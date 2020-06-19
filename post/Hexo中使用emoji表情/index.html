@@ -21,12 +21,12 @@
     var CONFIG = {"hostname":"hxwguang.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","Muse | Mist":320,"Pisces | Gemini":240,"width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="注意： 这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。             Hexo开启欢乐的emoji之旅:yellow_heart:内容转载自：Hexo中使用emoji表情将markdown转化为html的转化器叫做markdown渲染器。在He">
+  <meta name="description" content="注意： 这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。            Hexo开启欢乐的emoji之旅💛 内容转载自：Hexo中使用emoji表情 将markdown转化为html的转化器叫做markdown渲染器。 在Hexo中默认的mark">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo中使用emoji表情">
 <meta property="og:url" content="http://hxwguang.github.io/post/Hexo%E4%B8%AD%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/index.html">
 <meta property="og:site_name" content="HxGuang&#39;s Home">
-<meta property="og:description" content="注意： 这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。             Hexo开启欢乐的emoji之旅:yellow_heart:内容转载自：Hexo中使用emoji表情将markdown转化为html的转化器叫做markdown渲染器。在He">
+<meta property="og:description" content="注意： 这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。            Hexo开启欢乐的emoji之旅💛 内容转载自：Hexo中使用emoji表情 将markdown转化为html的转化器叫做markdown渲染器。 在Hexo中默认的mark">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-25T03:01:04.000Z">
 <meta property="article:modified_time" content="2020-01-30T08:21:45.497Z">
@@ -292,23 +292,28 @@
 
       
         <div class="note danger no-icon">
-            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</p>
+            <p><strong>注意：</strong> <s>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</s><br />这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</p>
           </div>
-
-<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>将markdown转化为html的转化器叫做markdown渲染器。<br>在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。</p>
+<p>Hexo开启欢乐的emoji之旅💛<br />
+内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br />
+将markdown转化为html的转化器叫做markdown渲染器。<br />
+在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。</p>
 <a id="more"></a>
-
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>命令行如下：</p>
+<h1>安装</h1>
+<p>命令行如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p><strong>Tips:</strong> 据说hexo-renderer-markdown-it的速度要比Hexo原装插件要快，而且功能更多</p>
 </blockquote>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。</p>
+<h1>配置</h1>
+<p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure>
 <p>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>输入对应的emoji编码就行了<br>例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
-<h1 id="emoji编码表"><a href="#emoji编码表" class="headerlink" title="emoji编码表"></a>emoji编码表</h1><table>
+<h1>使用方法</h1>
+<p>输入对应的emoji编码就行了<br />
+例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到😄。</p>
+<h1>emoji编码表</h1>
+<table>
 <thead>
 <tr>
 <th>People</th>
@@ -317,181 +322,183 @@
 <th></th>
 </tr>
 </thead>
-<tbody><tr>
-<td>:smile:<code>:smile:</code></td>
-<td>:laughing:<code>:laughing:</code></td>
-<td>:blush:<code>:blush:</code></td>
-<td>:smiley:<code>:smiley:</code></td>
+<tbody>
+<tr>
+<td>😄<code>:smile:</code></td>
+<td>😆<code>:laughing:</code></td>
+<td>😊<code>:blush:</code></td>
+<td>😃<code>:smiley:</code></td>
 </tr>
 <tr>
-<td>:relaxed:<code>:relaxed:</code></td>
-<td>:smirk:<code>:smirk:</code></td>
-<td>:heart_eyes:<code>:heart_eyes:</code>​</td>
-<td>:kissing_heart:<code>:kissing_heart:</code></td>
+<td>☺️<code>:relaxed:</code></td>
+<td>😏<code>:smirk:</code></td>
+<td>😍<code>:heart_eyes:</code>​</td>
+<td>😘<code>:kissing_heart:</code></td>
 </tr>
 <tr>
-<td>:kissing_closed_eyes:<code>:kissing_closed_eyes:</code></td>
-<td>:flushed:<code>:flushed:</code></td>
-<td>:relieved:<code>:relieved:</code></td>
-<td>:satisfied:<code>:satisfied:</code></td>
+<td>😚<code>:kissing_closed_eyes:</code></td>
+<td>😳<code>:flushed:</code></td>
+<td>😌<code>:relieved:</code></td>
+<td>😆<code>:satisfied:</code></td>
 </tr>
 <tr>
-<td>:grin:<code>:grin:</code></td>
-<td>:wink:<code>:wink:</code></td>
-<td>:stuck_out_tongue_winking_eye:<code>:stuck_out_tongue_winking_eye:</code></td>
-<td>:stuck_out_tongue_closed_eyes:<code>:stuck_out_tongue_closed_eyes:</code></td>
+<td>😁<code>:grin:</code></td>
+<td>😉<code>:wink:</code></td>
+<td>😜<code>:stuck_out_tongue_winking_eye:</code></td>
+<td>😝<code>:stuck_out_tongue_closed_eyes:</code></td>
 </tr>
 <tr>
-<td>:grinning:<code>:grinning:</code></td>
-<td>:kissing:<code>:kissing:</code></td>
-<td>:kissing_smiling_eyes:<code>:kissing_smiling_eyes:</code></td>
-<td>:stuck_out_tongue:<code>:stuck_out_tongue:</code></td>
+<td>😀<code>:grinning:</code></td>
+<td>😗<code>:kissing:</code></td>
+<td>😙<code>:kissing_smiling_eyes:</code></td>
+<td>😛<code>:stuck_out_tongue:</code></td>
 </tr>
 <tr>
-<td>:sleeping:<code>:sleeping:</code></td>
-<td>:worried:<code>:worried:</code></td>
-<td>:frowning:<code>:frowning:</code></td>
-<td>:anguished:<code>:anguished:</code></td>
+<td>😴<code>:sleeping:</code></td>
+<td>😟<code>:worried:</code></td>
+<td>😦<code>:frowning:</code></td>
+<td>😧<code>:anguished:</code></td>
 </tr>
 <tr>
-<td>:open_mouth:<code>:open_mouth:</code></td>
-<td>:grimacing:<code>:grimacing:</code></td>
-<td>:confused:<code>:confused:</code></td>
-<td>:hushed:<code>:hushed:</code></td>
+<td>😮<code>:open_mouth:</code></td>
+<td>😬<code>:grimacing:</code></td>
+<td>😕<code>:confused:</code></td>
+<td>😯<code>:hushed:</code></td>
 </tr>
 <tr>
-<td>:expressionless:<code>:expressionless:</code></td>
-<td>:unamused:<code>:unamused:</code></td>
-<td>:sweat_smile:<code>:sweat_smile:</code></td>
-<td>:sweat:<code>:sweat:</code></td>
+<td>😑<code>:expressionless:</code></td>
+<td>😒<code>:unamused:</code></td>
+<td>😅<code>:sweat_smile:</code></td>
+<td>😓<code>:sweat:</code></td>
 </tr>
 <tr>
-<td>:disappointed_relieved:<code>:disappointed_relieved:</code></td>
-<td>:weary:<code>:weary:</code></td>
-<td>:pensive:<code>:pensive:</code></td>
-<td>:disappointed:<code>:disappointed:</code></td>
+<td>😥<code>:disappointed_relieved:</code></td>
+<td>😩<code>:weary:</code></td>
+<td>😔<code>:pensive:</code></td>
+<td>😞<code>:disappointed:</code></td>
 </tr>
 <tr>
-<td>:confounded:<code>:confounded:</code></td>
-<td>:fearful:<code>:fearful:</code></td>
-<td>:cold_sweat:<code>:cold_sweat:</code></td>
-<td>:persevere:<code>:persevere:</code></td>
+<td>😖<code>:confounded:</code></td>
+<td>😨<code>:fearful:</code></td>
+<td>😰<code>:cold_sweat:</code></td>
+<td>😣<code>:persevere:</code></td>
 </tr>
 <tr>
-<td>:cry:<code>:cry:</code></td>
-<td>:sob:<code>:sob:</code></td>
-<td>:joy:<code>:joy:</code></td>
-<td>:astonished:<code>:astonished:</code></td>
+<td>😢<code>:cry:</code></td>
+<td>😭<code>:sob:</code></td>
+<td>😂<code>:joy:</code></td>
+<td>😲<code>:astonished:</code></td>
 </tr>
 <tr>
-<td>:scream:<code>:scream:</code></td>
-<td>:tired_face:<code>:tired_face:</code></td>
-<td>:angry:<code>:angry:</code></td>
-<td>:rage:<code>:rage:</code></td>
+<td>😱<code>:scream:</code></td>
+<td>😫<code>:tired_face:</code></td>
+<td>😠<code>:angry:</code></td>
+<td>😡<code>:rage:</code></td>
 </tr>
 <tr>
-<td>:triumph:<code>:triumph:</code></td>
-<td>:sleepy:<code>:sleepy:</code></td>
-<td>:yum:<code>:yum:</code></td>
-<td>:mask:<code>:mask:</code></td>
+<td>😤<code>:triumph:</code></td>
+<td>😪<code>:sleepy:</code></td>
+<td>😋<code>:yum:</code></td>
+<td>😷<code>:mask:</code></td>
 </tr>
 <tr>
-<td>:sunglasses:<code>:sunglasses:</code></td>
-<td>:dizzy_face:<code>:dizzy_face:</code></td>
-<td>:imp:<code>:imp:</code></td>
-<td>:smiling_imp:<code>:smiling_imp:</code>​</td>
+<td>😎<code>:sunglasses:</code></td>
+<td>😵<code>:dizzy_face:</code></td>
+<td>👿<code>:imp:</code></td>
+<td>😈<code>:smiling_imp:</code>​</td>
 </tr>
 <tr>
-<td>:neutral_face:<code>:neutral_face:</code></td>
-<td>:no_mouth:<code>:no_mouth:</code></td>
-<td>:innocent:<code>:innocent:</code></td>
-<td>:alien:<code>:alien:</code></td>
+<td>😐<code>:neutral_face:</code></td>
+<td>😶<code>:no_mouth:</code></td>
+<td>😇<code>:innocent:</code></td>
+<td>👽<code>:alien:</code></td>
 </tr>
 <tr>
-<td>:yellow_heart:<code>:yellow_heart:</code></td>
-<td>:blue_heart:<code>:blue_heart:</code></td>
-<td>:purple_heart:<code>:purple_heart:</code></td>
-<td>:heart:<code>:heart:</code></td>
+<td>💛<code>:yellow_heart:</code></td>
+<td>💙<code>:blue_heart:</code></td>
+<td>💜<code>:purple_heart:</code></td>
+<td>❤️<code>:heart:</code></td>
 </tr>
 <tr>
-<td>:green_heart:<code>:green_heart:</code></td>
-<td>:broken_heart:<code>:broken_heart:</code></td>
-<td>:heartbeat:<code>:heartbeat:</code></td>
-<td>:heartpulse:<code>:heartpulse:</code></td>
+<td>💚<code>:green_heart:</code></td>
+<td>💔<code>:broken_heart:</code></td>
+<td>💓<code>:heartbeat:</code></td>
+<td>💗<code>:heartpulse:</code></td>
 </tr>
 <tr>
-<td>:two_hearts:<code>:two_hearts:</code></td>
-<td>:revolving_hearts:<code>:revolving_hearts:</code></td>
-<td>:cupid:<code>:cupid:</code></td>
-<td>:sparkling_heart:<code>:sparkling_heart:</code></td>
+<td>💕<code>:two_hearts:</code></td>
+<td>💞<code>:revolving_hearts:</code></td>
+<td>💘<code>:cupid:</code></td>
+<td>💖<code>:sparkling_heart:</code></td>
 </tr>
 <tr>
-<td>:sparkles:<code>:sparkles:</code></td>
-<td>:star:<code>:star:</code></td>
-<td>:star2:<code>:star2:</code></td>
-<td>:dizzy:<code>:dizzy:</code></td>
+<td>✨<code>:sparkles:</code></td>
+<td>⭐️<code>:star:</code></td>
+<td>🌟<code>:star2:</code></td>
+<td>💫<code>:dizzy:</code></td>
 </tr>
 <tr>
-<td>:boom:<code>:boom:</code></td>
-<td>:collision:<code>:collision:</code></td>
-<td>:anger:<code>:anger:</code></td>
-<td>:exclamation:<code>:exclamation:</code></td>
+<td>💥<code>:boom:</code></td>
+<td>💥<code>:collision:</code></td>
+<td>💢<code>:anger:</code></td>
+<td>❗️<code>:exclamation:</code></td>
 </tr>
 <tr>
-<td>:question:<code>:question:</code></td>
-<td>:grey_exclamation:<code>:grey_exclamation:</code></td>
-<td>:grey_question:<code>:grey_question:</code></td>
-<td>:zzz:<code>:zzz:</code></td>
+<td>❓<code>:question:</code></td>
+<td>❕<code>:grey_exclamation:</code></td>
+<td>❔<code>:grey_question:</code></td>
+<td>💤<code>:zzz:</code></td>
 </tr>
 <tr>
-<td>:dash:<code>:dash:</code></td>
-<td>:sweat_drops:<code>:sweat_drops:</code></td>
-<td>:notes:<code>:notes:</code></td>
-<td>:musical_note:<code>:musical_note:</code></td>
+<td>💨<code>:dash:</code></td>
+<td>💦<code>:sweat_drops:</code></td>
+<td>🎶<code>:notes:</code></td>
+<td>🎵<code>:musical_note:</code></td>
 </tr>
 <tr>
-<td>:fire:<code>:fire:</code></td>
-<td>:hankey:<code>:hankey:</code></td>
-<td>:poop:<code>:poop:</code></td>
-<td>:shit:<code>:shit:</code></td>
+<td>🔥<code>:fire:</code></td>
+<td>💩<code>:hankey:</code></td>
+<td>💩<code>:poop:</code></td>
+<td>💩<code>:shit:</code></td>
 </tr>
 <tr>
-<td>:+1:<code>:+1:</code></td>
-<td>:thumbsup:<code>:thumbsup:</code></td>
-<td>:-1:<code>:-1:</code></td>
-<td>:thumbsdown:<code>:thumbsdown:</code></td>
+<td>👍<code>:+1:</code></td>
+<td>👍<code>:thumbsup:</code></td>
+<td>👎<code>:-1:</code></td>
+<td>👎<code>:thumbsdown:</code></td>
 </tr>
 <tr>
-<td>:ok_hand:<code>:ok_hand:</code></td>
-<td>:punch:<code>:punch:</code></td>
-<td>:facepunch:<code>:facepunch:</code></td>
-<td>:fist:<code>:fist:</code></td>
+<td>👌<code>:ok_hand:</code></td>
+<td>👊<code>:punch:</code></td>
+<td>👊<code>:facepunch:</code></td>
+<td>✊<code>:fist:</code></td>
 </tr>
 <tr>
-<td>:v:<code>:v:</code></td>
-<td>:wave:<code>:wave:</code></td>
-<td>:hand:<code>:hand:</code></td>
-<td>:raised_hand:<code>:raised_hand:</code></td>
+<td>✌️<code>:v:</code></td>
+<td>👋<code>:wave:</code></td>
+<td>✋<code>:hand:</code></td>
+<td>✋<code>:raised_hand:</code></td>
 </tr>
 <tr>
-<td>:open_hands:<code>:open_hands:</code></td>
-<td>:point_up:<code>:point_up:</code></td>
-<td>:point_down:<code>:point_down:</code></td>
-<td>:point_left:<code>:point_left:</code></td>
+<td>👐<code>:open_hands:</code></td>
+<td>☝️<code>:point_up:</code></td>
+<td>👇<code>:point_down:</code></td>
+<td>👈<code>:point_left:</code></td>
 </tr>
 <tr>
-<td>:point_right:<code>:point_right:</code></td>
-<td>:raised_hands:<code>:raised_hands:</code></td>
-<td>:pray:<code>:pray:</code></td>
-<td>:point_up_2:<code>:point_up_2:</code></td>
+<td>👉<code>:point_right:</code></td>
+<td>🙌<code>:raised_hands:</code></td>
+<td>🙏<code>:pray:</code></td>
+<td>👆<code>:point_up_2:</code></td>
 </tr>
 <tr>
-<td>:clap:<code>:clap:</code></td>
-<td>:muscle:<code>:muscle:</code></td>
-<td>:metal:<code>:metal:</code></td>
-<td>:fu:<code>:fu:</code></td>
+<td>👏<code>:clap:</code></td>
+<td>💪<code>:muscle:</code></td>
+<td>🤘<code>:metal:</code></td>
+<td>🖕<code>:fu:</code></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p><strong>未完待续…</strong></p>
 
     </div>
@@ -596,7 +603,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用方法"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#emoji编码表"><span class="nav-text">emoji编码表</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">emoji编码表</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

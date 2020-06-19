@@ -21,12 +21,12 @@
     var CONFIG = {"hostname":"hxwguang.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","Muse | Mist":320,"Pisces | Gemini":240,"width":300,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="说在前面本篇要解决以下问题：在博客中添加aplayer解决切换页面时不打断播放 因为我不是大神，看不懂官方文档，所以第一个问题也是几经波折花了很长时间才终于弄好了。">
+  <meta name="description" content="说在前面 本篇要解决以下问题： 在博客中添加aplayer 解决切换页面时不打断播放 因为我不是大神，看不懂官方文档，所以第一个问题也是几经波折花了很长时间才终于弄好了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo Next主题中添加aplayer播放器">
 <meta property="og:url" content="http://hxwguang.github.io/post/Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0aplayer%E6%92%AD%E6%94%BE%E5%99%A8/index.html">
 <meta property="og:site_name" content="HxGuang&#39;s Home">
-<meta property="og:description" content="说在前面本篇要解决以下问题：在博客中添加aplayer解决切换页面时不打断播放 因为我不是大神，看不懂官方文档，所以第一个问题也是几经波折花了很长时间才终于弄好了。">
+<meta property="og:description" content="说在前面 本篇要解决以下问题： 在博客中添加aplayer 解决切换页面时不打断播放 因为我不是大神，看不懂官方文档，所以第一个问题也是几经波折花了很长时间才终于弄好了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/01/26/x3XGbeAp7SokDPL.png">
 <meta property="article:published_time" content="2020-01-26T09:17:50.000Z">
@@ -299,31 +299,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>本篇要解决以下问题：<br><input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer<br><input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
+        <h1>说在前面</h1>
+<p>本篇要解决以下问题：<br />
+<input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer<br />
+<input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
 <p>因为我不是大神，看不懂<a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">官方文档</a>，所以第一个问题也是几经波折花了很长时间才终于弄好了。</p>
 <a id="more"></a>
-<h1 id="添加Aplayer播放器"><a href="#添加Aplayer播放器" class="headerlink" title="添加Aplayer播放器"></a>添加Aplayer播放器</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
-<h2 id="新建music-js"><a href="#新建music-js" class="headerlink" title="新建music.js"></a>新建music.js</h2><p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：</p>
+<h1>添加Aplayer播放器</h1>
+<h2>下载</h2>
+<p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
+<h2>新建music.js</h2>
+<p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"PDD洪荒之力"</span>,</span><br><span class="line">        artist: <span class="string">'徐梦圆'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/39868.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/84.jpg'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'9420'</span>,</span><br><span class="line">        artist: <span class="string">'麦小兜'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/45967.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/8.jpg'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>代码中对应参数的解释，请查看：<a href="[https://aplayer.js.org/#/zh-Hans/?id=%E5%85%A5%E9%97%A8](https://aplayer.js.org/#/zh-Hans/?id=入门)">Aplayer中文文档</a></p>
+<p>代码中对应参数的解释，请查看：<a href="%5Bhttps://aplayer.js.org/#/zh-Hans/?id=%E5%85%A5%E9%97%A8%5D(https://aplayer.js.org/#/zh-Hans/?id=%E5%85%A5%E9%97%A8)">Aplayer中文文档</a></p>
 <p><code>audio</code>对应的是音频文件的信息参数，需要自己配置相关的信息（如歌名，歌手，音频链接，封面等）的配置。</p>
 <div class="note info no-icon">
-            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: &#39;/dist/assets/song1.mp3&#39;</code><br>快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/一个快速生成音乐外链的方法/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
+            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: '/dist/assets/song1.mp3'</code><br />快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/%E4%B8%80%E4%B8%AA%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E7%9A%84%E6%96%B9%E6%B3%95/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
           </div>
-
-<h2 id="在-layout-swig中添加信息"><a href="#在-layout-swig中添加信息" class="headerlink" title="在_layout.swig中添加信息"></a>在_layout.swig中添加信息</h2><p>打开<code>~\themes\next\layout\_layout.swig</code>文件，将</p>
+<h2>在_layout.swig中添加信息</h2>
+<p>打开<code>~\themes\next\layout\_layout.swig</code>文件，将</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;aplayer&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;APlayer.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;dist&#x2F;music.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-
 <p>添加到<code>&lt;div class=&quot;container&quot;&gt;</code>标签的后面，即添加到<code>&lt;body&gt; &lt;/body&gt;</code>的下一级子标签里面。</p>
 <p>重新生成，部署，再访问就可以看到左下角的音乐播放器了。</p>
 <div class="note danger no-icon">
-            <p><strong>注意：</strong> 上面那段代码一定要放到<code>&lt;body&gt; &lt;/body&gt;</code>的下一级子标签里面！如果放到<code>&lt;body&gt; &lt;/body&gt;</code>里面就会出现底部滑出的情况<br><img src="https://i.loli.net/2020/01/26/x3XGbeAp7SokDPL.png" alt="底部滑出.png"></p>
+            <p><strong>注意：</strong> 上面那段代码一定要放到<code>&lt;body&gt; &lt;/body&gt;</code>的下一级子标签里面！如果放到<code>&lt;body&gt; &lt;/body&gt;</code>里面就会出现底部滑出的情况<br /><img src="https://i.loli.net/2020/01/26/x3XGbeAp7SokDPL.png" alt="底部滑出.png" /></p>
           </div>
-
-<hr>
-<h1 id="解决切换页面播放中断问题"><a href="#解决切换页面播放中断问题" class="headerlink" title="解决切换页面播放中断问题"></a>解决切换页面播放中断问题</h1><p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：</p>
+<hr />
+<h1>解决切换页面播放中断问题</h1>
+<p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
+<h2>安装</h2>
+<p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure>
 <p>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
@@ -431,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#说在前面"><span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加Aplayer播放器"><span class="nav-text">添加Aplayer播放器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建music-js"><span class="nav-text">新建music.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-layout-swig中添加信息"><span class="nav-text">在_layout.swig中添加信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决切换页面播放中断问题"><span class="nav-text">解决切换页面播放中断问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">添加Aplayer播放器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">新建music.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">在_layout.swig中添加信息</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">解决切换页面播放中断问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">安装</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
