@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b4331a;
+  background: #b18b00;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2642,17 +2642,57 @@ mjx-container + br {
 }
 :root {
   --body-bg-color: #404040;
+  --content-bg-color: #fff;
+  --card-bg-color: #f5f5f5;
   --text-color: #000;
+  --blockquote-color: #666;
+  --link-color: #555;
+  --link-hover-color: #222;
+  --brand-color: #fff;
+  --brand-hover-color: #fff;
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --btn-default-bg: #fff;
+  --btn-default-color: #555;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #222;
+  --btn-default-hover-color: #fff;
+  --btn-default-hover-border-color: #222;
 }
 .post-body a {
   color: #0e83cd;
-  border-bottom: 0px solid #0e83cd;
+  border: 0px;
   text-decoration: underline #0e83cd;
+}
+.post-body a.btn {
+  color: #555;
+  text-decoration: none;
 }
 .post-body a:hover {
   color: #1094e8;
-  border-bottom: 0px solid #1094e8;
+  border: 0px;
   text-decoration: underline #1094e8;
+}
+.post-body a.btn {
+  background: var(--btn-default-bg);
+  border: 2px solid var(--btn-default-border-color);
+  border-radius: 2px;
+  color: var(--btn-default-color);
+  display: inline-block;
+  font-size: 0.875em;
+  line-height: 2;
+  padding: 0 20px;
+  text-decoration: none;
+  transition-property: background-color;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.post-body a.btn:hover {
+  background: var(--btn-default-hover-bg);
+  border-color: var(--btn-default-hover-border-color);
+  color: var(--btn-default-hover-color);
 }
 .back-to-top {
   background: #fc6423;
@@ -2670,6 +2710,13 @@ mjx-container + br {
 .footer a:hover {
   color: #1094e8;
   border-bottom: 1px solid #1094e8;
+}
+.post-body a::selection {
+  color: #00f;
+}
+::selection {
+  background: #38d878;
+  color: #555;
 }
 .post-body a::selection {
   color: #00f;

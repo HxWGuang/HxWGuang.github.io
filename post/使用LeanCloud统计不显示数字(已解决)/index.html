@@ -48,13 +48,11 @@
   };
 </script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-
 <style>
-*{  cursor: url(/images/shubiao.ico), default !important;  //自定义的鼠标样式}
 ::-webkit-scrollbar {   
 	width: 6px;
 	height: 6px;
@@ -291,12 +289,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2>具体问题</h2>
+        <h2 id="具体问题">具体问题</h2>
 <p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a></p>
 <div class="note default no-icon">
-            <p><s>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</s><br />一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
+            <p><s>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</s><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
           </div>
-<h2>下面列出一些在网上找的解决方案</h2>
+<h2 id="下面列出一些在网上找的解决方案">下面列出一些在网上找的解决方案</h2>
 <ul>
 <li>安装插件<code>hexo-leancloud-counter-security</code>
 <ul>
@@ -306,7 +304,7 @@
 <li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
 </ul>
 <div class="note danger no-icon">
-            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br />但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br />但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
+            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
           </div>
     </div>
 
@@ -410,7 +408,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">具体问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">下面列出一些在网上找的解决方案</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体问题"><span class="nav-text">具体问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下面列出一些在网上找的解决方案"><span class="nav-text">下面列出一些在网上找的解决方案</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

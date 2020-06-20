@@ -48,13 +48,11 @@
   };
 </script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-
 <style>
-*{  cursor: url(/images/shubiao.ico), default !important;  //自定义的鼠标样式}
 ::-webkit-scrollbar {   
 	width: 6px;
 	height: 6px;
@@ -292,11 +290,11 @@
 
       
         <div class="note danger no-icon">
-            <p><strong>注意：</strong> <s>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</s><br /><s>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</s><br />其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是不会立即看到效果，经过反复尝试，都是几小时后才生效。。</p>
+            <p><strong>注意：</strong> <s>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</s><br><s>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</s><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是不会立即看到效果，经过反复尝试，都是几小时后才生效。。</p>
           </div>
-<p>Hexo开启欢乐的emoji之旅💛<br />
-内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br />
-将markdown转化为html的转化器叫做markdown渲染器。<br />
+<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>
+内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>
+将markdown转化为html的转化器叫做markdown渲染器。<br>
 在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。</p>
 <a id="more"></a>
 <h1>安装</h1>
@@ -310,8 +308,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure>
 <p>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
 <h1>使用方法</h1>
-<p>输入对应的emoji编码就行了<br />
-例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到😄。</p>
+<p>输入对应的emoji编码就行了<br>
+例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
 <h1>emoji编码表</h1>
 <table>
 <thead>
@@ -324,178 +322,178 @@
 </thead>
 <tbody>
 <tr>
-<td>😄<code>:smile:</code></td>
-<td>😆<code>:laughing:</code></td>
-<td>😊<code>:blush:</code></td>
-<td>😃<code>:smiley:</code></td>
+<td>:smile:<code>:smile:</code></td>
+<td>:laughing:<code>:laughing:</code></td>
+<td>:blush:<code>:blush:</code></td>
+<td>:smiley:<code>:smiley:</code></td>
 </tr>
 <tr>
-<td>☺️<code>:relaxed:</code></td>
-<td>😏<code>:smirk:</code></td>
-<td>😍<code>:heart_eyes:</code>​</td>
-<td>😘<code>:kissing_heart:</code></td>
+<td>:relaxed:<code>:relaxed:</code></td>
+<td>:smirk:<code>:smirk:</code></td>
+<td>:heart_eyes:<code>:heart_eyes:</code>​</td>
+<td>:kissing_heart:<code>:kissing_heart:</code></td>
 </tr>
 <tr>
-<td>😚<code>:kissing_closed_eyes:</code></td>
-<td>😳<code>:flushed:</code></td>
-<td>😌<code>:relieved:</code></td>
-<td>😆<code>:satisfied:</code></td>
+<td>:kissing_closed_eyes:<code>:kissing_closed_eyes:</code></td>
+<td>:flushed:<code>:flushed:</code></td>
+<td>:relieved:<code>:relieved:</code></td>
+<td>:satisfied:<code>:satisfied:</code></td>
 </tr>
 <tr>
-<td>😁<code>:grin:</code></td>
-<td>😉<code>:wink:</code></td>
-<td>😜<code>:stuck_out_tongue_winking_eye:</code></td>
-<td>😝<code>:stuck_out_tongue_closed_eyes:</code></td>
+<td>:grin:<code>:grin:</code></td>
+<td>:wink:<code>:wink:</code></td>
+<td>:stuck_out_tongue_winking_eye:<code>:stuck_out_tongue_winking_eye:</code></td>
+<td>:stuck_out_tongue_closed_eyes:<code>:stuck_out_tongue_closed_eyes:</code></td>
 </tr>
 <tr>
-<td>😀<code>:grinning:</code></td>
-<td>😗<code>:kissing:</code></td>
-<td>😙<code>:kissing_smiling_eyes:</code></td>
-<td>😛<code>:stuck_out_tongue:</code></td>
+<td>:grinning:<code>:grinning:</code></td>
+<td>:kissing:<code>:kissing:</code></td>
+<td>:kissing_smiling_eyes:<code>:kissing_smiling_eyes:</code></td>
+<td>:stuck_out_tongue:<code>:stuck_out_tongue:</code></td>
 </tr>
 <tr>
-<td>😴<code>:sleeping:</code></td>
-<td>😟<code>:worried:</code></td>
-<td>😦<code>:frowning:</code></td>
-<td>😧<code>:anguished:</code></td>
+<td>:sleeping:<code>:sleeping:</code></td>
+<td>:worried:<code>:worried:</code></td>
+<td>:frowning:<code>:frowning:</code></td>
+<td>:anguished:<code>:anguished:</code></td>
 </tr>
 <tr>
-<td>😮<code>:open_mouth:</code></td>
-<td>😬<code>:grimacing:</code></td>
-<td>😕<code>:confused:</code></td>
-<td>😯<code>:hushed:</code></td>
+<td>:open_mouth:<code>:open_mouth:</code></td>
+<td>:grimacing:<code>:grimacing:</code></td>
+<td>:confused:<code>:confused:</code></td>
+<td>:hushed:<code>:hushed:</code></td>
 </tr>
 <tr>
-<td>😑<code>:expressionless:</code></td>
-<td>😒<code>:unamused:</code></td>
-<td>😅<code>:sweat_smile:</code></td>
-<td>😓<code>:sweat:</code></td>
+<td>:expressionless:<code>:expressionless:</code></td>
+<td>:unamused:<code>:unamused:</code></td>
+<td>:sweat_smile:<code>:sweat_smile:</code></td>
+<td>:sweat:<code>:sweat:</code></td>
 </tr>
 <tr>
-<td>😥<code>:disappointed_relieved:</code></td>
-<td>😩<code>:weary:</code></td>
-<td>😔<code>:pensive:</code></td>
-<td>😞<code>:disappointed:</code></td>
+<td>:disappointed_relieved:<code>:disappointed_relieved:</code></td>
+<td>:weary:<code>:weary:</code></td>
+<td>:pensive:<code>:pensive:</code></td>
+<td>:disappointed:<code>:disappointed:</code></td>
 </tr>
 <tr>
-<td>😖<code>:confounded:</code></td>
-<td>😨<code>:fearful:</code></td>
-<td>😰<code>:cold_sweat:</code></td>
-<td>😣<code>:persevere:</code></td>
+<td>:confounded:<code>:confounded:</code></td>
+<td>:fearful:<code>:fearful:</code></td>
+<td>:cold_sweat:<code>:cold_sweat:</code></td>
+<td>:persevere:<code>:persevere:</code></td>
 </tr>
 <tr>
-<td>😢<code>:cry:</code></td>
-<td>😭<code>:sob:</code></td>
-<td>😂<code>:joy:</code></td>
-<td>😲<code>:astonished:</code></td>
+<td>:cry:<code>:cry:</code></td>
+<td>:sob:<code>:sob:</code></td>
+<td>:joy:<code>:joy:</code></td>
+<td>:astonished:<code>:astonished:</code></td>
 </tr>
 <tr>
-<td>😱<code>:scream:</code></td>
-<td>😫<code>:tired_face:</code></td>
-<td>😠<code>:angry:</code></td>
-<td>😡<code>:rage:</code></td>
+<td>:scream:<code>:scream:</code></td>
+<td>:tired_face:<code>:tired_face:</code></td>
+<td>:angry:<code>:angry:</code></td>
+<td>:rage:<code>:rage:</code></td>
 </tr>
 <tr>
-<td>😤<code>:triumph:</code></td>
-<td>😪<code>:sleepy:</code></td>
-<td>😋<code>:yum:</code></td>
-<td>😷<code>:mask:</code></td>
+<td>:triumph:<code>:triumph:</code></td>
+<td>:sleepy:<code>:sleepy:</code></td>
+<td>:yum:<code>:yum:</code></td>
+<td>:mask:<code>:mask:</code></td>
 </tr>
 <tr>
-<td>😎<code>:sunglasses:</code></td>
-<td>😵<code>:dizzy_face:</code></td>
-<td>👿<code>:imp:</code></td>
-<td>😈<code>:smiling_imp:</code>​</td>
+<td>:sunglasses:<code>:sunglasses:</code></td>
+<td>:dizzy_face:<code>:dizzy_face:</code></td>
+<td>:imp:<code>:imp:</code></td>
+<td>:smiling_imp:<code>:smiling_imp:</code>​</td>
 </tr>
 <tr>
-<td>😐<code>:neutral_face:</code></td>
-<td>😶<code>:no_mouth:</code></td>
-<td>😇<code>:innocent:</code></td>
-<td>👽<code>:alien:</code></td>
+<td>:neutral_face:<code>:neutral_face:</code></td>
+<td>:no_mouth:<code>:no_mouth:</code></td>
+<td>:innocent:<code>:innocent:</code></td>
+<td>:alien:<code>:alien:</code></td>
 </tr>
 <tr>
-<td>💛<code>:yellow_heart:</code></td>
-<td>💙<code>:blue_heart:</code></td>
-<td>💜<code>:purple_heart:</code></td>
-<td>❤️<code>:heart:</code></td>
+<td>:yellow_heart:<code>:yellow_heart:</code></td>
+<td>:blue_heart:<code>:blue_heart:</code></td>
+<td>:purple_heart:<code>:purple_heart:</code></td>
+<td>:heart:<code>:heart:</code></td>
 </tr>
 <tr>
-<td>💚<code>:green_heart:</code></td>
-<td>💔<code>:broken_heart:</code></td>
-<td>💓<code>:heartbeat:</code></td>
-<td>💗<code>:heartpulse:</code></td>
+<td>:green_heart:<code>:green_heart:</code></td>
+<td>:broken_heart:<code>:broken_heart:</code></td>
+<td>:heartbeat:<code>:heartbeat:</code></td>
+<td>:heartpulse:<code>:heartpulse:</code></td>
 </tr>
 <tr>
-<td>💕<code>:two_hearts:</code></td>
-<td>💞<code>:revolving_hearts:</code></td>
-<td>💘<code>:cupid:</code></td>
-<td>💖<code>:sparkling_heart:</code></td>
+<td>:two_hearts:<code>:two_hearts:</code></td>
+<td>:revolving_hearts:<code>:revolving_hearts:</code></td>
+<td>:cupid:<code>:cupid:</code></td>
+<td>:sparkling_heart:<code>:sparkling_heart:</code></td>
 </tr>
 <tr>
-<td>✨<code>:sparkles:</code></td>
-<td>⭐️<code>:star:</code></td>
-<td>🌟<code>:star2:</code></td>
-<td>💫<code>:dizzy:</code></td>
+<td>:sparkles:<code>:sparkles:</code></td>
+<td>:star:<code>:star:</code></td>
+<td>:star2:<code>:star2:</code></td>
+<td>:dizzy:<code>:dizzy:</code></td>
 </tr>
 <tr>
-<td>💥<code>:boom:</code></td>
-<td>💥<code>:collision:</code></td>
-<td>💢<code>:anger:</code></td>
-<td>❗️<code>:exclamation:</code></td>
+<td>:boom:<code>:boom:</code></td>
+<td>:collision:<code>:collision:</code></td>
+<td>:anger:<code>:anger:</code></td>
+<td>:exclamation:<code>:exclamation:</code></td>
 </tr>
 <tr>
-<td>❓<code>:question:</code></td>
-<td>❕<code>:grey_exclamation:</code></td>
-<td>❔<code>:grey_question:</code></td>
-<td>💤<code>:zzz:</code></td>
+<td>:question:<code>:question:</code></td>
+<td>:grey_exclamation:<code>:grey_exclamation:</code></td>
+<td>:grey_question:<code>:grey_question:</code></td>
+<td>:zzz:<code>:zzz:</code></td>
 </tr>
 <tr>
-<td>💨<code>:dash:</code></td>
-<td>💦<code>:sweat_drops:</code></td>
-<td>🎶<code>:notes:</code></td>
-<td>🎵<code>:musical_note:</code></td>
+<td>:dash:<code>:dash:</code></td>
+<td>:sweat_drops:<code>:sweat_drops:</code></td>
+<td>:notes:<code>:notes:</code></td>
+<td>:musical_note:<code>:musical_note:</code></td>
 </tr>
 <tr>
-<td>🔥<code>:fire:</code></td>
-<td>💩<code>:hankey:</code></td>
-<td>💩<code>:poop:</code></td>
-<td>💩<code>:shit:</code></td>
+<td>:fire:<code>:fire:</code></td>
+<td>:hankey:<code>:hankey:</code></td>
+<td>:poop:<code>:poop:</code></td>
+<td>:shit:<code>:shit:</code></td>
 </tr>
 <tr>
-<td>👍<code>:+1:</code></td>
-<td>👍<code>:thumbsup:</code></td>
-<td>👎<code>:-1:</code></td>
-<td>👎<code>:thumbsdown:</code></td>
+<td>:+1:<code>:+1:</code></td>
+<td>:thumbsup:<code>:thumbsup:</code></td>
+<td>:-1:<code>:-1:</code></td>
+<td>:thumbsdown:<code>:thumbsdown:</code></td>
 </tr>
 <tr>
-<td>👌<code>:ok_hand:</code></td>
-<td>👊<code>:punch:</code></td>
-<td>👊<code>:facepunch:</code></td>
-<td>✊<code>:fist:</code></td>
+<td>:ok_hand:<code>:ok_hand:</code></td>
+<td>:punch:<code>:punch:</code></td>
+<td>:facepunch:<code>:facepunch:</code></td>
+<td>:fist:<code>:fist:</code></td>
 </tr>
 <tr>
-<td>✌️<code>:v:</code></td>
-<td>👋<code>:wave:</code></td>
-<td>✋<code>:hand:</code></td>
-<td>✋<code>:raised_hand:</code></td>
+<td>:v:<code>:v:</code></td>
+<td>:wave:<code>:wave:</code></td>
+<td>:hand:<code>:hand:</code></td>
+<td>:raised_hand:<code>:raised_hand:</code></td>
 </tr>
 <tr>
-<td>👐<code>:open_hands:</code></td>
-<td>☝️<code>:point_up:</code></td>
-<td>👇<code>:point_down:</code></td>
-<td>👈<code>:point_left:</code></td>
+<td>:open_hands:<code>:open_hands:</code></td>
+<td>:point_up:<code>:point_up:</code></td>
+<td>:point_down:<code>:point_down:</code></td>
+<td>:point_left:<code>:point_left:</code></td>
 </tr>
 <tr>
-<td>👉<code>:point_right:</code></td>
-<td>🙌<code>:raised_hands:</code></td>
-<td>🙏<code>:pray:</code></td>
-<td>👆<code>:point_up_2:</code></td>
+<td>:point_right:<code>:point_right:</code></td>
+<td>:raised_hands:<code>:raised_hands:</code></td>
+<td>:pray:<code>:pray:</code></td>
+<td>:point_up_2:<code>:point_up_2:</code></td>
 </tr>
 <tr>
-<td>👏<code>:clap:</code></td>
-<td>💪<code>:muscle:</code></td>
-<td>🤘<code>:metal:</code></td>
-<td>🖕<code>:fu:</code></td>
+<td>:clap:<code>:clap:</code></td>
+<td>:muscle:<code>:muscle:</code></td>
+<td>:metal:<code>:metal:</code></td>
+<td>:fu:<code>:fu:</code></td>
 </tr>
 </tbody>
 </table>

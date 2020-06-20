@@ -49,13 +49,11 @@
   };
 </script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-
 <style>
-*{  cursor: url(/images/shubiao.ico), default !important;  //自定义的鼠标样式}
 ::-webkit-scrollbar {   
 	width: 6px;
 	height: 6px;
@@ -318,7 +316,7 @@
 <p>从上面我们可以看到，无论是readonly还是disabled，都没有实现我们期望的效果。既然直接实现不了，那么我们可以变通一下，模拟实现。代码如下：</p>
 <p><code>&lt;input type=&quot;checkbox&quot; name=&quot;chkAllowed&quot; onclick=&quot;return false;&quot; checked=&quot;checked&quot; /&gt;</code> —&gt; <input type="checkbox" name="chkAllowed" onclick="return false;" checked="checked" /></p>
 <p>转自： <a href="https://www.cnblogs.com/josephchan/archive/2012/10/15/webui_checkbox_readonly.html" target="_blank" rel="noopener">Web开发：设置复选框的只读效果</a></p>
-<hr />
+<hr>
 <h1>实现“内容折叠”的功能</h1>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">mark</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">darkred</span>&gt;</span>点击查看详细内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <details>

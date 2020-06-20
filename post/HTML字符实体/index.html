@@ -47,13 +47,11 @@
   };
 </script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"></script> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 
-
 <style>
-*{  cursor: url(/images/shubiao.ico), default !important;  //自定义的鼠标样式}
 ::-webkit-scrollbar {   
 	width: 6px;
 	height: 6px;
@@ -292,19 +290,19 @@
 <div class="note danger">
             <p><strong>注意：</strong> HTML中的预留字符必须被替换为字符实体</p>
           </div>
-<h2>HTML实体</h2>
+<h2 id="HTML实体">HTML实体</h2>
 <p>在HTML 中，某些字符是预留的。</p>
 <p>在 HTML 中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。</p>
 <p>如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）。</p>
 <a id="more"></a>
 <p>字符实体类似这样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&amp;entity_name;</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">&amp;#entity_number;</span><br></pre></td></tr></table></figure>
-<p>如需显示小于号，我们必须这样写：<code>&amp;lt;</code>或<code>&amp;#60;</code></p>
+<p>如需显示小于号，我们必须这样写：<code>&amp;lt; </code>或<code>&amp;#60;</code></p>
 <p><strong>提示</strong>：使用实体名而不是数字的好处是，名称易于记忆。不过坏处是，浏览器也许并不支持所有实体名称（对实体数字的支持却很好）。</p>
-<h2>不间断空格（non-breaking space）</h2>
+<h2 id="不间断空格（non-breaking-space）">不间断空格（non-breaking space）</h2>
 <p>HTML 中的常用字符实体是不间断空格<code>&amp;nbsp;</code>。</p>
 <p>浏览器总是会截短 HTML 页面中的空格。<span class="label warning">如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。</span>如需在页面中增加空格的数量，您需要使用 <code>&amp;nbsp;</code> 字符实体。</p>
-<h2>HTML 中有用的字符实体</h2>
+<h2 id="HTML-中有用的字符实体">HTML 中有用的字符实体</h2>
 <div class="note default">
             <p><strong>注释：</strong> 实体名称对大小写敏感！</p>
           </div>
@@ -518,7 +516,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">HTML实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">不间断空格（non-breaking space）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">HTML 中有用的字符实体</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML实体"><span class="nav-text">HTML实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不间断空格（non-breaking-space）"><span class="nav-text">不间断空格（non-breaking space）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-中有用的字符实体"><span class="nav-text">HTML 中有用的字符实体</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
