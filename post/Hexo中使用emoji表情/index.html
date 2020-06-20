@@ -290,27 +290,16 @@
 
       
         <div class="note danger no-icon">
-            <p><strong>注意：</strong> <s>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</s><br><s>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</s><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是不会立即看到效果，经过反复尝试，都是几小时后才生效。。</p>
+            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br><del>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</del><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是不会立即看到效果，经过反复尝试，都是几小时后才生效。。</p>
           </div>
-<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>
-内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>
-将markdown转化为html的转化器叫做markdown渲染器。<br>
-在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。</p>
-<a id="more"></a>
-<h1>安装</h1>
-<p>命令行如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-emoji --save</span><br></pre></td></tr></table></figure>
+<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>将markdown转化为html的转化器叫做markdown渲染器。<br>在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。<br><a id="more"></a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>命令行如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-emoji --save</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p><strong>Tips:</strong> 据说hexo-renderer-markdown-it的速度要比Hexo原装插件要快，而且功能更多</p>
 </blockquote>
-<h1>配置</h1>
-<p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure>
-<p>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
-<h1>使用方法</h1>
-<p>输入对应的emoji编码就行了<br>
-例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
-<h1>emoji编码表</h1>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure><br>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>输入对应的emoji编码就行了<br>例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
+<h1 id="emoji编码表"><a href="#emoji编码表" class="headerlink" title="emoji编码表"></a>emoji编码表</h1><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -497,6 +486,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>未完待续…</strong></p>
 
     </div>
@@ -601,7 +591,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-text">emoji编码表</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用方法"><span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#emoji编码表"><span class="nav-text">emoji编码表</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
