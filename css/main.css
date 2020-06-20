@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #85b6ff;
+  background: #95216e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2720,4 +2720,9 @@ mjx-container + br {
 }
 .post-body a::selection {
   color: #00f;
+}
+.links-of-author-item a:hover,
+.links-of-author-item span.exturl:hover {
+  background: #f5f7f9;
+  border-radius: 4px;
 }
