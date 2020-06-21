@@ -25,6 +25,590 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo文章插入音乐和视频</title>
+    <url>/post/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90%E5%92%8C%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>记录在文章中插入音乐或视频<br><div class="note warning">
+            <p>不建议使用直接使用网站生成的链接和代码插入的方式</p>
+          </div><br><a id="more"></a></p>
+<h2 id="使用插件hexo-tag-mmedia"><a href="#使用插件hexo-tag-mmedia" class="headerlink" title="使用插件hexo-tag-mmedia"></a>使用插件hexo-tag-mmedia</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hexo-tag-mmedia 是 MonoLogueChi 自用的一个媒体插入插件，在添加部分功能后发布给大家使用</p>
+<h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><p>个人推荐的话，音乐插入建议是<strong>MetingJS音乐插件</strong>，视频的话是<strong>Bilibili视频插件</strong></p>
+<h3 id="支持的平台"><a href="#支持的平台" class="headerlink" title="支持的平台"></a>支持的平台</h3><ul>
+<li><a href="https://github.com/DIYgod/APlayer" target="_blank" rel="noopener">Aplayer</a></li>
+<li><a href="https://github.com/metowolf/MetingJS" target="_blank" rel="noopener">Meting</a></li>
+<li><a href="https://github.com/DIYgod/DPlayer" target="_blank" rel="noopener">Dplayer</a></li>
+<li><a href="https://www.bilibili.com/" target="_blank" rel="noopener">Bilibili</a></li>
+<li>YouTube</li>
+<li><a href="https://github.com/zhw2590582/ArtPlayer" target="_blank" rel="noopener">ArtPlayer</a></li>
+</ul>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>本插件与以下插件冲突</p>
+<ul>
+<li>hexo-tag-aplayer</li>
+<li>hexo-tag-dplayer</li>
+<li>hexo-tag-bilibili</li>
+</ul>
+<p>如有安装，使用前请卸载。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-tag-aplayer</span><br><span class="line">npm uninstall hexo-tag-dplayer</span><br><span class="line">npm uninstall hexo-tag-bilibili</span><br></pre></td></tr></table></figure>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-mmedia --save</span><br></pre></td></tr></table></figure>
+<p>需要修改主目录下的<code>_config.yml</code> ，一般无需修改直接使用即可</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mmedia:</span></span><br><span class="line">  <span class="attr">aplayer:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js</span></span><br><span class="line">    <span class="attr">style_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">  <span class="attr">meting:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js</span></span><br><span class="line">    <span class="attr">api:</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">  <span class="attr">dplayer:</span></span><br><span class="line">    <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js</span></span><br><span class="line">    <span class="attr">style_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css</span></span><br><span class="line">    <span class="attr">hls_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/hls.j/dist/hls.min.js</span></span><br><span class="line">    <span class="attr">dash_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js</span></span><br><span class="line">    <span class="attr">shaka_dash_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js</span></span><br><span class="line">    <span class="attr">flv_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js</span></span><br><span class="line">    <span class="attr">webtorrent_cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js</span></span><br><span class="line">    <span class="attr">default:</span></span><br></pre></td></tr></table></figure>
+<p>default 项下可配置默认选项，例如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">meting:</span></span><br><span class="line">  <span class="attr">cdn:</span> <span class="string">https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js</span></span><br><span class="line">  <span class="attr">api:</span></span><br><span class="line">  <span class="attr">default:</span></span><br><span class="line">    <span class="attr">order:</span> <span class="string">random</span></span><br></pre></td></tr></table></figure>
+<h3 id="MetingJS音乐插件"><a href="#MetingJS音乐插件" class="headerlink" title="MetingJS音乐插件"></a>MetingJS音乐插件</h3><p>在文件直接插入以下代码即可，注意一下，如果是Typora的话需要切换成源码模式再插入</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;001Mf4Ic1aNYYK&quot; &quot;tencent&quot; &quot;album&quot; &quot;order:random&quot; &quot;listmaxheight:180px&quot; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% meting &quot;auto:https:&#x2F;&#x2F;y.qq.com&#x2F;n&#x2F;yqq&#x2F;song&#x2F;001RGrEX3ija5X.html&quot; &quot;autoplay&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>基本兼容 hexo-tag-aplayer，绝大部分可以直接从 hexo-tag-aplayer 迁移，参数形式为 <code>&quot;option:vaule&quot;</code>，不懂的可以参考 <a href="https://github.com/metowolf/MetingJS#option" target="_blank" rel="noopener">MetingJS</a></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">配置项</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td>必须</td>
+<td>音乐 id，第一个参数</td>
+</tr>
+<tr>
+<td style="text-align:left">server</td>
+<td>必须</td>
+<td>音乐平台，第二个参数，可选： <code>netease</code> , <code>tencent</code> , <code>kugou</code> ,<code>xiami</code> , <code>baidu</code></td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td>必须</td>
+<td>音乐类型，第三个参数，可选： <code>song</code> , <code>playlist</code> , <code>album``search</code> , <code>artist</code></td>
+</tr>
+<tr>
+<td style="text-align:left">auto</td>
+<td>无</td>
+<td>有 auto 选项时前面参数不需要填写，否则为必填，见示例 2</td>
+</tr>
+<tr>
+<td style="text-align:left">autoplay</td>
+<td><code>false</code></td>
+<td>自动播放，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td style="text-align:left">fixed</td>
+<td><code>false</code></td>
+<td>吸底模式，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td style="text-align:left">mini</td>
+<td><code>false</code></td>
+<td>迷你模式，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td style="text-align:left">listfolded</td>
+<td><code>false</code></td>
+<td>默认折叠列表，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td style="text-align:left">mutex</td>
+<td><code>true</code></td>
+<td>互斥，如不需互斥 <code>&quot;mutex:false&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">theme</td>
+<td><code>#2980b9</code></td>
+<td>主题颜色</td>
+</tr>
+<tr>
+<td style="text-align:left">loop</td>
+<td><code>all</code></td>
+<td>循环模式 ，可选值 <code>all</code> , <code>one</code> , <code>none</code></td>
+</tr>
+<tr>
+<td style="text-align:left">order</td>
+<td><code>list</code></td>
+<td>播放顺序，可选值 <code>list</code> , <code>random</code></td>
+</tr>
+<tr>
+<td style="text-align:left">preload</td>
+<td><code>auto</code></td>
+<td>预加载模式 ，可选 <code>none</code> , <code>metadata</code> , <code>auto</code></td>
+</tr>
+<tr>
+<td style="text-align:left">volume</td>
+<td><code>0.7</code></td>
+<td>默认音量，可选 <code>0-1</code></td>
+</tr>
+<tr>
+<td style="text-align:left">lrctype</td>
+<td><code>0</code></td>
+<td>歌词类型</td>
+</tr>
+<tr>
+<td style="text-align:left">listmaxheight</td>
+<td><code>340px</code></td>
+<td>播放器最大高度</td>
+</tr>
+<tr>
+<td style="text-align:left">storagename</td>
+<td><code>metingjs</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>后端服务器可以使用官方后端，也可以使用我自己写的后端服务器 <a href="https://github.com/MonoLogueChi/MetingJS.Server" target="_blank" rel="noopener">MetingJS.Server</a> 自建服务。</p>
+<h4 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h4><ul>
+<li>音乐列表形式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;001Mf4Ic1aNYYK&quot; &quot;tencent&quot; &quot;album&quot; &quot;order:random&quot; &quot;listmaxheight:180px&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>单首音乐</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;auto:https:&#x2F;&#x2F;y.qq.com&#x2F;n&#x2F;yqq&#x2F;song&#x2F;001RGrEX3ija5X.html&quot; &quot;autoplay&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Aplayer音乐插件"><a href="#Aplayer音乐插件" class="headerlink" title="Aplayer音乐插件"></a>Aplayer音乐插件</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer &quot;Caffeine&quot; &quot;Jeff Williams&quot; &quot;caffeine.mp3&quot; &quot;picture.jpg&quot; &quot;lrc:caffeine.txt&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>必须</td>
+<td>曲目标题，第一个参数</td>
+</tr>
+<tr>
+<td>author</td>
+<td>必须</td>
+<td>曲目作者，第二个参数</td>
+</tr>
+<tr>
+<td>url</td>
+<td>必须</td>
+<td>音乐文件地址</td>
+</tr>
+<tr>
+<td>picture_url</td>
+<td></td>
+<td>音乐对应的图片地址</td>
+</tr>
+<tr>
+<td>narrow</td>
+<td><code>false</code></td>
+<td>袖珍风格，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td><code>false</code></td>
+<td>自动播放，带有此参数表示 <code>true</code> ，不带表示 <code>false</code></td>
+</tr>
+<tr>
+<td>width:xxx</td>
+<td><code>100%</code></td>
+<td>播放器宽度</td>
+</tr>
+<tr>
+<td>lrc</td>
+<td></td>
+<td>歌词地址</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Bilibili视频插件"><a href="#Bilibili视频插件" class="headerlink" title="Bilibili视频插件"></a>Bilibili视频插件</h3><p>视频还是强烈推荐<strong>Bilibili</strong>的，毕竟视频又全又好用，关键免费</p>
+<h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% bilibili &quot;aid:60016166&quot; &quot;quality:high&quot; &quot;danmaku&quot; &quot;allowfullscreen&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>默认</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aid</td>
+<td>必填</td>
+<td>视频 av 号，填写 av 时非必填</td>
+</tr>
+<tr>
+<td>av</td>
+<td></td>
+<td>视频链接地址，不要带分 P 信息，与 aid 同时填写会被覆盖</td>
+</tr>
+<tr>
+<td>page</td>
+<td><code>1</code></td>
+<td>分 P，填写 av 时才会生效</td>
+</tr>
+<tr>
+<td>quality</td>
+<td><code>low</code></td>
+<td>视频质量，可选 <code>high</code> <code>low</code></td>
+</tr>
+<tr>
+<td>danmaku</td>
+<td><code>false</code></td>
+<td>开启弹幕，带有此参数表示 true，不带表示 false</td>
+</tr>
+<tr>
+<td>allowfullscreen</td>
+<td><code>true</code></td>
+<td>是否允许全屏</td>
+</tr>
+<tr>
+<td>width</td>
+<td><code>100%</code></td>
+<td>宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td><code>500px</code></td>
+<td>高度</td>
+</tr>
+<tr>
+<td>margin</td>
+<td><code>auto</code></td>
+<td>位置，css 属性，例： <code>&quot;margin:auto&quot;</code> <code>&quot;margin:0 0 0 auto&quot;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="演示-1"><a href="#演示-1" class="headerlink" title="演示"></a>演示</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% bilibili “aid:60016166” “quality:high” “danmaku” “allowfullscreen” %&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>music</tag>
+        <tag>plug</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基本数学公式语法(of MathJax)</title>
+    <url>/post/MathJax/</url>
+    <content><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="呈现位置"><a href="#呈现位置" class="headerlink" title="呈现位置"></a>呈现位置</h3><ul>
+<li>正文(inline)中的LaTeX公式用<code>$...$</code>定义<ul>
+<li>语句为<code>$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</code><br>显示为 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</li>
+</ul>
+</li>
+<li>单独显示(display)的LaTeX公式用<code>$$...$$</code>定义，此时公式居中并放大显示<ul>
+<li>语句为<code>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</code><br>显示为 <script type="math/tex">\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t</script></li>
+</ul>
+</li>
+<li>下列描述语句中若非特别指出均省略<code>$...$</code></li>
+</ul>
+<a id="more"></a>
+<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\alpha$</td>
+<td style="text-align:center">\alpha</td>
+<td style="text-align:center">$\beta$</td>
+<td style="text-align:center">\beta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gamma$</td>
+<td style="text-align:center">\gamma</td>
+<td style="text-align:center">$\delta$</td>
+<td style="text-align:center">\delta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon$</td>
+<td style="text-align:center">\epsilon</td>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center">\zeta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\eta$</td>
+<td style="text-align:center">\eta</td>
+<td style="text-align:center">$\theta$</td>
+<td style="text-align:center">\theta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\iota$</td>
+<td style="text-align:center">\iota</td>
+<td style="text-align:center">$\kappa$</td>
+<td style="text-align:center">\kappa</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lambda$</td>
+<td style="text-align:center">\lambda</td>
+<td style="text-align:center">$\mu$</td>
+<td style="text-align:center">\mu</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nu$</td>
+<td style="text-align:center">\nu</td>
+<td style="text-align:center">$\xi$</td>
+<td style="text-align:center">\xi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\pi$</td>
+<td style="text-align:center">\pi</td>
+<td style="text-align:center">$\rho$</td>
+<td style="text-align:center">\rho</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sigma$</td>
+<td style="text-align:center">\sigma</td>
+<td style="text-align:center">$\tau$</td>
+<td style="text-align:center">\tau</td>
+</tr>
+<tr>
+<td style="text-align:center">$\upsilon$</td>
+<td style="text-align:center">\upsilon</td>
+<td style="text-align:center">$\phi$</td>
+<td style="text-align:center">\phi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\chi$</td>
+<td style="text-align:center">\chi</td>
+<td style="text-align:center">$\psi$</td>
+<td style="text-align:center">\psi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega$</td>
+<td style="text-align:center">\omega</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>若需要大写希腊字母，将命令首字母大写即可。</li>
+<li><code>\Gamma</code>呈现为 $\Gamma$</li>
+<li>若需要斜体希腊字母，将命令前加上<code>var</code>前缀即可。</li>
+<li><code>\varGamma</code>呈现为 $\varGamma$</li>
+</ul>
+<h3 id="字母修饰"><a href="#字母修饰" class="headerlink" title="字母修饰"></a>字母修饰</h3><h4 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h4><ul>
+<li>上标：<code>^</code></li>
+<li>下标：<code>_</code></li>
+<li>举例：<code>C_n^2</code>呈现为$C_n^2$</li>
+</ul>
+<h4 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h4><ul>
+<li><code>\vec a</code>呈现为$\vec a$</li>
+<li><code>\overrightarrow{xy}</code>呈现为$\overrightarrow{xy}$</li>
+</ul>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><ul>
+<li>Typewriter：\mathtt{A}呈现为$\mathtt{A}$<ul>
+<li>$\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+<li>Blackboard Bold：\mathbb{A}呈现为$\mathbb{A}$<ul>
+<li>$\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+<li>Sans Serif：\mathsf{A}呈现为$\mathsf{A}$<ul>
+<li>$\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><ul>
+<li>使用<code>{}</code>将具有相同等级的内容扩入其中，成组处理</li>
+<li>举例：<code>10^{10}</code>呈现为$10^{10}$，而<code>10^10</code>呈现为$10^10$</li>
+</ul>
+<h4 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h4><ul>
+<li><p>小括号：<code>()</code>呈现为$()$</p>
+</li>
+<li><p>中括号：<code>[]</code>呈现为$[]$</p>
+</li>
+<li><p>尖括号：<code>\langle,\rangle</code>呈现为$\langle,\rangle$</p>
+<ul>
+<li>此处为与分组符号<code>{}</code>相区别，使用转义字符<code>\</code></li>
+</ul>
+</li>
+<li><p>使用<code>\left(</code>或<code>\right)</code>使符号大小与邻近的公式相适应；该语句适用于所有括号类型</p>
+<ul>
+<li><code>(\frac{x}{y})</code>呈现为$(\frac{x}{y})$</li>
+<li>而<code>\left(\frac{x}{y}\right)</code>呈现为$\left(\frac{x}{y}\right)$</li>
+</ul>
+</li>
+</ul>
+<h4 id="求和、极限与积分"><a href="#求和、极限与积分" class="headerlink" title="求和、极限与积分"></a>求和、极限与积分</h4><ul>
+<li>求和：<code>\sum</code><ul>
+<li>举例：<code>\sum{i=1}^n{a_i}</code>呈现为 $\sum{i=1}^n{a_i}$</li>
+</ul>
+</li>
+<li>极限：<code>\lim{x\to 0}</code>呈现为$\lim{x\to 0}$</li>
+<li>积分：<code>\int</code><ul>
+<li>举例：<code>\int0^\infty{fxdx}</code>呈现为 $\int0^\infty{fxdx}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h4><ul>
+<li><code>\函数名</code></li>
+<li>举例：<code>\sin x</code>，<code>\ln x</code>，<code>\max(A,B,C)</code>呈现为$\sin x$,$\ln x$,$\max(A,B,C)$</li>
+</ul>
+<h4 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">\infty</td>
+<td style="text-align:center">$\cup$</td>
+<td style="text-align:center">\cup</td>
+</tr>
+<tr>
+<td style="text-align:center">$\cap$</td>
+<td style="text-align:center">\cap</td>
+<td style="text-align:center">$\subset$</td>
+<td style="text-align:center">\subset</td>
+</tr>
+<tr>
+<td style="text-align:center">$\subseteq$</td>
+<td style="text-align:center">\subseteq</td>
+<td style="text-align:center">$\supset$</td>
+<td style="text-align:center">\supset</td>
+</tr>
+<tr>
+<td style="text-align:center">$\in$</td>
+<td style="text-align:center">\in</td>
+<td style="text-align:center">$\notin$</td>
+<td style="text-align:center">\notin</td>
+</tr>
+<tr>
+<td style="text-align:center">$\varnothing$</td>
+<td style="text-align:center">\varnothing</td>
+<td style="text-align:center">$\forall$</td>
+<td style="text-align:center">\forall</td>
+</tr>
+<tr>
+<td style="text-align:center">$\exists$</td>
+<td style="text-align:center">\exists</td>
+<td style="text-align:center">$\lnot$</td>
+<td style="text-align:center">\lnot</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nabla$</td>
+<td style="text-align:center">\nabla</td>
+<td style="text-align:center">$\partial$</td>
+<td style="text-align:center">\partial</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h4><ul>
+<li>LaTeX语法本身会忽略空格的存在</li>
+<li>小空格：<code>a\ b</code>呈现为$a b$</li>
+<li>4格空格：<code>a\quad b</code>呈现为$a\quad b$</li>
+</ul>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h4><ul>
+<li>起始标记<code>\begin{matrix}，结束标记\end{matrix}</code></li>
+<li>每一行末尾标记<code>\\</code>，行间元素之间以<code>&amp;</code>分隔</li>
+<li>举例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line">1&amp;0&amp;0\\</span><br><span class="line">0&amp;1&amp;0\\</span><br><span class="line">0&amp;0&amp;1\\</span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
+<script type="math/tex; mode=display">
+\begin{matrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{matrix}</script><h4 id="矩阵边框"><a href="#矩阵边框" class="headerlink" title="矩阵边框"></a>矩阵边框</h4><p>在起始、结束标记处用下列词替换<code>matrix</code></p>
+<ul>
+<li><code>pmatrix</code>：小括号边框</li>
+<li><code>bmatrix</code>：中括号边框</li>
+<li><code>Bmatrix</code>：大括号边框</li>
+<li><code>vmatrix</code>：单竖线边框</li>
+<li><code>Vmatrix</code>：双竖线边框</li>
+</ul>
+<h4 id="省略元素"><a href="#省略元素" class="headerlink" title="省略元素"></a>省略元素</h4><ul>
+<li>横省略号：<code>\cdots</code></li>
+<li>竖省略号：<code>\vdots</code></li>
+<li>斜省略号：<code>\ddots</code></li>
+<li>举例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;bmatrix&#125;</span><br><span class="line">&#123;a_&#123;11&#125;&#125;&amp;&#123;a_&#123;12&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;1n&#125;&#125;\\</span><br><span class="line">&#123;a_&#123;21&#125;&#125;&amp;&#123;a_&#123;22&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;2n&#125;&#125;\\</span><br><span class="line">&#123;\vdots&#125;&amp;&#123;\vdots&#125;&amp;&#123;\ddots&#125;&amp;&#123;\vdots&#125;\\</span><br><span class="line">&#123;a_&#123;m1&#125;&#125;&amp;&#123;a_&#123;m2&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;mn&#125;&#125;\\</span><br><span class="line">\end&#123;bmatrix&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{a_{11}}&{a_{12}}&{\cdots}&{a_{1n}}\\
+{a_{21}}&{a_{22}}&{\cdots}&{a_{2n}}\\
+{\vdots}&{\vdots}&{\ddots}&{\vdots}\\
+{a_{m1}}&{a_{m2}}&{\cdots}&{a_{mn}}\\
+\end{bmatrix}</script><h4 id="阵列"><a href="#阵列" class="headerlink" title="阵列"></a>阵列</h4><ul>
+<li><p>需要array环境：起始、结束处以<code>{array}</code>声明</p>
+</li>
+<li><p>对齐方式：在<code>{array}</code>后以<code>{}</code>逐行统一声明</p>
+<ul>
+<li>左对齐：<code>l</code>；居中：<code>c</code>；右对齐：<code>r</code></li>
+<li>竖直线：在声明对齐方式时，插入<code>|</code>建立竖直线</li>
+</ul>
+</li>
+<li><p>插入水平线：<code>\hline</code></p>
+</li>
+<li><p>举例</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;array&#125;&#123;c|lll&#125;</span><br><span class="line">&#123;↓&#125;&amp;&#123;a&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;\\</span><br><span class="line">\hline</span><br><span class="line">&#123;R_1&#125;&amp;&#123;c&#125;&amp;&#123;b&#125;&amp;&#123;a&#125;\\</span><br><span class="line">&#123;R_2&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;&amp;&#123;c&#125;\\</span><br><span class="line">\end&#123;array&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{array}{c|lll}
+{↓}&{a}&{b}&{c}\\
+\hline
+{R_1}&{c}&{b}&{a}\\
+{R_2}&{b}&{c}&{c}\\
+\end{array}</script><h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><ul>
+<li>需要cases环境：起始、结束处以<code>{cases}</code>声明</li>
+<li>举例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a<span class="emphasis">_1x+b_</span>1y+c<span class="emphasis">_1z=d_</span>1\\</span><br><span class="line">a<span class="emphasis">_2x+b_</span>2y+c<span class="emphasis">_2z=d_</span>2\\</span><br><span class="line">a<span class="emphasis">_3x+b_</span>3y+c<span class="emphasis">_3z=d_</span>3\\</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{cases}
+a_1x+b_1y+c_1z=d_1\\
+a_2x+b_2y+c_2z=d_2\\
+a_3x+b_3y+c_3z=d_3\\
+\end{cases}</script><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax tutorial</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>mathjax</tag>
+        <tag>katex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT添加新的页面</title>
+    <url>/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<p>给博客添加一个新的页面(page)，基本步骤与Next主题文档中添加tag或categories页面的步骤基本一致，但是由于Next主题菜单项中没有自带留言项，所以需要做一些小调整，下面用新建相册页面来介绍一下详细步骤。<br><a id="more"></a></p>
+<h3 id="1-在菜单中添加photo"><a href="#1-在菜单中添加photo" class="headerlink" title="1.在菜单中添加photo"></a>1.在菜单中添加photo</h3><h4 id="1-1-修改主题配置文件"><a href="#1-1-修改主题配置文件" class="headerlink" title="1.1.修改主题配置文件"></a>1.1.修改主题配置文件</h4><p>打开Next主题目录下的<code>_config.yml</code>（注意不是Hexo目录下的_config.yml,是 <strong><span class="label danger">Next主题目录</span></strong> 下的_config.yml，路径为blog/themes/next/_config.yml），在<code>menu</code>项下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">/photo/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-camera-retro</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-2-添加对应的译文"><a href="#1-2-添加对应的译文" class="headerlink" title="1.2.添加对应的译文"></a>1.2.添加对应的译文</h4><p>在<code>~/themes/next/languages/zh-CN.yml</code>文件中的<code>menu</code>下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">相册</span></span><br><span class="line">  <span class="string">...</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-创建photo页面"><a href="#2-创建photo页面" class="headerlink" title="2.创建photo页面"></a>2.创建photo页面</h3><p>终端下进入Hexo根目录，运行以下命令创建<code>photo</code>页面：</p>
+<figure class="highlight plain"><figcaption><span>hexo根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo new page photo</span><br></pre></td></tr></table></figure>
+<p>此时在Hexo根目录下的source文件夹中应该就能看到<code>photo</code>文件夹了，进入<code>photo</code>文件夹打开<code>index.md</code>文件，再自行修改其中内容即可。<br>最后再输入<code>hexo clean &amp;&amp; hexo s</code>就可以查看效果了。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《TCP-IP网络编程》学习笔记</title>
     <url>/post/%E3%80%8ATCP-IP%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="本篇来自转载"><a href="#本篇来自转载" class="headerlink" title="#本篇来自转载"></a><strong>#本篇来自转载</strong></h2><p>我的环境是：Ubuntu18.04 LTS</p>
@@ -2786,7 +3370,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">And then define the link:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://google.com/</span></span><br></pre></td></tr></table></figure>
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x69;&#64;&#x74;&#121;&#x70;&#x6f;&#x72;&#97;&#x2e;&#x69;&#111;">&#x69;&#64;&#x74;&#121;&#x70;&#x6f;&#x72;&#97;&#x2e;&#x69;&#111;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x69;&#x40;&#x74;&#x79;&#x70;&#x6f;&#114;&#97;&#46;&#105;&#111;">&#x69;&#x40;&#x74;&#x79;&#x70;&#x6f;&#114;&#97;&#46;&#105;&#111;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: www.google.com.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -3005,12 +3589,14 @@
 <h2 id="使用MathJax"><a href="#使用MathJax" class="headerlink" title="使用MathJax"></a>使用MathJax</h2><h3 id="使用kramed代替marked"><a href="#使用kramed代替marked" class="headerlink" title="使用kramed代替marked"></a>使用kramed代替marked</h3><p>hexo 默认的渲染引擎是 <code>marked</code>，但是 marked 不支持 <code>mathjax</code>。 <code>kramed</code>是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>.</p>
 <figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
 <p>然后，更改<code>/node_modules/hexo-renderer-kramed/lib/</code>下的<code>renderer.js</code>文件：</p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">// Change inline math rule</span><br><span class="line">function formatText(text) &#123;</span><br><span class="line"><span class="deletion">-    // Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line"><span class="deletion">-    return text.replace(/`\$(.*?)\$`/g, '$$$$$1$$$$');</span></span><br><span class="line"><span class="addition">+    return text;</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>diff</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">-    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">-    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">+    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="更改默认转义规则"><a href="#更改默认转义规则" class="headerlink" title="更改默认转义规则"></a>更改默认转义规则</h3><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 <code>_</code>转为 <code>&lt;em&gt;</code>, 所以我们需要对默认的规则进行修改.</p>
 <figure class="highlight diff"><figcaption><span>~/node_modules/kramed/lib/rules/inline.js</span></figcaption><table><tr><td class="code"><pre><span class="line">// 替换11行</span><br><span class="line"><span class="deletion">-  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</span></span><br><span class="line"></span><br><span class="line">//替换20行</span><br><span class="line"><span class="deletion">-  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
 <h3 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h3><p>设置<code>_config.yml</code>：</p>
 <figure class="highlight diff"><figcaption><span>~/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">mathjax:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line">  perpage: false</span><br><span class="line">  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-<h3 id="修改post模板"><a href="#修改post模板" class="headerlink" title="修改post模板"></a><a name="mod">修改post模板</a></h3><figure class="highlight diff"><figcaption><span>~/scaffolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">    - </span><br><span class="line">categories: </span><br><span class="line">    - </span><br><span class="line"><span class="addition">+ mathjax: false</span></span><br></pre></td></tr></table></figure>
+<h3 id="mod">修改post模板</h3>
+
+<figure class="highlight diff"><figcaption><span>~/scaffolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">    - </span><br><span class="line">categories: </span><br><span class="line">    - </span><br><span class="line"><span class="addition">+ mathjax: false</span></span><br></pre></td></tr></table></figure>
 <p>文章需要渲染数学公式时改为<code>true</code>就行了。</p>
 <hr>
 <h2 id="使用Katex"><a href="#使用Katex" class="headerlink" title="使用Katex"></a>使用Katex</h2><h3 id="使用markdown-it-plus代替marked"><a href="#使用markdown-it-plus代替marked" class="headerlink" title="使用markdown-it-plus代替marked"></a>使用markdown-it-plus代替marked</h3><p>安装插件：</p>
@@ -3308,7 +3894,7 @@
     <title>Hexo中使用emoji表情</title>
     <url>/post/Hexo%E4%B8%AD%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/</url>
     <content><![CDATA[<div class="note danger no-icon">
-            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br><del>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</del><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是不会立即看到效果，经过反复尝试，都是几小时后才生效。。</p>
+            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br><del>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</del><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是上面两个插件和<code>hexo-renderer-markdown-it-plus</code>不能同时安装！！</p>
           </div>
 <p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>将markdown转化为html的转化器叫做markdown渲染器。<br>在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。<br><a id="more"></a></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>命令行如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-emoji --save</span><br></pre></td></tr></table></figure></p>

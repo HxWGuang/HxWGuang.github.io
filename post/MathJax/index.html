@@ -21,22 +21,21 @@
     var CONFIG = {"hostname":"hxwguang.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文主要记录用于渲染数学公式的两个插件：MathJax和Katex。">
+  <meta name="description" content="基本语法呈现位置 正文(inline)中的LaTeX公式用$...$定义 语句为$\sum_{i&#x3D;0}^N\int_{a}^{b}g(t,i)\text{d}t$显示为 $\sum_{i&#x3D;0}^N\int_{a}^{b}g(t,i)\text{d}t$   单独显示(display)的LaTeX公式用$$...$$定义，此时公式居中并放大显示 语句为$$\sum_{i&#x3D;0}^N\int_{a}^{">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo中插入数学公式">
-<meta property="og:url" content="http://hxwguang.github.io/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/index.html">
+<meta property="og:title" content="基本数学公式语法(of MathJax)">
+<meta property="og:url" content="http://hxwguang.github.io/post/MathJax/index.html">
 <meta property="og:site_name" content="HxGuang&#39;s Home">
-<meta property="og:description" content="本文主要记录用于渲染数学公式的两个插件：MathJax和Katex。">
+<meta property="og:description" content="基本语法呈现位置 正文(inline)中的LaTeX公式用$...$定义 语句为$\sum_{i&#x3D;0}^N\int_{a}^{b}g(t,i)\text{d}t$显示为 $\sum_{i&#x3D;0}^N\int_{a}^{b}g(t,i)\text{d}t$   单独显示(display)的LaTeX公式用$$...$$定义，此时公式居中并放大显示 语句为$$\sum_{i&#x3D;0}^N\int_{a}^{">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-27T11:27:39.000Z">
-<meta property="article:modified_time" content="2020-06-21T08:22:16.468Z">
+<meta property="article:published_time" content="2020-06-21T08:42:46.000Z">
+<meta property="article:modified_time" content="2020-06-21T10:46:38.132Z">
 <meta property="article:author" content="HxGuang">
-<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="mathjax">
 <meta property="article:tag" content="katex">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://hxwguang.github.io/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">
+<link rel="canonical" href="http://hxwguang.github.io/post/MathJax/">
 
 
 <script id="page-configurations">
@@ -92,7 +91,7 @@
 }
 </style>
 
-  <title>Hexo中插入数学公式 | HxGuang's Home</title>
+  <title>基本数学公式语法(of MathJax) | HxGuang's Home</title>
   
 
 
@@ -247,7 +246,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://hxwguang.github.io/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://hxwguang.github.io/post/MathJax/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/touxiang.jpg">
@@ -260,7 +259,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo中插入数学公式
+          基本数学公式语法(of MathJax)
         </h1>
 
         <div class="post-meta">
@@ -270,23 +269,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-01-27 19:27:39" itemprop="dateCreated datePublished" datetime="2020-01-27T19:27:39+08:00">2020-01-27</time>
+              <time title="创建时间：2020-06-21 16:42:46 / 修改时间：18:46:38" itemprop="dateCreated datePublished" datetime="2020-06-21T16:42:46+08:00">2020-06-21</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-21 16:22:16" itemprop="dateModified" datetime="2020-06-21T16:22:16+08:00">2020-06-21</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
                 </span>
             </span>
 
@@ -308,45 +301,296 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文主要记录用于渲染数学公式的两个插件：<code>MathJax</code>和<code>Katex</code>。<br><a id="more"></a></p>
-<p>[toc]</p>
-<h2 id="使用MathJax"><a href="#使用MathJax" class="headerlink" title="使用MathJax"></a>使用MathJax</h2><h3 id="使用kramed代替marked"><a href="#使用kramed代替marked" class="headerlink" title="使用kramed代替marked"></a>使用kramed代替marked</h3><p>hexo 默认的渲染引擎是 <code>marked</code>，但是 marked 不支持 <code>mathjax</code>。 <code>kramed</code>是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>.</p>
-<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>然后，更改<code>/node_modules/hexo-renderer-kramed/lib/</code>下的<code>renderer.js</code>文件：</p>
-<figure class="highlight js"><figcaption><span>diff</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">-    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">-    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">+    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="更改默认转义规则"><a href="#更改默认转义规则" class="headerlink" title="更改默认转义规则"></a>更改默认转义规则</h3><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 <code>_</code>转为 <code>&lt;em&gt;</code>, 所以我们需要对默认的规则进行修改.</p>
-<figure class="highlight diff"><figcaption><span>~/node_modules/kramed/lib/rules/inline.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 替换11行</span><br><span class="line"><span class="deletion">-  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</span></span><br><span class="line"></span><br><span class="line">//替换20行</span><br><span class="line"><span class="deletion">-  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
-<h3 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h3><p>设置<code>_config.yml</code>：</p>
-<figure class="highlight diff"><figcaption><span>~/themes/next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mathjax:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line">  perpage: false</span><br><span class="line">  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-<h3 id="mod">修改post模板</h3>
-
-<figure class="highlight diff"><figcaption><span>~/scaffolds/post.md</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">    - </span><br><span class="line">categories: </span><br><span class="line">    - </span><br><span class="line"><span class="addition">+ mathjax: false</span></span><br></pre></td></tr></table></figure>
-<p>文章需要渲染数学公式时改为<code>true</code>就行了。</p>
-<hr>
-<h2 id="使用Katex"><a href="#使用Katex" class="headerlink" title="使用Katex"></a>使用Katex</h2><h3 id="使用markdown-it-plus代替marked"><a href="#使用markdown-it-plus代替marked" class="headerlink" title="使用markdown-it-plus代替marked"></a>使用markdown-it-plus代替marked</h3><p>安装插件：</p>
-<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked --save</span><br><span class="line">$ npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在主题配置文件里设置：</p>
-<figure class="highlight yml"><figcaption><span>~/next/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span> <span class="comment">#如果这个选项是false，那么每一个网页都会引入公式渲染，这是很浪费的，只需要在需要公式渲染功能的博文md文件的头部，添加一行`mathjax: true`(使用Katex引擎渲染也是在文件头部标记`mathjax: true`，表示支持公式)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加样式"><a href="#添加样式" class="headerlink" title="添加样式"></a>添加样式</h3><p>在<code>~/source/_data/head.swig</code>文件里添加：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css"</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>然后修改模板<code>post.md</code>，<a href="#mod">同上</a></p>
-<hr>
-<h2 id="简单语法"><a href="#简单语法" class="headerlink" title="简单语法"></a>简单语法</h2><h3 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h3><p>两边各用一个<code>$</code>包裹起来：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$\sqrt&#123;3x-1&#125;+(1+x)^2$</span><br></pre></td></tr></table></figure>
-<p>$\sqrt{3x-1}+(1+x)^2$</p>
-<h3 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h3><p>上下各用一个(<code>$$</code>) 包裹起来：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;c&#125;</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;B&#125;&#125; -\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;E&#125;&#125;&#125;&#123;\partial t&#125; &amp;</span><br><span class="line">&#x3D; \frac&#123;4\pi&#125;&#123;c&#125;\vec&#123;\mathbf&#123;j&#125;&#125;    \nabla \cdot \vec&#123;\mathbf&#123;E&#125;&#125; &amp; &#x3D; 4 \pi \rho \\</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;E&#125;&#125;\, +\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;B&#125;&#125;&#125;&#123;\partial t&#125; &amp; &#x3D; \vec&#123;\mathbf&#123;0&#125;&#125; \\</span><br><span class="line"></span><br><span class="line">\nabla \cdot \vec&#123;\mathbf&#123;B&#125;&#125; &amp; &#x3D; 0</span><br><span class="line"></span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+        <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="呈现位置"><a href="#呈现位置" class="headerlink" title="呈现位置"></a>呈现位置</h3><ul>
+<li>正文(inline)中的LaTeX公式用<code>$...$</code>定义<ul>
+<li>语句为<code>$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</code><br>显示为 $\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$</li>
+</ul>
+</li>
+<li>单独显示(display)的LaTeX公式用<code>$$...$$</code>定义，此时公式居中并放大显示<ul>
+<li>语句为<code>$$\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t$$</code><br>显示为 <script type="math/tex">\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t</script></li>
+</ul>
+</li>
+<li>下列描述语句中若非特别指出均省略<code>$...$</code></li>
+</ul>
+<a id="more"></a>
+<h3 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\alpha$</td>
+<td style="text-align:center">\alpha</td>
+<td style="text-align:center">$\beta$</td>
+<td style="text-align:center">\beta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\gamma$</td>
+<td style="text-align:center">\gamma</td>
+<td style="text-align:center">$\delta$</td>
+<td style="text-align:center">\delta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\epsilon$</td>
+<td style="text-align:center">\epsilon</td>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center">\zeta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\eta$</td>
+<td style="text-align:center">\eta</td>
+<td style="text-align:center">$\theta$</td>
+<td style="text-align:center">\theta</td>
+</tr>
+<tr>
+<td style="text-align:center">$\iota$</td>
+<td style="text-align:center">\iota</td>
+<td style="text-align:center">$\kappa$</td>
+<td style="text-align:center">\kappa</td>
+</tr>
+<tr>
+<td style="text-align:center">$\lambda$</td>
+<td style="text-align:center">\lambda</td>
+<td style="text-align:center">$\mu$</td>
+<td style="text-align:center">\mu</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nu$</td>
+<td style="text-align:center">\nu</td>
+<td style="text-align:center">$\xi$</td>
+<td style="text-align:center">\xi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\pi$</td>
+<td style="text-align:center">\pi</td>
+<td style="text-align:center">$\rho$</td>
+<td style="text-align:center">\rho</td>
+</tr>
+<tr>
+<td style="text-align:center">$\sigma$</td>
+<td style="text-align:center">\sigma</td>
+<td style="text-align:center">$\tau$</td>
+<td style="text-align:center">\tau</td>
+</tr>
+<tr>
+<td style="text-align:center">$\upsilon$</td>
+<td style="text-align:center">\upsilon</td>
+<td style="text-align:center">$\phi$</td>
+<td style="text-align:center">\phi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\chi$</td>
+<td style="text-align:center">\chi</td>
+<td style="text-align:center">$\psi$</td>
+<td style="text-align:center">\psi</td>
+</tr>
+<tr>
+<td style="text-align:center">$\omega$</td>
+<td style="text-align:center">\omega</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>若需要大写希腊字母，将命令首字母大写即可。</li>
+<li><code>\Gamma</code>呈现为 $\Gamma$</li>
+<li>若需要斜体希腊字母，将命令前加上<code>var</code>前缀即可。</li>
+<li><code>\varGamma</code>呈现为 $\varGamma$</li>
+</ul>
+<h3 id="字母修饰"><a href="#字母修饰" class="headerlink" title="字母修饰"></a>字母修饰</h3><h4 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h4><ul>
+<li>上标：<code>^</code></li>
+<li>下标：<code>_</code></li>
+<li>举例：<code>C_n^2</code>呈现为$C_n^2$</li>
+</ul>
+<h4 id="矢量"><a href="#矢量" class="headerlink" title="矢量"></a>矢量</h4><ul>
+<li><code>\vec a</code>呈现为$\vec a$</li>
+<li><code>\overrightarrow{xy}</code>呈现为$\overrightarrow{xy}$</li>
+</ul>
+<h4 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h4><ul>
+<li>Typewriter：\mathtt{A}呈现为$\mathtt{A}$<ul>
+<li>$\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+<li>Blackboard Bold：\mathbb{A}呈现为$\mathbb{A}$<ul>
+<li>$\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+<li>Sans Serif：\mathsf{A}呈现为$\mathsf{A}$<ul>
+<li>$\mathsf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><ul>
+<li>使用<code>{}</code>将具有相同等级的内容扩入其中，成组处理</li>
+<li>举例：<code>10^{10}</code>呈现为$10^{10}$，而<code>10^10</code>呈现为$10^10$</li>
+</ul>
+<h4 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h4><ul>
+<li><p>小括号：<code>()</code>呈现为$()$</p>
+</li>
+<li><p>中括号：<code>[]</code>呈现为$[]$</p>
+</li>
+<li><p>尖括号：<code>\langle,\rangle</code>呈现为$\langle,\rangle$</p>
+<ul>
+<li>此处为与分组符号<code>{}</code>相区别，使用转义字符<code>\</code></li>
+</ul>
+</li>
+<li><p>使用<code>\left(</code>或<code>\right)</code>使符号大小与邻近的公式相适应；该语句适用于所有括号类型</p>
+<ul>
+<li><code>(\frac{x}{y})</code>呈现为$(\frac{x}{y})$</li>
+<li>而<code>\left(\frac{x}{y}\right)</code>呈现为$\left(\frac{x}{y}\right)$</li>
+</ul>
+</li>
+</ul>
+<h4 id="求和、极限与积分"><a href="#求和、极限与积分" class="headerlink" title="求和、极限与积分"></a>求和、极限与积分</h4><ul>
+<li>求和：<code>\sum</code><ul>
+<li>举例：<code>\sum{i=1}^n{a_i}</code>呈现为 $\sum{i=1}^n{a_i}$</li>
+</ul>
+</li>
+<li>极限：<code>\lim{x\to 0}</code>呈现为$\lim{x\to 0}$</li>
+<li>积分：<code>\int</code><ul>
+<li>举例：<code>\int0^\infty{fxdx}</code>呈现为 $\int0^\infty{fxdx}$</li>
+</ul>
+</li>
+</ul>
+<h4 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h4><ul>
+<li><code>\函数名</code></li>
+<li>举例：<code>\sin x</code>，<code>\ln x</code>，<code>\max(A,B,C)</code>呈现为$\sin x$,$\ln x$,$\max(A,B,C)$</li>
+</ul>
+<h4 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">\infty</td>
+<td style="text-align:center">$\cup$</td>
+<td style="text-align:center">\cup</td>
+</tr>
+<tr>
+<td style="text-align:center">$\cap$</td>
+<td style="text-align:center">\cap</td>
+<td style="text-align:center">$\subset$</td>
+<td style="text-align:center">\subset</td>
+</tr>
+<tr>
+<td style="text-align:center">$\subseteq$</td>
+<td style="text-align:center">\subseteq</td>
+<td style="text-align:center">$\supset$</td>
+<td style="text-align:center">\supset</td>
+</tr>
+<tr>
+<td style="text-align:center">$\in$</td>
+<td style="text-align:center">\in</td>
+<td style="text-align:center">$\notin$</td>
+<td style="text-align:center">\notin</td>
+</tr>
+<tr>
+<td style="text-align:center">$\varnothing$</td>
+<td style="text-align:center">\varnothing</td>
+<td style="text-align:center">$\forall$</td>
+<td style="text-align:center">\forall</td>
+</tr>
+<tr>
+<td style="text-align:center">$\exists$</td>
+<td style="text-align:center">\exists</td>
+<td style="text-align:center">$\lnot$</td>
+<td style="text-align:center">\lnot</td>
+</tr>
+<tr>
+<td style="text-align:center">$\nabla$</td>
+<td style="text-align:center">\nabla</td>
+<td style="text-align:center">$\partial$</td>
+<td style="text-align:center">\partial</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h4><ul>
+<li>LaTeX语法本身会忽略空格的存在</li>
+<li>小空格：<code>a\ b</code>呈现为$a b$</li>
+<li>4格空格：<code>a\quad b</code>呈现为$a\quad b$</li>
+</ul>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><h4 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h4><ul>
+<li>起始标记<code>\begin{matrix}，结束标记\end{matrix}</code></li>
+<li>每一行末尾标记<code>\\</code>，行间元素之间以<code>&amp;</code>分隔</li>
+<li>举例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line">1&amp;0&amp;0\\</span><br><span class="line">0&amp;1&amp;0\\</span><br><span class="line">0&amp;0&amp;1\\</span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
 <script type="math/tex; mode=display">
-\begin{array}{c}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}} & = 0
-\end{array}</script><hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX" target="_blank" rel="noopener">Function Support in KaTeX</a></li>
-<li><a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener">Markdown-it</a> </li>
-</ol>
+\begin{matrix}
+1&0&0\\
+0&1&0\\
+0&0&1\\
+\end{matrix}</script><h4 id="矩阵边框"><a href="#矩阵边框" class="headerlink" title="矩阵边框"></a>矩阵边框</h4><p>在起始、结束标记处用下列词替换<code>matrix</code></p>
+<ul>
+<li><code>pmatrix</code>：小括号边框</li>
+<li><code>bmatrix</code>：中括号边框</li>
+<li><code>Bmatrix</code>：大括号边框</li>
+<li><code>vmatrix</code>：单竖线边框</li>
+<li><code>Vmatrix</code>：双竖线边框</li>
+</ul>
+<h4 id="省略元素"><a href="#省略元素" class="headerlink" title="省略元素"></a>省略元素</h4><ul>
+<li>横省略号：<code>\cdots</code></li>
+<li>竖省略号：<code>\vdots</code></li>
+<li>斜省略号：<code>\ddots</code></li>
+<li>举例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;bmatrix&#125;</span><br><span class="line">&#123;a_&#123;11&#125;&#125;&amp;&#123;a_&#123;12&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;1n&#125;&#125;\\</span><br><span class="line">&#123;a_&#123;21&#125;&#125;&amp;&#123;a_&#123;22&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;2n&#125;&#125;\\</span><br><span class="line">&#123;\vdots&#125;&amp;&#123;\vdots&#125;&amp;&#123;\ddots&#125;&amp;&#123;\vdots&#125;\\</span><br><span class="line">&#123;a_&#123;m1&#125;&#125;&amp;&#123;a_&#123;m2&#125;&#125;&amp;&#123;\cdots&#125;&amp;&#123;a_&#123;mn&#125;&#125;\\</span><br><span class="line">\end&#123;bmatrix&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+{a_{11}}&{a_{12}}&{\cdots}&{a_{1n}}\\
+{a_{21}}&{a_{22}}&{\cdots}&{a_{2n}}\\
+{\vdots}&{\vdots}&{\ddots}&{\vdots}\\
+{a_{m1}}&{a_{m2}}&{\cdots}&{a_{mn}}\\
+\end{bmatrix}</script><h4 id="阵列"><a href="#阵列" class="headerlink" title="阵列"></a>阵列</h4><ul>
+<li><p>需要array环境：起始、结束处以<code>{array}</code>声明</p>
+</li>
+<li><p>对齐方式：在<code>{array}</code>后以<code>{}</code>逐行统一声明</p>
+<ul>
+<li>左对齐：<code>l</code>；居中：<code>c</code>；右对齐：<code>r</code></li>
+<li>竖直线：在声明对齐方式时，插入<code>|</code>建立竖直线</li>
+</ul>
+</li>
+<li><p>插入水平线：<code>\hline</code></p>
+</li>
+<li><p>举例</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;array&#125;&#123;c|lll&#125;</span><br><span class="line">&#123;↓&#125;&amp;&#123;a&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;\\</span><br><span class="line">\hline</span><br><span class="line">&#123;R_1&#125;&amp;&#123;c&#125;&amp;&#123;b&#125;&amp;&#123;a&#125;\\</span><br><span class="line">&#123;R_2&#125;&amp;&#123;b&#125;&amp;&#123;c&#125;&amp;&#123;c&#125;\\</span><br><span class="line">\end&#123;array&#125;$$</span><br></pre></td></tr></table></figure>
+<p>呈现为</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{array}{c|lll}
+{↓}&{a}&{b}&{c}\\
+\hline
+{R_1}&{c}&{b}&{a}\\
+{R_2}&{b}&{c}&{c}\\
+\end{array}</script><h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><ul>
+<li>需要cases环境：起始、结束处以<code>{cases}</code>声明</li>
+<li>举例</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;cases&#125;</span><br><span class="line">a<span class="emphasis">_1x+b_</span>1y+c<span class="emphasis">_1z=d_</span>1\\</span><br><span class="line">a<span class="emphasis">_2x+b_</span>2y+c<span class="emphasis">_2z=d_</span>2\\</span><br><span class="line">a<span class="emphasis">_3x+b_</span>3y+c<span class="emphasis">_3z=d_</span>3\\</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{cases}
+a_1x+b_1y+c_1z=d_1\\
+a_2x+b_2y+c_2z=d_2\\
+a_3x+b_3y+c_3z=d_3\\
+\end{cases}</script><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax tutorial</a></p>
 
     </div>
 
@@ -362,7 +606,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://hxwguang.github.io/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" title="Hexo中插入数学公式">http://hxwguang.github.io/post/Hexo中插入数学公式/</a>
+    <a href="http://hxwguang.github.io/post/MathJax/" title="基本数学公式语法(of MathJax)">http://hxwguang.github.io/post/MathJax/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -374,7 +618,6 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
               <a href="/tags/mathjax/" rel="tag"><i class="fa fa-tag"></i> mathjax</a>
               <a href="/tags/katex/" rel="tag"><i class="fa fa-tag"></i> katex</a>
           </div>
@@ -385,12 +628,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/post/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
+    <a href="/post/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90%E5%92%8C%E8%A7%86%E9%A2%91/" rel="prev" title="hexo文章插入音乐和视频">
+      <i class="fa fa-chevron-left"></i> hexo文章插入音乐和视频
     </a></div>
       <div class="post-nav-item">
-    <a href="/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/" rel="next" title="hexo-renderer-markdown-it里的插件使用">
-      hexo-renderer-markdown-it里的插件使用 <i class="fa fa-chevron-right"></i>
+    <a href="/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/" rel="next" title="NexT添加新的页面">
+      NexT添加新的页面 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -451,7 +694,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用MathJax"><span class="nav-text">使用MathJax</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用kramed代替marked"><span class="nav-text">使用kramed代替marked</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改默认转义规则"><span class="nav-text">更改默认转义规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启MathJax"><span class="nav-text">开启MathJax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mod"><span class="nav-text">修改post模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Katex"><span class="nav-text">使用Katex</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用markdown-it-plus代替marked"><span class="nav-text">使用markdown-it-plus代替marked</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加样式"><span class="nav-text">添加样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单语法"><span class="nav-text">简单语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#行内公式"><span class="nav-text">行内公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行公式"><span class="nav-text">多行公式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#呈现位置"><span class="nav-text">呈现位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希腊字母"><span class="nav-text">希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字母修饰"><span class="nav-text">字母修饰</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上下标"><span class="nav-text">上下标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矢量"><span class="nav-text">矢量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字体"><span class="nav-text">字体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分组"><span class="nav-text">分组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#括号"><span class="nav-text">括号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#求和、极限与积分"><span class="nav-text">求和、极限与积分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊函数"><span class="nav-text">特殊函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊符号"><span class="nav-text">特殊符号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空格"><span class="nav-text">空格</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵"><span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法-1"><span class="nav-text">基本语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#矩阵边框"><span class="nav-text">矩阵边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#省略元素"><span class="nav-text">省略元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阵列"><span class="nav-text">阵列</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方程组"><span class="nav-text">方程组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -801,7 +1044,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'comments',
       owner       : 'HxWGuang',
       admin       : ['HxWGuang'],
-      id          : '429a38b620776981fbfd248bdf619132',
+      id          : '0b46b74f559bf782b14713f89523eb50',
         language: 'zh-CN',
       distractionFreeMode: true
     });
