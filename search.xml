@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo-NexT主题美化</title>
+    <url>/post/Hexo-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p>这里包括了本站所有有关NexT主题美化的教程。<br><a id="more"></a></p>
+<ul>
+<li><a href="https://hxwguang.github.io/post/给文章添加置顶/">给文章添加置顶功能</a></li>
+<li><a href="https://hxwguang.github.io/post/Hexo-Next主题中添加aplayer播放器/">添加Aplayer音乐播放器</a></li>
+<li><a href="https://hxwguang.github.io/post/Hexo中使用emoji表情/">在Hexo中使用emoji表情</a></li>
+</ul>
+<hr>
+<ol>
+<li>参考：<a href="https://io-oi.me/tech/hexo-next-optimization" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization</a></li>
+<li>参考：<a href="https://juejin.im/post/5bcd2d395188255c3b7dc1db" target="_blank" rel="noopener">https://juejin.im/post/5bcd2d395188255c3b7dc1db</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>美化</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>美化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML字符实体</title>
     <url>/post/HTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93/</url>
     <content><![CDATA[<div class="note info">
@@ -166,15 +190,15 @@
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure><br>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
-        <category>记录</category>
         <category>美化</category>
+        <category>记录</category>
         <category>捣鼓</category>
       </categories>
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-        <tag>aplayer</tag>
         <tag>美化</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
@@ -390,82 +414,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-NexT主题美化</title>
-    <url>/post/Hexo-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p>这里包括了本站所有有关NexT主题美化的教程。<br><a id="more"></a></p>
-<ul>
-<li><a href="https://hxwguang.github.io/post/给文章添加置顶/">给文章添加置顶功能</a></li>
-<li><a href="https://hxwguang.github.io/post/Hexo-Next主题中添加aplayer播放器/">添加Aplayer音乐播放器</a></li>
-<li><a href="https://hxwguang.github.io/post/Hexo中使用emoji表情/">在Hexo中使用emoji表情</a></li>
-</ul>
-<hr>
-<ol>
-<li>参考：<a href="https://io-oi.me/tech/hexo-next-optimization" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization</a></li>
-<li>参考：<a href="https://juejin.im/post/5bcd2d395188255c3b7dc1db" target="_blank" rel="noopener">https://juejin.im/post/5bcd2d395188255c3b7dc1db</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>美化</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo中插入数学公式</title>
-    <url>/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<p>本文主要记录用于渲染数学公式的两个插件：<code>MathJax</code>和<code>Katex</code>。<br><a id="more"></a></p>
-<p>[toc]</p>
-<h2 id="使用MathJax"><a href="#使用MathJax" class="headerlink" title="使用MathJax"></a>使用MathJax</h2><h3 id="使用kramed代替marked"><a href="#使用kramed代替marked" class="headerlink" title="使用kramed代替marked"></a>使用kramed代替marked</h3><p>hexo 默认的渲染引擎是 <code>marked</code>，但是 marked 不支持 <code>mathjax</code>。 <code>kramed</code>是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>.</p>
-<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>然后，更改<code>/node_modules/hexo-renderer-kramed/lib/</code>下的<code>renderer.js</code>文件：</p>
-<figure class="highlight js"><figcaption><span>diff</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">-    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">-    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">+    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="更改默认转义规则"><a href="#更改默认转义规则" class="headerlink" title="更改默认转义规则"></a>更改默认转义规则</h3><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 <code>_</code>转为 <code>&lt;em&gt;</code>, 所以我们需要对默认的规则进行修改.</p>
-<figure class="highlight diff"><figcaption><span>~/node_modules/kramed/lib/rules/inline.js</span></figcaption><table><tr><td class="code"><pre><span class="line">// 替换11行</span><br><span class="line"><span class="deletion">-  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</span></span><br><span class="line"></span><br><span class="line">//替换20行</span><br><span class="line"><span class="deletion">-  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
-<h3 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h3><p>设置<code>_config.yml</code>：</p>
-<figure class="highlight diff"><figcaption><span>~/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">mathjax:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line">  perpage: false</span><br><span class="line">  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
-<h3 id="mod">修改post模板</h3>
-
-<figure class="highlight diff"><figcaption><span>~/scaffolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">    - </span><br><span class="line">categories: </span><br><span class="line">    - </span><br><span class="line"><span class="addition">+ mathjax: false</span></span><br></pre></td></tr></table></figure>
-<p>文章需要渲染数学公式时改为<code>true</code>就行了。</p>
-<hr>
-<h2 id="使用Katex"><a href="#使用Katex" class="headerlink" title="使用Katex"></a>使用Katex</h2><h3 id="使用markdown-it-plus代替marked"><a href="#使用markdown-it-plus代替marked" class="headerlink" title="使用markdown-it-plus代替marked"></a>使用markdown-it-plus代替marked</h3><p>安装插件：</p>
-<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked --save</span><br><span class="line">$ npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在主题配置文件里设置：</p>
-<figure class="highlight yml"><figcaption><span>~/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span> <span class="comment">#如果这个选项是false，那么每一个网页都会引入公式渲染，这是很浪费的，只需要在需要公式渲染功能的博文md文件的头部，添加一行`mathjax: true`(使用Katex引擎渲染也是在文件头部标记`mathjax: true`，表示支持公式)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<h3 id="添加样式"><a href="#添加样式" class="headerlink" title="添加样式"></a>添加样式</h3><p>在<code>~/source/_data/head.swig</code>文件里添加：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css"</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>然后修改模板<code>post.md</code>，<a href="#mod">同上</a></p>
-<hr>
-<h2 id="简单语法"><a href="#简单语法" class="headerlink" title="简单语法"></a>简单语法</h2><h3 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h3><p>两边各用一个<code>$</code>包裹起来：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$\sqrt&#123;3x-1&#125;+(1+x)^2$</span><br></pre></td></tr></table></figure>
-<p>$\sqrt{3x-1}+(1+x)^2$</p>
-<h3 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h3><p>上下各用一个(<code>$$</code>) 包裹起来：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;c&#125;</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;B&#125;&#125; -\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;E&#125;&#125;&#125;&#123;\partial t&#125; &amp;</span><br><span class="line">&#x3D; \frac&#123;4\pi&#125;&#123;c&#125;\vec&#123;\mathbf&#123;j&#125;&#125;    \nabla \cdot \vec&#123;\mathbf&#123;E&#125;&#125; &amp; &#x3D; 4 \pi \rho \\</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;E&#125;&#125;\, +\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;B&#125;&#125;&#125;&#123;\partial t&#125; &amp; &#x3D; \vec&#123;\mathbf&#123;0&#125;&#125; \\</span><br><span class="line"></span><br><span class="line">\nabla \cdot \vec&#123;\mathbf&#123;B&#125;&#125; &amp; &#x3D; 0</span><br><span class="line"></span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\begin{array}{c}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}} & = 0
-\end{array}</script><hr>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX" target="_blank" rel="noopener">Function Support in KaTeX</a></li>
-<li><a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener">Markdown-it</a> </li>
-</ol>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>mathjax</tag>
-        <tag>katex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown 语法</title>
     <url>/post/Markdown%20%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Markdown</strong> is created by <a href="http://daringfireball.net/" target="_blank" rel="noopener">Daring Fireball</a>; the original guideline is <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">here</a>. Its syntax, however, varies between different parsers or editors. <strong>Typora</strong> is using <a href="https://help.github.com/en/github/writing-on-github" target="_blank" rel="noopener">GitHub Flavored Markdown</a>.</p>
@@ -539,7 +487,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">And then define the link:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://google.com/</span></span><br></pre></td></tr></table></figure>
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x69;&#x40;&#x74;&#121;&#x70;&#x6f;&#x72;&#x61;&#46;&#x69;&#111;">&#x69;&#x40;&#x74;&#121;&#x70;&#x6f;&#x72;&#x61;&#46;&#x69;&#111;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x69;&#64;&#116;&#x79;&#x70;&#111;&#114;&#x61;&#46;&#105;&#111;">&#x69;&#64;&#116;&#x79;&#x70;&#111;&#114;&#x61;&#46;&#105;&#111;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: www.google.com.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -593,6 +541,58 @@
       </categories>
       <tags>
         <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo中插入数学公式</title>
+    <url>/post/Hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<p>本文主要记录用于渲染数学公式的两个插件：<code>MathJax</code>和<code>Katex</code>。<br><a id="more"></a></p>
+<p>[toc]</p>
+<h2 id="使用MathJax"><a href="#使用MathJax" class="headerlink" title="使用MathJax"></a>使用MathJax</h2><h3 id="使用kramed代替marked"><a href="#使用kramed代替marked" class="headerlink" title="使用kramed代替marked"></a>使用kramed代替marked</h3><p>hexo 默认的渲染引擎是 <code>marked</code>，但是 marked 不支持 <code>mathjax</code>。 <code>kramed</code>是在 marked 的基础上进行修改。我们在工程目录下执行以下命令来安装 <code>kramed</code>.</p>
+<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p>然后，更改<code>/node_modules/hexo-renderer-kramed/lib/</code>下的<code>renderer.js</code>文件：</p>
+<figure class="highlight js"><figcaption><span>diff</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">-    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">-    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">+    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="更改默认转义规则"><a href="#更改默认转义规则" class="headerlink" title="更改默认转义规则"></a>更改默认转义规则</h3><p>因为 hexo 默认的转义规则会将一些字符进行转义，比如 <code>_</code>转为 <code>&lt;em&gt;</code>, 所以我们需要对默认的规则进行修改.</p>
+<figure class="highlight diff"><figcaption><span>~/node_modules/kramed/lib/rules/inline.js</span></figcaption><table><tr><td class="code"><pre><span class="line">// 替换11行</span><br><span class="line"><span class="deletion">-  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</span></span><br><span class="line"></span><br><span class="line">//替换20行</span><br><span class="line"><span class="deletion">-  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br><span class="line">//修改为</span><br><span class="line"><span class="addition">+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span></span><br></pre></td></tr></table></figure>
+<h3 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h3><p>设置<code>_config.yml</code>：</p>
+<figure class="highlight diff"><figcaption><span>~/themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line">mathjax:</span><br><span class="line"><span class="deletion">- enable: false</span></span><br><span class="line"><span class="addition">+ enable: true</span></span><br><span class="line">  perpage: false</span><br><span class="line">  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML</span><br></pre></td></tr></table></figure>
+<h3 id="mod">修改post模板</h3>
+
+<figure class="highlight diff"><figcaption><span>~/scaffolds/post.md</span></figcaption><table><tr><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">    - </span><br><span class="line">categories: </span><br><span class="line">    - </span><br><span class="line"><span class="addition">+ mathjax: false</span></span><br></pre></td></tr></table></figure>
+<p>文章需要渲染数学公式时改为<code>true</code>就行了。</p>
+<hr>
+<h2 id="使用Katex"><a href="#使用Katex" class="headerlink" title="使用Katex"></a>使用Katex</h2><h3 id="使用markdown-it-plus代替marked"><a href="#使用markdown-it-plus代替marked" class="headerlink" title="使用markdown-it-plus代替marked"></a>使用markdown-it-plus代替marked</h3><p>安装插件：</p>
+<figure class="highlight plain"><figcaption><span>~/博客根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked --save</span><br><span class="line">$ npm i hexo-renderer-markdown-it-plus --save</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在主题配置文件里设置：</p>
+<figure class="highlight yml"><figcaption><span>~/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Math Formulas Render Support</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">true</span> <span class="comment">#如果这个选项是false，那么每一个网页都会引入公式渲染，这是很浪费的，只需要在需要公式渲染功能的博文md文件的头部，添加一行`mathjax: true`(使用Katex引擎渲染也是在文件头部标记`mathjax: true`，表示支持公式)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># See: https://mhchem.github.io/MathJax-mhchem/</span></span><br><span class="line">    <span class="attr">mhchem:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h3 id="添加样式"><a href="#添加样式" class="headerlink" title="添加样式"></a>添加样式</h3><p>在<code>~/source/_data/head.swig</code>文件里添加：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css"</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>然后修改模板<code>post.md</code>，<a href="#mod">同上</a></p>
+<hr>
+<h2 id="简单语法"><a href="#简单语法" class="headerlink" title="简单语法"></a>简单语法</h2><h3 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h3><p>两边各用一个<code>$</code>包裹起来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$\sqrt&#123;3x-1&#125;+(1+x)^2$</span><br></pre></td></tr></table></figure>
+<p>$\sqrt{3x-1}+(1+x)^2$</p>
+<h3 id="多行公式"><a href="#多行公式" class="headerlink" title="多行公式"></a>多行公式</h3><p>上下各用一个(<code>$$</code>) 包裹起来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;c&#125;</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;B&#125;&#125; -\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;E&#125;&#125;&#125;&#123;\partial t&#125; &amp;</span><br><span class="line">&#x3D; \frac&#123;4\pi&#125;&#123;c&#125;\vec&#123;\mathbf&#123;j&#125;&#125;    \nabla \cdot \vec&#123;\mathbf&#123;E&#125;&#125; &amp; &#x3D; 4 \pi \rho \\</span><br><span class="line"></span><br><span class="line">\nabla \times \vec&#123;\mathbf&#123;E&#125;&#125;\, +\, \frac1c\, \frac&#123;\partial\vec&#123;\mathbf&#123;B&#125;&#125;&#125;&#123;\partial t&#125; &amp; &#x3D; \vec&#123;\mathbf&#123;0&#125;&#125; \\</span><br><span class="line"></span><br><span class="line">\nabla \cdot \vec&#123;\mathbf&#123;B&#125;&#125; &amp; &#x3D; 0</span><br><span class="line"></span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{array}</script><hr>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX" target="_blank" rel="noopener">Function Support in KaTeX</a></li>
+<li><a href="https://github.com/markdown-it/markdown-it" target="_blank" rel="noopener">Markdown-it</a> </li>
+</ol>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>mathjax</tag>
+        <tag>katex</tag>
       </tags>
   </entry>
   <entry>
@@ -930,6 +930,44 @@ a_3x+b_3y+c_3z=d_3\\
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>hexo-renderer-markdown-it里的插件使用</title>
+    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>markdown-it-abbr：缩写插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-footnote：脚注插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-ins：插入插件（下划线插件）</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sub：下标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sup：上标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>插件</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo文章插入音乐和视频</title>
@@ -1347,41 +1385,24 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>hexo-renderer-markdown-it里的插件使用</title>
-    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
+    <title>一个快速生成音乐外链的方法</title>
+    <url>/post/%E4%B8%80%E4%B8%AA%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>像图片可以用SM.MS或腾讯云搞到图片外链一样，音乐其实也可以通过网易云音乐网页版快速的搞到外链的 。</p>
 <a id="more"></a>
-<ul>
-<li>markdown-it-abbr：缩写插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-footnote：脚注插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-ins：插入插件（下划线插件）</li>
-</ul>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sub：下标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sup：上标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
-</ul>
+<ol>
+<li>首先在浏览器中打开<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>。</li>
+<li>搜索想要搞的音乐，以sunflower feelings为例</li>
+<li>把链接复制下来：<code>https://music.163.com/#/song?id=520458166</code>，然后把id后面的这一串数字复制一下。</li>
+<li>外链的模板是：<code>https://music.163.com/song/media/outer/url?id=XXXXX.mp3</code>，将XXXXX替换为刚刚复制的那串数字即可。</li>
+<li>组合在一起就是<code>https://music.163.com/song/media/outer/url?id=520458166.mp3</code>，这样一个音乐链接就完成了。</li>
+</ol>
 ]]></content>
       <categories>
         <category>记录</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
-        <tag>插件</tag>
+        <tag>外链</tag>
+        <tag>音乐</tag>
       </tags>
   </entry>
   <entry>
@@ -1462,24 +1483,87 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>一个快速生成音乐外链的方法</title>
-    <url>/post/%E4%B8%80%E4%B8%AA%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>像图片可以用SM.MS或腾讯云搞到图片外链一样，音乐其实也可以通过网易云音乐网页版快速的搞到外链的 。</p>
+    <title>使用LeanCloud无法显示数量</title>
+    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
+    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
+            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
+          </div></p>
+<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
+<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
+<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
+</ul>
+</li>
+<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
+</ul>
+<div class="note danger no-icon">
+            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
+          </div>]]></content>
+      <categories>
+        <category>记录</category>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>leancloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Hexo和Next主题搭建个人博客</title>
+    <url>/post/%E7%94%A8Hexo%E5%92%8CNext%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<div class="note info">
+            <p><strong>本篇转载，</strong><a href="http://dugblog.coding.me/Hexo/20180616-build-blog-hexo-next-windows.html#HexoEditor%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">原文地址</a></p>
+          </div>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>处女博文，就写一下这个个人Blog是如何搭建起来的吧。本文只讲解在Windows环境下如何搭建。<br>说起来想要搭建这样一个Blog还是因为我特别喜欢这个主题 <strong>_Next_</strong>，所以索性就自己搭一个啦。</p>
+<hr>
 <a id="more"></a>
-<ol>
-<li>首先在浏览器中打开<a href="https://music.163.com/" target="_blank" rel="noopener">网易云音乐</a>。</li>
-<li>搜索想要搞的音乐，以sunflower feelings为例</li>
-<li>把链接复制下来：<code>https://music.163.com/#/song?id=520458166</code>，然后把id后面的这一串数字复制一下。</li>
-<li>外链的模板是：<code>https://music.163.com/song/media/outer/url?id=XXXXX.mp3</code>，将XXXXX替换为刚刚复制的那串数字即可。</li>
-<li>组合在一起就是<code>https://music.163.com/song/media/outer/url?id=520458166.mp3</code>，这样一个音乐链接就完成了。</li>
-</ol>
+<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
+<li>Node.js（点击可进入下载页面，两个版本都行，我选的最新的版本）</li>
+<li>Git（点击进去直接下载，附赠一个Git 安装教程）<br>Hexo 官方使用文档（有什么更详细的想了解可以上官网，右上角可以选中文）</li>
+<li>Next 主题官网（官网上有很多详细的配置说明和设定教程）<br>HexoEditor（用于编写Markdown 文章的软件，配合Hexo食用）</li>
+<li>Notepad++（Windows下记事本的替代品，因为记事本保存的时候会在每一行的开头还是结尾加一个什么标记，会导致有些文件用记事本打开之后再保存会出问题）</li>
+<li>Git Bash 相关的一点点小知识，和命令行使用方法一样。（这个我写在最后面，如果不会的话请看一看）</li>
+</ul>
+<div class="note info">
+            <p>如果以下步骤哪里出了问题，欢迎留言，留言时请填上邮箱，你就可以收到我的回复了。<br>PS：邮件回复可能会被收进垃圾箱，请注意。</p>
+          </div>
+<hr>
+<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>所谓的依赖就是搭建博客需要的一些基层的软件，包括Node.js和Git，这两个东西在上面已经给出了下载链接，安装的话对于Windows用户应该不算难题吧。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装好Git之后，任意空白处鼠标右键，会出现<code>Git Bash Here</code>。点击<code>Git Bash Here</code>会出现<code>Git Bash</code>对话框。<br>新建一个文件夹，用于保存Hexo生成的博客内容。（将这个文件夹成为Hexo文件夹）然后进入该文件夹，空白处右键，点击<code>Git Bash Here</code>，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>如果没有报错，继续输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure><br><code>&lt;folder&gt;</code>代表的是保存目录，如果不填会在当前目录下生成Hexo框架所需要的文件件。<br>命令执行完成后，文件夹下的目录结构如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><br>其中<code>_config.yml</code>为配置文件，后面会用到。<br>验证一下是否安装成功，在刚刚的<code>Git Bash</code>对话框中输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><br>等待完成后再输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>然后打开浏览器，输入<code>localhost:4000</code>。如果成功看见博客就证明安装成功。<br>成功后在刚刚的<code>Git Bash</code>对话框中按下<code>Ctrl+C</code>停止服务。</p>
+<h2 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h2><p>进入Hexo文件夹（上文提到过，这个目录下可以看到一个themes文件夹），在Hexo文件夹空白处右键打开<code>Git Bash Here</code>，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure><br>没有报错（红色的er），就证明已经安装好了Next主题。</p>
+<h2 id="将Hexo的主题更改为Next主题"><a href="#将Hexo的主题更改为Next主题" class="headerlink" title="将Hexo的主题更改为Next主题"></a>将Hexo的主题更改为Next主题</h2><p>在Hexo文件夹下面可以看到一个<code>_config.yml</code>文件，右键用Notepad++打开（用记事本打开不知道会不会出问题，建议用Notepad++），靠下面的位置寻找<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: landscape</span><br></pre></td></tr></table></figure><br>将里面的landscape改成next<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure><br>然后和Hexo里面验证是否安装成功一样的步骤，可以检验主题是否更改成功。<br>在Hexo文件夹里面打开<code>Git Bash</code>对话框，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean -g</span><br></pre></td></tr></table></figure><br>等待完成后再输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>然后打开浏览器，输入<code>localhost:4000</code>。如果成功看到主题更改了，记得在刚刚的<code>Git Bash</code>对话框中按下<code>Ctrl+C</code>停止服务。</p>
+<hr>
+<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h1><p>现在我们可以在本地显示自己博客了，可是创建博客就是给人看的呀，那接下来就把我们的博客部署到网上。在没有自己的服务器的情况下，大致的选择方案有两种：</p>
+<ul>
+<li>部署到GitHub上</li>
+<li>部署到Coding上</li>
+</ul>
+<div class="note primary">
+            <p>因为GitHub不让百度爬虫，影响百度收录，然后服务器在国外，速度也慢，所以推荐Coding。</p>
+          </div>
+<p>首先当然是得拥有一个Coding账号啦~，<a href="https://coding.net/" target="_blank" rel="noopener">点击我注册</a>。<br><div class="note danger">
+            <p>用户名一定不要有奇奇怪怪的符号！特别是下划线！影响收录！所以最好不要符号！</p>
+          </div><br>注册登录之后，右上角加号点击项目，新建一个项目</p>
+<p><div align="center"><img src="https://i.loli.net/2020/01/23/ocbtN6BKskSHuUR.png"/></div><br>项目名称一定要用<code>[你的用户名].coding.me</code>，比如用用户名为<code>dugblog</code>，项目名就填<code>dugblog.coding.me</code>。</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/MlgUSxkLn7dK4pD.png"/></div><br>新建好了之后，会进入项目页面，点击左侧代码-&gt;Pages服务</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/V7b9ZSfW1dUQJzF.png"/></div><br>在部署来源里面选择master分支，保存</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/SwK1459zvxIF8Gq.png"/></div><br>保存好了之后，会出现这样的提示</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/ISQv1ZT3RfmcqYz.png"/></div><br><div class="note warning">
+            <p>上图框出来的地址，就是你的博客地址，而且是一个一级目录，如果你的最后还有一个斜杠然后一串名称（例如：<code>http://DugBlog.coding.me/abcd</code>），请检查项目名称是否填对。</p>
+          </div><br>然后在左侧可以找到这个</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/IHMa3ibhpwsUuvz.png"/></div><br>复制下来，打开站点配置文件，也就是<code>/yoursite/_config.yml</code>，和<code>source</code>平级目录下的那个。找到<code>deploy</code>，更改里面的配置：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git # 必须填git</span><br><span class="line">  repo: # https:&#x2F;&#x2F;用户名:密码@刚刚复制的链接去掉https:&#x2F;&#x2F;</span><br><span class="line">  # repo示例 https:&#x2F;&#x2F;myblog:123456@git.coding.net&#x2F;myblog&#x2F;myblog.coding.me.git</span><br><span class="line">  branch: master # 刚刚选择的分支，不懂就填这个</span><br><span class="line">  message: blog update # 每次更新时提交的备注</span><br></pre></td></tr></table></figure><br>  填好保存好，在Hexo根目录下打开Git Bash，先后执行命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><br>再回到刚刚的Pages服务页面，点开自己的博客地址，就应该可以看到你的博客了。</p>
+<hr>
+<h1 id="HexoEditor安装"><a href="#HexoEditor安装" class="headerlink" title="HexoEditor安装"></a>HexoEditor安装</h1><p>首先找一个地方，新建一个文件夹用来放HexoEditor的文件。进入文件夹，右键打开<code>Git Bash</code>对话框，依次输入下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry &quot;https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;&quot;</span><br><span class="line">npm config set electron_mirror &quot;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;electron&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;zhuzhuyule&#x2F;HexoEditor.git</span><br><span class="line">cd HexoEditor</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><br>如果没报错，就是安装成功。而且会在你刚刚新建的目录下面生成一个HexoEditor目录。那么如何打开HexoEditor呢？<br>进入到HexoEditor的目录里面，右键打开<code>Git Bash</code>对话框，输入如下命令启动HexoEditor:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="关于Git-Bash"><a href="#关于Git-Bash" class="headerlink" title="关于Git Bash"></a>关于Git Bash</h1><p>如果你来看这个，我默认你不怎么懂命令行，不打算深讲，只讲一点相关的内容。<br>在上述教程中，很多时候我会有一个操作，就是在某一个文件夹里面，空白处右键打开Git Bash。可能有的同学会有疑问，在不同的地方打开会有什么不同吗？<br><strong>是的！可以说完全不同！而且影响很严重。</strong><br>你仔细观察会发现，$这个符号上面一行最后面，有一个目录</p>
+<p><div align=center><img src="https://i.loli.net/2020/01/23/cCVxiz8r6Qdlqnk.png"/></div><br>你在哪里打开的，这个目录就会是什么。而且你执行的所有命令，都会基于这个目录来执行。可以百度一下命令行和cd命令，会有更深的理解。</p>
+<hr>
 ]]></content>
       <categories>
         <category>记录</category>
       </categories>
       <tags>
-        <tag>外链</tag>
-        <tag>音乐</tag>
+        <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -1586,90 +1670,6 @@ a_3x+b_3y+c_3z=d_3\\
         <tag>html</tag>
         <tag>markdown</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用Hexo和Next主题搭建个人博客</title>
-    <url>/post/%E7%94%A8Hexo%E5%92%8CNext%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<div class="note info">
-            <p><strong>本篇转载，</strong><a href="http://dugblog.coding.me/Hexo/20180616-build-blog-hexo-next-windows.html#HexoEditor%E5%AE%89%E8%A3%85" target="_blank" rel="noopener">原文地址</a></p>
-          </div>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>处女博文，就写一下这个个人Blog是如何搭建起来的吧。本文只讲解在Windows环境下如何搭建。<br>说起来想要搭建这样一个Blog还是因为我特别喜欢这个主题 <strong>_Next_</strong>，所以索性就自己搭一个啦。</p>
-<hr>
-<a id="more"></a>
-<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
-<li>Node.js（点击可进入下载页面，两个版本都行，我选的最新的版本）</li>
-<li>Git（点击进去直接下载，附赠一个Git 安装教程）<br>Hexo 官方使用文档（有什么更详细的想了解可以上官网，右上角可以选中文）</li>
-<li>Next 主题官网（官网上有很多详细的配置说明和设定教程）<br>HexoEditor（用于编写Markdown 文章的软件，配合Hexo食用）</li>
-<li>Notepad++（Windows下记事本的替代品，因为记事本保存的时候会在每一行的开头还是结尾加一个什么标记，会导致有些文件用记事本打开之后再保存会出问题）</li>
-<li>Git Bash 相关的一点点小知识，和命令行使用方法一样。（这个我写在最后面，如果不会的话请看一看）</li>
-</ul>
-<div class="note info">
-            <p>如果以下步骤哪里出了问题，欢迎留言，留言时请填上邮箱，你就可以收到我的回复了。<br>PS：邮件回复可能会被收进垃圾箱，请注意。</p>
-          </div>
-<hr>
-<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>所谓的依赖就是搭建博客需要的一些基层的软件，包括Node.js和Git，这两个东西在上面已经给出了下载链接，安装的话对于Windows用户应该不算难题吧。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装好Git之后，任意空白处鼠标右键，会出现<code>Git Bash Here</code>。点击<code>Git Bash Here</code>会出现<code>Git Bash</code>对话框。<br>新建一个文件夹，用于保存Hexo生成的博客内容。（将这个文件夹成为Hexo文件夹）然后进入该文件夹，空白处右键，点击<code>Git Bash Here</code>，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><br>如果没有报错，继续输入<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure><br><code>&lt;folder&gt;</code>代表的是保存目录，如果不填会在当前目录下生成Hexo框架所需要的文件件。<br>命令执行完成后，文件夹下的目录结构如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><br>其中<code>_config.yml</code>为配置文件，后面会用到。<br>验证一下是否安装成功，在刚刚的<code>Git Bash</code>对话框中输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><br>等待完成后再输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>然后打开浏览器，输入<code>localhost:4000</code>。如果成功看见博客就证明安装成功。<br>成功后在刚刚的<code>Git Bash</code>对话框中按下<code>Ctrl+C</code>停止服务。</p>
-<h2 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h2><p>进入Hexo文件夹（上文提到过，这个目录下可以看到一个themes文件夹），在Hexo文件夹空白处右键打开<code>Git Bash Here</code>，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure><br>没有报错（红色的er），就证明已经安装好了Next主题。</p>
-<h2 id="将Hexo的主题更改为Next主题"><a href="#将Hexo的主题更改为Next主题" class="headerlink" title="将Hexo的主题更改为Next主题"></a>将Hexo的主题更改为Next主题</h2><p>在Hexo文件夹下面可以看到一个<code>_config.yml</code>文件，右键用Notepad++打开（用记事本打开不知道会不会出问题，建议用Notepad++），靠下面的位置寻找<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: landscape</span><br></pre></td></tr></table></figure><br>将里面的landscape改成next<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure><br>然后和Hexo里面验证是否安装成功一样的步骤，可以检验主题是否更改成功。<br>在Hexo文件夹里面打开<code>Git Bash</code>对话框，输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean -g</span><br></pre></td></tr></table></figure><br>等待完成后再输入命令<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><br>然后打开浏览器，输入<code>localhost:4000</code>。如果成功看到主题更改了，记得在刚刚的<code>Git Bash</code>对话框中按下<code>Ctrl+C</code>停止服务。</p>
-<hr>
-<h1 id="部署Hexo"><a href="#部署Hexo" class="headerlink" title="部署Hexo"></a>部署Hexo</h1><p>现在我们可以在本地显示自己博客了，可是创建博客就是给人看的呀，那接下来就把我们的博客部署到网上。在没有自己的服务器的情况下，大致的选择方案有两种：</p>
-<ul>
-<li>部署到GitHub上</li>
-<li>部署到Coding上</li>
-</ul>
-<div class="note primary">
-            <p>因为GitHub不让百度爬虫，影响百度收录，然后服务器在国外，速度也慢，所以推荐Coding。</p>
-          </div>
-<p>首先当然是得拥有一个Coding账号啦~，<a href="https://coding.net/" target="_blank" rel="noopener">点击我注册</a>。<br><div class="note danger">
-            <p>用户名一定不要有奇奇怪怪的符号！特别是下划线！影响收录！所以最好不要符号！</p>
-          </div><br>注册登录之后，右上角加号点击项目，新建一个项目</p>
-<p><div align="center"><img src="https://i.loli.net/2020/01/23/ocbtN6BKskSHuUR.png"/></div><br>项目名称一定要用<code>[你的用户名].coding.me</code>，比如用用户名为<code>dugblog</code>，项目名就填<code>dugblog.coding.me</code>。</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/MlgUSxkLn7dK4pD.png"/></div><br>新建好了之后，会进入项目页面，点击左侧代码-&gt;Pages服务</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/V7b9ZSfW1dUQJzF.png"/></div><br>在部署来源里面选择master分支，保存</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/SwK1459zvxIF8Gq.png"/></div><br>保存好了之后，会出现这样的提示</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/ISQv1ZT3RfmcqYz.png"/></div><br><div class="note warning">
-            <p>上图框出来的地址，就是你的博客地址，而且是一个一级目录，如果你的最后还有一个斜杠然后一串名称（例如：<code>http://DugBlog.coding.me/abcd</code>），请检查项目名称是否填对。</p>
-          </div><br>然后在左侧可以找到这个</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/IHMa3ibhpwsUuvz.png"/></div><br>复制下来，打开站点配置文件，也就是<code>/yoursite/_config.yml</code>，和<code>source</code>平级目录下的那个。找到<code>deploy</code>，更改里面的配置：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git # 必须填git</span><br><span class="line">  repo: # https:&#x2F;&#x2F;用户名:密码@刚刚复制的链接去掉https:&#x2F;&#x2F;</span><br><span class="line">  # repo示例 https:&#x2F;&#x2F;myblog:123456@git.coding.net&#x2F;myblog&#x2F;myblog.coding.me.git</span><br><span class="line">  branch: master # 刚刚选择的分支，不懂就填这个</span><br><span class="line">  message: blog update # 每次更新时提交的备注</span><br></pre></td></tr></table></figure><br>  填好保存好，在Hexo根目录下打开Git Bash，先后执行命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure><br>再回到刚刚的Pages服务页面，点开自己的博客地址，就应该可以看到你的博客了。</p>
-<hr>
-<h1 id="HexoEditor安装"><a href="#HexoEditor安装" class="headerlink" title="HexoEditor安装"></a>HexoEditor安装</h1><p>首先找一个地方，新建一个文件夹用来放HexoEditor的文件。进入文件夹，右键打开<code>Git Bash</code>对话框，依次输入下面的命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config set registry &quot;https:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;&quot;</span><br><span class="line">npm config set electron_mirror &quot;https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;electron&#x2F;&quot;</span><br><span class="line"></span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;zhuzhuyule&#x2F;HexoEditor.git</span><br><span class="line">cd HexoEditor</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><br>如果没报错，就是安装成功。而且会在你刚刚新建的目录下面生成一个HexoEditor目录。那么如何打开HexoEditor呢？<br>进入到HexoEditor的目录里面，右键打开<code>Git Bash</code>对话框，输入如下命令启动HexoEditor:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h1 id="关于Git-Bash"><a href="#关于Git-Bash" class="headerlink" title="关于Git Bash"></a>关于Git Bash</h1><p>如果你来看这个，我默认你不怎么懂命令行，不打算深讲，只讲一点相关的内容。<br>在上述教程中，很多时候我会有一个操作，就是在某一个文件夹里面，空白处右键打开Git Bash。可能有的同学会有疑问，在不同的地方打开会有什么不同吗？<br><strong>是的！可以说完全不同！而且影响很严重。</strong><br>你仔细观察会发现，$这个符号上面一行最后面，有一个目录</p>
-<p><div align=center><img src="https://i.loli.net/2020/01/23/cCVxiz8r6Qdlqnk.png"/></div><br>你在哪里打开的，这个目录就会是什么。而且你执行的所有命令，都会基于这个目录来执行。可以百度一下命令行和cd命令，会有更深的理解。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用LeanCloud无法显示数量</title>
-    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
-    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
-            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
-          </div></p>
-<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
-<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
-<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
-</ul>
-</li>
-<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
-</ul>
-<div class="note danger no-icon">
-            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
-          </div>]]></content>
-      <categories>
-        <category>记录</category>
-        <category>问题</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>leancloud</tag>
       </tags>
   </entry>
   <entry>
