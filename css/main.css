@@ -1073,7 +1073,7 @@ pre .javascript .function {
   border-bottom: none;
   color: var(--brand-color);
   display: inline-block;
-  line-height: 1.375em;
+  line-height: 1.5em;
   padding: 0 40px;
   position: relative;
 }
@@ -1082,7 +1082,7 @@ pre .javascript .function {
 }
 .site-title {
   font-family: 'Monda', 'Noto Serif SC', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.375em;
+  font-size: 1.5em;
   font-weight: normal;
   margin: 0;
 }
@@ -1267,7 +1267,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #edc9ff;
+  background: #46cd11;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
