@@ -141,43 +141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Next主题中添加aplayer播放器</title>
-    <url>/post/Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0aplayer%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<p>本篇主要解决以下两个问题：</p>
-<p><input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer</p>
-<p><input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
-<a id="more"></a>
-<h2 id="添加Aplayer播放器"><a href="#添加Aplayer播放器" class="headerlink" title="添加Aplayer播放器"></a>添加Aplayer播放器</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
-<h3 id="新建music-js"><a href="#新建music-js" class="headerlink" title="新建music.js"></a>新建music.js</h3><p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"PDD洪荒之力"</span>,</span><br><span class="line">        artist: <span class="string">'徐梦圆'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/39868.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/84.jpg'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'9420'</span>,</span><br><span class="line">        artist: <span class="string">'麦小兜'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/45967.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/8.jpg'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>代码中对应参数的解释，请查看：<a href="https://aplayer.js.org/#/zh-Hans/?id=参数" target="_blank" rel="noopener">Aplayer中文文档</a></p>
-<p><code>audio</code>对应的是音频文件的信息参数，需要自己配置相关的信息（如歌名，歌手，音频链接，封面等）的配置。</p>
-<div class="note info no-icon">
-            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: &#39;/dist/assets/song1.mp3&#39;</code><br>快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/一个快速生成音乐外链的方法/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
-          </div>
-<h3 id="添加脚本信息"><a href="#添加脚本信息" class="headerlink" title="添加脚本信息"></a>添加脚本信息</h3><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>在<code>站点根目录/source/_data</code>里新建文件<code>head.swig</code></p>
-<p>在里面添加</p>
-<figure class="highlight js"><figcaption><span>head.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">+  <span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/music.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>保存</p>
-<h4 id="去掉注释"><a href="#去掉注释" class="headerlink" title="去掉注释"></a>去掉注释</h4><p>打开<code>~/theme/next/_config.yml</code></p>
-<p>定位到<code>custom_file_path</code>然后把<code>#header: source/_data/header.swig</code>前面的<code>#</code>号去掉，保存</p>
-<p>完成。</p>
-<hr>
-<h2 id="解决切换页面播放中断问题"><a href="#解决切换页面播放中断问题" class="headerlink" title="解决切换页面播放中断问题"></a>解决切换页面播放中断问题</h2><p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure><br>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>记录</category>
-        <category>美化</category>
-        <category>捣鼓</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>aplayer</tag>
-        <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-NexT主题美化</title>
     <url>/post/Hexo-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<p>这里包括了本站所有有关NexT主题美化的教程。<br><a id="more"></a></p>
@@ -251,6 +214,43 @@
         <tag>hexo</tag>
         <tag>mathjax</tag>
         <tag>katex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Next主题中添加aplayer播放器</title>
+    <url>/post/Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0aplayer%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<p>本篇主要解决以下两个问题：</p>
+<p><input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer</p>
+<p><input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
+<a id="more"></a>
+<h2 id="添加Aplayer播放器"><a href="#添加Aplayer播放器" class="headerlink" title="添加Aplayer播放器"></a>添加Aplayer播放器</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
+<h3 id="新建music-js"><a href="#新建music-js" class="headerlink" title="新建music.js"></a>新建music.js</h3><p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"PDD洪荒之力"</span>,</span><br><span class="line">        artist: <span class="string">'徐梦圆'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/39868.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/84.jpg'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'9420'</span>,</span><br><span class="line">        artist: <span class="string">'麦小兜'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/45967.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/8.jpg'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>代码中对应参数的解释，请查看：<a href="https://aplayer.js.org/#/zh-Hans/?id=参数" target="_blank" rel="noopener">Aplayer中文文档</a></p>
+<p><code>audio</code>对应的是音频文件的信息参数，需要自己配置相关的信息（如歌名，歌手，音频链接，封面等）的配置。</p>
+<div class="note info no-icon">
+            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: &#39;/dist/assets/song1.mp3&#39;</code><br>快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/一个快速生成音乐外链的方法/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
+          </div>
+<h3 id="添加脚本信息"><a href="#添加脚本信息" class="headerlink" title="添加脚本信息"></a>添加脚本信息</h3><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>在<code>站点根目录/source/_data</code>里新建文件<code>head.swig</code></p>
+<p>在里面添加</p>
+<figure class="highlight js"><figcaption><span>head.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">+  <span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/music.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>保存</p>
+<h4 id="去掉注释"><a href="#去掉注释" class="headerlink" title="去掉注释"></a>去掉注释</h4><p>打开<code>~/theme/next/_config.yml</code></p>
+<p>定位到<code>custom_file_path</code>然后把<code>#header: source/_data/header.swig</code>前面的<code>#</code>号去掉，保存</p>
+<p>完成。</p>
+<hr>
+<h2 id="解决切换页面播放中断问题"><a href="#解决切换页面播放中断问题" class="headerlink" title="解决切换页面播放中断问题"></a>解决切换页面播放中断问题</h2><p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure><br>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>美化</category>
+        <category>记录</category>
+        <category>捣鼓</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>美化</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
@@ -539,7 +539,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">And then define the link:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://google.com/</span></span><br></pre></td></tr></table></figure>
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#46;&#x69;&#111;">&#x69;&#x40;&#116;&#x79;&#112;&#111;&#x72;&#x61;&#46;&#x69;&#111;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#105;&#x40;&#x74;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#105;&#x6f;">&#105;&#x40;&#x74;&#x79;&#112;&#111;&#x72;&#x61;&#x2e;&#105;&#x6f;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: www.google.com.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -594,6 +594,40 @@
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>NexT添加新的页面</title>
+    <url>/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<p>给博客添加一个新的页面(page)，基本步骤与Next主题文档中添加tag或categories页面的步骤基本一致，但是由于Next主题菜单项中没有自带留言项，所以需要做一些小调整，下面用新建相册页面来介绍一下详细步骤。<br><a id="more"></a></p>
+<h3 id="1-在菜单中添加photo"><a href="#1-在菜单中添加photo" class="headerlink" title="1.在菜单中添加photo"></a>1.在菜单中添加photo</h3><h4 id="1-1-修改主题配置文件"><a href="#1-1-修改主题配置文件" class="headerlink" title="1.1.修改主题配置文件"></a>1.1.修改主题配置文件</h4><p>打开Next主题目录下的<code>_config.yml</code>（注意不是Hexo目录下的_config.yml,是 <strong><span class="label danger">Next主题目录</span></strong> 下的_config.yml，路径为blog/themes/next/_config.yml），在<code>menu</code>项下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">/photo/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-camera-retro</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-2-添加对应的译文"><a href="#1-2-添加对应的译文" class="headerlink" title="1.2.添加对应的译文"></a>1.2.添加对应的译文</h4><p>在<code>~/themes/next/languages/zh-CN.yml</code>文件中的<code>menu</code>下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">相册</span></span><br><span class="line">  <span class="string">...</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-创建photo页面"><a href="#2-创建photo页面" class="headerlink" title="2.创建photo页面"></a>2.创建photo页面</h3><p>终端下进入Hexo根目录，运行以下命令创建<code>photo</code>页面：</p>
+<figure class="highlight plain"><figcaption><span>hexo根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo new page photo</span><br></pre></td></tr></table></figure>
+<p>此时在Hexo根目录下的source文件夹中应该就能看到<code>photo</code>文件夹了，进入<code>photo</code>文件夹打开<code>index.md</code>文件，再自行修改其中内容即可。<br>最后再输入<code>hexo clean &amp;&amp; hexo s</code>就可以查看效果了。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/post/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>基本数学公式语法(of MathJax)</title>
@@ -898,22 +932,41 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>NexT添加新的页面</title>
-    <url>/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/</url>
-    <content><![CDATA[<p>给博客添加一个新的页面(page)，基本步骤与Next主题文档中添加tag或categories页面的步骤基本一致，但是由于Next主题菜单项中没有自带留言项，所以需要做一些小调整，下面用新建相册页面来介绍一下详细步骤。<br><a id="more"></a></p>
-<h3 id="1-在菜单中添加photo"><a href="#1-在菜单中添加photo" class="headerlink" title="1.在菜单中添加photo"></a>1.在菜单中添加photo</h3><h4 id="1-1-修改主题配置文件"><a href="#1-1-修改主题配置文件" class="headerlink" title="1.1.修改主题配置文件"></a>1.1.修改主题配置文件</h4><p>打开Next主题目录下的<code>_config.yml</code>（注意不是Hexo目录下的_config.yml,是 <strong><span class="label danger">Next主题目录</span></strong> 下的_config.yml，路径为blog/themes/next/_config.yml），在<code>menu</code>项下添加<code>photo</code>字段，如下：</p>
-<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">/photo/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-camera-retro</span></span><br></pre></td></tr></table></figure>
-<h4 id="1-2-添加对应的译文"><a href="#1-2-添加对应的译文" class="headerlink" title="1.2.添加对应的译文"></a>1.2.添加对应的译文</h4><p>在<code>~/themes/next/languages/zh-CN.yml</code>文件中的<code>menu</code>下添加<code>photo</code>字段，如下：</p>
-<figure class="highlight yml"><figcaption><span>zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">相册</span></span><br><span class="line">  <span class="string">...</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-创建photo页面"><a href="#2-创建photo页面" class="headerlink" title="2.创建photo页面"></a>2.创建photo页面</h3><p>终端下进入Hexo根目录，运行以下命令创建<code>photo</code>页面：</p>
-<figure class="highlight plain"><figcaption><span>hexo根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo new page photo</span><br></pre></td></tr></table></figure>
-<p>此时在Hexo根目录下的source文件夹中应该就能看到<code>photo</code>文件夹了，进入<code>photo</code>文件夹打开<code>index.md</code>文件，再自行修改其中内容即可。<br>最后再输入<code>hexo clean &amp;&amp; hexo s</code>就可以查看效果了。</p>
+    <title>hexo-renderer-markdown-it里的插件使用</title>
+    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>markdown-it-abbr：缩写插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-footnote：脚注插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-ins：插入插件（下划线插件）</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sub：下标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sup：上标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>记录</category>
       </categories>
       <tags>
-        <tag>next</tag>
+        <tag>markdown</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1063,59 +1116,6 @@ a_3x+b_3y+c_3z=d_3\\
         <tag>next</tag>
         <tag>tag</tag>
         <tag>plugins</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/post/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo-renderer-markdown-it里的插件使用</title>
-    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<ul>
-<li>markdown-it-abbr：缩写插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-footnote：脚注插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-ins：插入插件（下划线插件）</li>
-</ul>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sub：下标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sup：上标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -1483,6 +1483,31 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
+    <title>使用LeanCloud无法显示数量</title>
+    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
+    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
+            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
+          </div></p>
+<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
+<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
+<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
+</ul>
+</li>
+<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
+</ul>
+<div class="note danger no-icon">
+            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
+          </div>]]></content>
+      <categories>
+        <category>记录</category>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>leancloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>捣鼓主题样式的方法</title>
     <url>/post/%E6%8D%A3%E9%BC%93%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
@@ -1520,31 +1545,6 @@ a_3x+b_3y+c_3z=d_3\\
         <tag>hexo</tag>
         <tag>next</tag>
         <tag>自定义</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用LeanCloud无法显示数量</title>
-    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
-    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
-            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
-          </div></p>
-<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
-<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
-<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
-</ul>
-</li>
-<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
-</ul>
-<div class="note danger no-icon">
-            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
-          </div>]]></content>
-      <categories>
-        <category>记录</category>
-        <category>问题</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>leancloud</tag>
       </tags>
   </entry>
   <entry>
@@ -1614,23 +1614,6 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>给文章添加置顶</title>
-    <url>/post/%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6/</url>
-    <content><![CDATA[<p>本文是给next主题下文章添加置顶功能的教程。<br><a id="more"></a></p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-<h1 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h1><p>打开<code>~/scaffolds/post.md</code>，在<code>Front-matter</code>里最底下添加<code>top: false</code>，这样每次生成的post文件都自带由<code>top:</code>这个参数项了，需要置顶的时候就把<code>false</code>改为<code>true</code>就行了。</p>
-<h1 id="设置置顶的样式"><a href="#设置置顶的样式" class="headerlink" title="设置置顶的样式"></a>设置置顶的样式</h1><p>打开<code>~/themes/next/layout/_macro/</code>里的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>在下面插入代码：<br><figure class="highlight plain"><figcaption><span>post.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>其中<code>color</code>是调整文字颜色的属性，可以自行修改想要的颜色。</p>
-]]></content>
-      <categories>
-        <category>美化</category>
-      </categories>
-      <tags>
-        <tag>next</tag>
-        <tag>美化</tag>
-        <tag>置顶</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>用Hexo和Next主题搭建个人博客</title>
     <url>/post/%E7%94%A8Hexo%E5%92%8CNext%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<div class="note info">
@@ -1687,6 +1670,23 @@ a_3x+b_3y+c_3z=d_3\\
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给文章添加置顶</title>
+    <url>/post/%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6/</url>
+    <content><![CDATA[<p>本文是给next主题下文章添加置顶功能的教程。<br><a id="more"></a></p>
+<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<h1 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h1><p>打开<code>~/scaffolds/post.md</code>，在<code>Front-matter</code>里最底下添加<code>top: false</code>，这样每次生成的post文件都自带由<code>top:</code>这个参数项了，需要置顶的时候就把<code>false</code>改为<code>true</code>就行了。</p>
+<h1 id="设置置顶的样式"><a href="#设置置顶的样式" class="headerlink" title="设置置顶的样式"></a>设置置顶的样式</h1><p>打开<code>~/themes/next/layout/_macro/</code>里的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>在下面插入代码：<br><figure class="highlight plain"><figcaption><span>post.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>其中<code>color</code>是调整文字颜色的属性，可以自行修改想要的颜色。</p>
+]]></content>
+      <categories>
+        <category>美化</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>美化</tag>
+        <tag>置顶</tag>
       </tags>
   </entry>
   <entry>
