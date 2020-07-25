@@ -11,10 +11,10 @@
 </ul>
 <h3 id="修改主题页面布局为圆角"><a href="#修改主题页面布局为圆角" class="headerlink" title="修改主题页面布局为圆角"></a>修改主题页面布局为圆角</h3><p>打开<code>\themes\next\source\css\_variables\Gemini.styl</code> 添加代码：</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">$border-radius-inner     = 9px 9px 9px 9px;</span><br><span class="line">$border-radius           = 9px;</span><br></pre></td></tr></table></figure>
-<p><img src=".\Hexo-NexT主题美化\image-20200723224351292.png" alt="image-20200723224351292"></p>
+<p><img src="..\images\image-20200723224351292.png" alt="image-20200723224351292"></p>
 <h3 id="去掉顶部黑线"><a href="#去掉顶部黑线" class="headerlink" title="去掉顶部黑线"></a>去掉顶部黑线</h3><p>打开<code>博客根目录\source\_data\styles.styl</code>添加代码：</p>
 <figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.headband</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:none;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><img src=".\Hexo-NexT主题美化\image-20200723224731630.png" alt="image-20200723224731630"></p>
+<p><img src="..\images\image-20200723224731630.png" alt="image-20200723224731630"></p>
 <hr>
 <ol>
 <li>参考：<a href="https://io-oi.me/tech/hexo-next-optimization" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization</a></li>
@@ -34,13 +34,13 @@
     <title>使用Googoleapis字体库报错</title>
     <url>/post/%E4%BD%BF%E7%94%A8Googoleapis%E5%AD%97%E4%BD%93%E5%BA%93%E6%8A%A5%E9%94%99/</url>
     <content><![CDATA[<p>在next主题配置文件里开启fonts设置自定义字体，使用默认host(googleapis.com)，开始还可以正常显示字体，一段时间后，重新生成部署网站后，字体恢复默认，不显示自定义字体，打开F12发现报错。</p>
-<p><img src=".\使用Googoleapis字体库报错\报错1.png" alt="image-20200723222907418"><img src=".\使用Googoleapis字体库报错\报错2.png" alt="image-20200723223333744"><a id="more"></a></p>
+<p><img src="..\images\报错1.png" alt="image-20200723222907418"><img src="..\images\报错2.png" alt="image-20200723223333744"><a id="more"></a></p>
 <p>这个问题原因还不明白，但是找到了解决方法。</p>
 <p>按F12进入控制台，找到申请字体的资源</p>
-<p><img src=".\使用Googoleapis字体库报错\image-20200724213119642.png" alt="image-20200724213119642"></p>
+<p><img src="..\images\image-20200724213119642.png" alt="image-20200724213119642"></p>
 <p>全部复制下来，在博客目录里面找个位置保存，然后在<code>~\source\_data\head.swig</code>添加：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fonts --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/fonts/css/original_fonts.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src=".\使用Googoleapis字体库报错\image-20200724213241666.png" alt="image-20200724213241666"></p>
+<p><img src="..\images\image-20200724213241666.png" alt="image-20200724213241666"></p>
 <p>问题就解决了。</p>
 ]]></content>
       <categories>
@@ -3397,7 +3397,7 @@ a_3x+b_3y+c_3z=d_3\\
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">And then define the link:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://google.com/</span></span><br></pre></td></tr></table></figure>
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#105;&#64;&#116;&#x79;&#112;&#111;&#x72;&#97;&#x2e;&#x69;&#x6f;">&#105;&#64;&#116;&#x79;&#112;&#111;&#x72;&#97;&#x2e;&#x69;&#x6f;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#105;&#64;&#x74;&#x79;&#x70;&#x6f;&#114;&#97;&#46;&#x69;&#111;">&#105;&#64;&#x74;&#x79;&#x70;&#x6f;&#114;&#97;&#46;&#x69;&#111;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: www.google.com.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -3853,8 +3853,8 @@ a_3x+b_3y+c_3z=d_3\\
         <category>记录</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>html</tag>
+        <tag>markdown</tag>
         <tag>web</tag>
       </tags>
   </entry>
