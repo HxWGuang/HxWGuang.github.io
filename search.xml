@@ -1,6 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo中使用emoji表情</title>
+    <url>/post/Hexo%E4%B8%AD%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/</url>
+    <content><![CDATA[<div class="note danger no-icon">
+            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br><del>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</del><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是上面两个插件和<code>hexo-renderer-markdown-it-plus</code>不能同时安装！！</p>
+          </div>
+<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>将markdown转化为html的转化器叫做markdown渲染器。<br>在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。<br><a id="more"></a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>命令行如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-emoji --save</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>Tips:</strong> 据说hexo-renderer-markdown-it的速度要比Hexo原装插件要快，而且功能更多</p>
+</blockquote>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure><br>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
+<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>输入对应的emoji编码就行了<br>例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
+<h1 id="emoji编码表"><a href="#emoji编码表" class="headerlink" title="emoji编码表"></a>emoji编码表</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>People</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:smile:<code>:smile:</code></td>
+<td>:laughing:<code>:laughing:</code></td>
+<td>:blush:<code>:blush:</code></td>
+<td>:smiley:<code>:smiley:</code></td>
+</tr>
+<tr>
+<td>:relaxed:<code>:relaxed:</code></td>
+<td>:smirk:<code>:smirk:</code></td>
+<td>:heart_eyes:<code>:heart_eyes:</code>​</td>
+<td>:kissing_heart:<code>:kissing_heart:</code></td>
+</tr>
+<tr>
+<td>:kissing_closed_eyes:<code>:kissing_closed_eyes:</code></td>
+<td>:flushed:<code>:flushed:</code></td>
+<td>:relieved:<code>:relieved:</code></td>
+<td>:satisfied:<code>:satisfied:</code></td>
+</tr>
+<tr>
+<td>:grin:<code>:grin:</code></td>
+<td>:wink:<code>:wink:</code></td>
+<td>:stuck_out_tongue_winking_eye:<code>:stuck_out_tongue_winking_eye:</code></td>
+<td>:stuck_out_tongue_closed_eyes:<code>:stuck_out_tongue_closed_eyes:</code></td>
+</tr>
+<tr>
+<td>:grinning:<code>:grinning:</code></td>
+<td>:kissing:<code>:kissing:</code></td>
+<td>:kissing_smiling_eyes:<code>:kissing_smiling_eyes:</code></td>
+<td>:stuck_out_tongue:<code>:stuck_out_tongue:</code></td>
+</tr>
+<tr>
+<td>:sleeping:<code>:sleeping:</code></td>
+<td>:worried:<code>:worried:</code></td>
+<td>:frowning:<code>:frowning:</code></td>
+<td>:anguished:<code>:anguished:</code></td>
+</tr>
+<tr>
+<td>:open_mouth:<code>:open_mouth:</code></td>
+<td>:grimacing:<code>:grimacing:</code></td>
+<td>:confused:<code>:confused:</code></td>
+<td>:hushed:<code>:hushed:</code></td>
+</tr>
+<tr>
+<td>:expressionless:<code>:expressionless:</code></td>
+<td>:unamused:<code>:unamused:</code></td>
+<td>:sweat_smile:<code>:sweat_smile:</code></td>
+<td>:sweat:<code>:sweat:</code></td>
+</tr>
+<tr>
+<td>:disappointed_relieved:<code>:disappointed_relieved:</code></td>
+<td>:weary:<code>:weary:</code></td>
+<td>:pensive:<code>:pensive:</code></td>
+<td>:disappointed:<code>:disappointed:</code></td>
+</tr>
+<tr>
+<td>:confounded:<code>:confounded:</code></td>
+<td>:fearful:<code>:fearful:</code></td>
+<td>:cold_sweat:<code>:cold_sweat:</code></td>
+<td>:persevere:<code>:persevere:</code></td>
+</tr>
+<tr>
+<td>:cry:<code>:cry:</code></td>
+<td>:sob:<code>:sob:</code></td>
+<td>:joy:<code>:joy:</code></td>
+<td>:astonished:<code>:astonished:</code></td>
+</tr>
+<tr>
+<td>:scream:<code>:scream:</code></td>
+<td>:tired_face:<code>:tired_face:</code></td>
+<td>:angry:<code>:angry:</code></td>
+<td>:rage:<code>:rage:</code></td>
+</tr>
+<tr>
+<td>:triumph:<code>:triumph:</code></td>
+<td>:sleepy:<code>:sleepy:</code></td>
+<td>:yum:<code>:yum:</code></td>
+<td>:mask:<code>:mask:</code></td>
+</tr>
+<tr>
+<td>:sunglasses:<code>:sunglasses:</code></td>
+<td>:dizzy_face:<code>:dizzy_face:</code></td>
+<td>:imp:<code>:imp:</code></td>
+<td>:smiling_imp:<code>:smiling_imp:</code>​</td>
+</tr>
+<tr>
+<td>:neutral_face:<code>:neutral_face:</code></td>
+<td>:no_mouth:<code>:no_mouth:</code></td>
+<td>:innocent:<code>:innocent:</code></td>
+<td>:alien:<code>:alien:</code></td>
+</tr>
+<tr>
+<td>:yellow_heart:<code>:yellow_heart:</code></td>
+<td>:blue_heart:<code>:blue_heart:</code></td>
+<td>:purple_heart:<code>:purple_heart:</code></td>
+<td>:heart:<code>:heart:</code></td>
+</tr>
+<tr>
+<td>:green_heart:<code>:green_heart:</code></td>
+<td>:broken_heart:<code>:broken_heart:</code></td>
+<td>:heartbeat:<code>:heartbeat:</code></td>
+<td>:heartpulse:<code>:heartpulse:</code></td>
+</tr>
+<tr>
+<td>:two_hearts:<code>:two_hearts:</code></td>
+<td>:revolving_hearts:<code>:revolving_hearts:</code></td>
+<td>:cupid:<code>:cupid:</code></td>
+<td>:sparkling_heart:<code>:sparkling_heart:</code></td>
+</tr>
+<tr>
+<td>:sparkles:<code>:sparkles:</code></td>
+<td>:star:<code>:star:</code></td>
+<td>:star2:<code>:star2:</code></td>
+<td>:dizzy:<code>:dizzy:</code></td>
+</tr>
+<tr>
+<td>:boom:<code>:boom:</code></td>
+<td>:collision:<code>:collision:</code></td>
+<td>:anger:<code>:anger:</code></td>
+<td>:exclamation:<code>:exclamation:</code></td>
+</tr>
+<tr>
+<td>:question:<code>:question:</code></td>
+<td>:grey_exclamation:<code>:grey_exclamation:</code></td>
+<td>:grey_question:<code>:grey_question:</code></td>
+<td>:zzz:<code>:zzz:</code></td>
+</tr>
+<tr>
+<td>:dash:<code>:dash:</code></td>
+<td>:sweat_drops:<code>:sweat_drops:</code></td>
+<td>:notes:<code>:notes:</code></td>
+<td>:musical_note:<code>:musical_note:</code></td>
+</tr>
+<tr>
+<td>:fire:<code>:fire:</code></td>
+<td>:hankey:<code>:hankey:</code></td>
+<td>:poop:<code>:poop:</code></td>
+<td>:shit:<code>:shit:</code></td>
+</tr>
+<tr>
+<td>:+1:<code>:+1:</code></td>
+<td>:thumbsup:<code>:thumbsup:</code></td>
+<td>:-1:<code>:-1:</code></td>
+<td>:thumbsdown:<code>:thumbsdown:</code></td>
+</tr>
+<tr>
+<td>:ok_hand:<code>:ok_hand:</code></td>
+<td>:punch:<code>:punch:</code></td>
+<td>:facepunch:<code>:facepunch:</code></td>
+<td>:fist:<code>:fist:</code></td>
+</tr>
+<tr>
+<td>:v:<code>:v:</code></td>
+<td>:wave:<code>:wave:</code></td>
+<td>:hand:<code>:hand:</code></td>
+<td>:raised_hand:<code>:raised_hand:</code></td>
+</tr>
+<tr>
+<td>:open_hands:<code>:open_hands:</code></td>
+<td>:point_up:<code>:point_up:</code></td>
+<td>:point_down:<code>:point_down:</code></td>
+<td>:point_left:<code>:point_left:</code></td>
+</tr>
+<tr>
+<td>:point_right:<code>:point_right:</code></td>
+<td>:raised_hands:<code>:raised_hands:</code></td>
+<td>:pray:<code>:pray:</code></td>
+<td>:point_up_2:<code>:point_up_2:</code></td>
+</tr>
+<tr>
+<td>:clap:<code>:clap:</code></td>
+<td>:muscle:<code>:muscle:</code></td>
+<td>:metal:<code>:metal:</code></td>
+<td>:fu:<code>:fu:</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>未完待续…</strong></p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>emoji</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-NexT主题美化</title>
+    <url>/post/Hexo-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p>记录一些主题修改（美化）的步骤或方法。<br><a id="more"></a></p>
+<ul>
+<li><a href="https://hxwguang.github.io/post/给文章添加置顶/">给文章添加置顶功能</a></li>
+<li><a href="https://hxwguang.github.io/post/Hexo-Next主题中添加aplayer播放器/">添加Aplayer音乐播放器</a></li>
+<li><a href="https://hxwguang.github.io/post/Hexo中使用emoji表情/">在Hexo中使用emoji表情</a></li>
+</ul>
+<h3 id="修改主题页面布局为圆角"><a href="#修改主题页面布局为圆角" class="headerlink" title="修改主题页面布局为圆角"></a>修改主题页面布局为圆角</h3><p>打开<code>\themes\next\source\css\_variables\Gemini.styl</code> 添加代码：</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$border-radius-inner     = 9px 9px 9px 9px;</span><br><span class="line">$border-radius           = 9px;</span><br></pre></td></tr></table></figure>
+<p><img src="..\images\image-20200723224351292.png" alt="image-20200723224351292"></p>
+<h3 id="去掉顶部黑线"><a href="#去掉顶部黑线" class="headerlink" title="去掉顶部黑线"></a>去掉顶部黑线</h3><p>打开<code>博客根目录\source\_data\styles.styl</code>添加代码：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.headband</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:none;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="..\images\image-20200723224731630.png" alt="image-20200723224731630"></p>
+<hr>
+<ol>
+<li>参考：<a href="https://io-oi.me/tech/hexo-next-optimization" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization</a></li>
+<li>参考：<a href="https://juejin.im/post/5bcd2d395188255c3b7dc1db" target="_blank" rel="noopener">https://juejin.im/post/5bcd2d395188255c3b7dc1db</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>美化</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>美化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML字符实体</title>
     <url>/post/HTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93/</url>
     <content><![CDATA[<div class="note info">
@@ -141,36 +383,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-NexT主题美化</title>
-    <url>/post/Hexo-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p>记录一些主题修改（美化）的步骤或方法。<br><a id="more"></a></p>
-<ul>
-<li><a href="https://hxwguang.github.io/post/给文章添加置顶/">给文章添加置顶功能</a></li>
-<li><a href="https://hxwguang.github.io/post/Hexo-Next主题中添加aplayer播放器/">添加Aplayer音乐播放器</a></li>
-<li><a href="https://hxwguang.github.io/post/Hexo中使用emoji表情/">在Hexo中使用emoji表情</a></li>
-</ul>
-<h3 id="修改主题页面布局为圆角"><a href="#修改主题页面布局为圆角" class="headerlink" title="修改主题页面布局为圆角"></a>修改主题页面布局为圆角</h3><p>打开<code>\themes\next\source\css\_variables\Gemini.styl</code> 添加代码：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">$border-radius-inner     = 9px 9px 9px 9px;</span><br><span class="line">$border-radius           = 9px;</span><br></pre></td></tr></table></figure>
-<p><img src="..\images\image-20200723224351292.png" alt="image-20200723224351292"></p>
-<h3 id="去掉顶部黑线"><a href="#去掉顶部黑线" class="headerlink" title="去掉顶部黑线"></a>去掉顶部黑线</h3><p>打开<code>博客根目录\source\_data\styles.styl</code>添加代码：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.headband</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:none;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p><img src="..\images\image-20200723224731630.png" alt="image-20200723224731630"></p>
-<hr>
-<ol>
-<li>参考：<a href="https://io-oi.me/tech/hexo-next-optimization" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization</a></li>
-<li>参考：<a href="https://juejin.im/post/5bcd2d395188255c3b7dc1db" target="_blank" rel="noopener">https://juejin.im/post/5bcd2d395188255c3b7dc1db</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>美化</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-        <tag>美化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown 语法</title>
     <url>/post/Markdown%20%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><strong>Markdown</strong> is created by <a href="http://daringfireball.net/" target="_blank" rel="noopener">Daring Fireball</a>; the original guideline is <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">here</a>. Its syntax, however, varies between different parsers or editors. <strong>Typora</strong> is using <a href="https://help.github.com/en/github/writing-on-github" target="_blank" rel="noopener">GitHub Flavored Markdown</a>.</p>
@@ -244,7 +456,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">Google</span>][<span class="symbol"></span>]</span><br><span class="line">And then define the link:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">Google</span>]: <span class="link">http://google.com/</span></span><br></pre></td></tr></table></figure>
 <p>In Typora, clicking the link will expand it for editing, and command+click will open the hyperlink in your web browser.</p>
 <h3 id="URLs"><a href="#URLs" class="headerlink" title="URLs"></a>URLs</h3><p>Typora allows you to insert URLs as links, wrapped by <code>&lt;</code>brackets<code>&gt;</code>.</p>
-<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x69;&#x40;&#116;&#121;&#112;&#111;&#x72;&#97;&#x2e;&#x69;&#111;">&#x69;&#x40;&#116;&#121;&#112;&#111;&#x72;&#97;&#x2e;&#x69;&#111;</a>.</p>
+<p><code>&lt;i@typora.io&gt;</code> becomes <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#105;&#x40;&#x74;&#121;&#x70;&#111;&#114;&#x61;&#46;&#x69;&#111;">&#105;&#x40;&#x74;&#121;&#x70;&#111;&#114;&#x61;&#46;&#x69;&#111;</a>.</p>
 <p>Typora will also automatically link standard URLs. e.g: www.google.com.</p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p>Images have similar syntax as links, but they require an additional <code>!</code> char before the start of the link. The syntax for inserting an image looks like this:</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line"></span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
@@ -301,41 +513,38 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Next主题中添加aplayer播放器</title>
-    <url>/post/Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0aplayer%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<p>本篇主要解决以下两个问题：</p>
-<p><input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer</p>
-<p><input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
-<a id="more"></a>
-<h2 id="添加Aplayer播放器"><a href="#添加Aplayer播放器" class="headerlink" title="添加Aplayer播放器"></a>添加Aplayer播放器</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
-<h3 id="新建music-js"><a href="#新建music-js" class="headerlink" title="新建music.js"></a>新建music.js</h3><p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"PDD洪荒之力"</span>,</span><br><span class="line">        artist: <span class="string">'徐梦圆'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/39868.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/84.jpg'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'9420'</span>,</span><br><span class="line">        artist: <span class="string">'麦小兜'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/45967.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/8.jpg'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>代码中对应参数的解释，请查看：<a href="https://aplayer.js.org/#/zh-Hans/?id=参数" target="_blank" rel="noopener">Aplayer中文文档</a></p>
-<p><code>audio</code>对应的是音频文件的信息参数，需要自己配置相关的信息（如歌名，歌手，音频链接，封面等）的配置。</p>
-<div class="note info no-icon">
-            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: &#39;/dist/assets/song1.mp3&#39;</code><br>快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/一个快速生成音乐外链的方法/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
-          </div>
-<h3 id="添加脚本信息"><a href="#添加脚本信息" class="headerlink" title="添加脚本信息"></a>添加脚本信息</h3><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>在<code>站点根目录/source/_data</code>里新建文件<code>head.swig</code></p>
-<p>在里面添加</p>
-<figure class="highlight js"><figcaption><span>head.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">+  <span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/music.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>保存</p>
-<h4 id="去掉注释"><a href="#去掉注释" class="headerlink" title="去掉注释"></a>去掉注释</h4><p>打开<code>~/theme/next/_config.yml</code></p>
-<p>定位到<code>custom_file_path</code>然后把<code>#header: source/_data/header.swig</code>前面的<code>#</code>号去掉，保存</p>
-<p>完成。</p>
-<hr>
-<h2 id="解决切换页面播放中断问题"><a href="#解决切换页面播放中断问题" class="headerlink" title="解决切换页面播放中断问题"></a>解决切换页面播放中断问题</h2><p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure><br>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+    <title>NexT添加新的页面</title>
+    <url>/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<p>给博客添加一个新的页面(page)，基本步骤与Next主题文档中添加tag或categories页面的步骤基本一致，但是由于Next主题菜单项中没有自带留言项，所以需要做一些小调整，下面用新建相册页面来介绍一下详细步骤。<br><a id="more"></a></p>
+<h3 id="1-在菜单中添加photo"><a href="#1-在菜单中添加photo" class="headerlink" title="1.在菜单中添加photo"></a>1.在菜单中添加photo</h3><h4 id="1-1-修改主题配置文件"><a href="#1-1-修改主题配置文件" class="headerlink" title="1.1.修改主题配置文件"></a>1.1.修改主题配置文件</h4><p>打开Next主题目录下的<code>_config.yml</code>（注意不是Hexo目录下的_config.yml,是 <strong><span class="label danger">Next主题目录</span></strong> 下的_config.yml，路径为blog/themes/next/_config.yml），在<code>menu</code>项下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">/photo/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-camera-retro</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-2-添加对应的译文"><a href="#1-2-添加对应的译文" class="headerlink" title="1.2.添加对应的译文"></a>1.2.添加对应的译文</h4><p>在<code>~/themes/next/languages/zh-CN.yml</code>文件中的<code>menu</code>下添加<code>photo</code>字段，如下：</p>
+<figure class="highlight yml"><figcaption><span>zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">相册</span></span><br><span class="line">  <span class="string">...</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-创建photo页面"><a href="#2-创建photo页面" class="headerlink" title="2.创建photo页面"></a>2.创建photo页面</h3><p>终端下进入Hexo根目录，运行以下命令创建<code>photo</code>页面：</p>
+<figure class="highlight plain"><figcaption><span>hexo根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo new page photo</span><br></pre></td></tr></table></figure>
+<p>此时在Hexo根目录下的source文件夹中应该就能看到<code>photo</code>文件夹了，进入<code>photo</code>文件夹打开<code>index.md</code>文件，再自行修改其中内容即可。<br>最后再输入<code>hexo clean &amp;&amp; hexo s</code>就可以查看效果了。</p>
 ]]></content>
       <categories>
-        <category>美化</category>
         <category>记录</category>
-        <category>捣鼓</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>next</tag>
-        <tag>美化</tag>
-        <tag>aplayer</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/post/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>基本数学公式语法(of MathJax)</title>
@@ -640,215 +849,41 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>Hexo中使用emoji表情</title>
-    <url>/post/Hexo%E4%B8%AD%E4%BD%BF%E7%94%A8emoji%E8%A1%A8%E6%83%85/</url>
-    <content><![CDATA[<div class="note danger no-icon">
-            <p><strong>注意：</strong> <del>这个方法我尝试了但是没有效果，还是没能显示emoji，但我还是发出来这个方法，也许你们可以</del><br><del>这个方法用的是npm后面我自己改用了yarn再重复本方法的操作就又可以了。。</del><br>其实安装完<code>hexo-renderer-markdown-it</code>和<code>markdown-it-emoji</code>插件后就可以了，但是上面两个插件和<code>hexo-renderer-markdown-it-plus</code>不能同时安装！！</p>
-          </div>
-<p>Hexo开启欢乐的emoji之旅:yellow_heart:<br>内容转载自：<a href="https://geek-space.cn/post/emoji.html" target="_blank" rel="noopener">Hexo中使用emoji表情</a><br>将markdown转化为html的转化器叫做markdown渲染器。<br>在Hexo中默认的markdown渲染器是<code>hexo-renderer-marked</code>，这个渲染器是不支持emoji表情的。我们换一个支持emoji的引擎，再增加一个emoji插件即可。<br><a id="more"></a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>命令行如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br><span class="line">npm i markdown-it-emoji --save</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>Tips:</strong> 据说hexo-renderer-markdown-it的速度要比Hexo原装插件要快，而且功能更多</p>
-</blockquote>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>完成插件安装后还需要修改Hexo站点配置文件<code>_config.yml</code>(不是主题配置文件哦)。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">markdown:</span><br><span class="line"> plugins:</span><br><span class="line"> - markdown-it-footnote</span><br><span class="line"> - markdown-it-sup</span><br><span class="line"> - markdown-it-sub</span><br><span class="line"> - markdown-it-abbr</span><br><span class="line"> - markdown-it-emoji</span><br></pre></td></tr></table></figure><br>更多配置参数可以看这个：<a href="https://github.com/hexojs/hexo-renderer-markdown-it/wiki/Getting-Started" target="_blank" rel="noopener">点我进入</a></p>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>输入对应的emoji编码就行了<br>例如：输入笑脸对应的emoji编码<code>:smile:</code>就可以得到:smile:。</p>
-<h1 id="emoji编码表"><a href="#emoji编码表" class="headerlink" title="emoji编码表"></a>emoji编码表</h1><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>People</th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>:smile:<code>:smile:</code></td>
-<td>:laughing:<code>:laughing:</code></td>
-<td>:blush:<code>:blush:</code></td>
-<td>:smiley:<code>:smiley:</code></td>
-</tr>
-<tr>
-<td>:relaxed:<code>:relaxed:</code></td>
-<td>:smirk:<code>:smirk:</code></td>
-<td>:heart_eyes:<code>:heart_eyes:</code>​</td>
-<td>:kissing_heart:<code>:kissing_heart:</code></td>
-</tr>
-<tr>
-<td>:kissing_closed_eyes:<code>:kissing_closed_eyes:</code></td>
-<td>:flushed:<code>:flushed:</code></td>
-<td>:relieved:<code>:relieved:</code></td>
-<td>:satisfied:<code>:satisfied:</code></td>
-</tr>
-<tr>
-<td>:grin:<code>:grin:</code></td>
-<td>:wink:<code>:wink:</code></td>
-<td>:stuck_out_tongue_winking_eye:<code>:stuck_out_tongue_winking_eye:</code></td>
-<td>:stuck_out_tongue_closed_eyes:<code>:stuck_out_tongue_closed_eyes:</code></td>
-</tr>
-<tr>
-<td>:grinning:<code>:grinning:</code></td>
-<td>:kissing:<code>:kissing:</code></td>
-<td>:kissing_smiling_eyes:<code>:kissing_smiling_eyes:</code></td>
-<td>:stuck_out_tongue:<code>:stuck_out_tongue:</code></td>
-</tr>
-<tr>
-<td>:sleeping:<code>:sleeping:</code></td>
-<td>:worried:<code>:worried:</code></td>
-<td>:frowning:<code>:frowning:</code></td>
-<td>:anguished:<code>:anguished:</code></td>
-</tr>
-<tr>
-<td>:open_mouth:<code>:open_mouth:</code></td>
-<td>:grimacing:<code>:grimacing:</code></td>
-<td>:confused:<code>:confused:</code></td>
-<td>:hushed:<code>:hushed:</code></td>
-</tr>
-<tr>
-<td>:expressionless:<code>:expressionless:</code></td>
-<td>:unamused:<code>:unamused:</code></td>
-<td>:sweat_smile:<code>:sweat_smile:</code></td>
-<td>:sweat:<code>:sweat:</code></td>
-</tr>
-<tr>
-<td>:disappointed_relieved:<code>:disappointed_relieved:</code></td>
-<td>:weary:<code>:weary:</code></td>
-<td>:pensive:<code>:pensive:</code></td>
-<td>:disappointed:<code>:disappointed:</code></td>
-</tr>
-<tr>
-<td>:confounded:<code>:confounded:</code></td>
-<td>:fearful:<code>:fearful:</code></td>
-<td>:cold_sweat:<code>:cold_sweat:</code></td>
-<td>:persevere:<code>:persevere:</code></td>
-</tr>
-<tr>
-<td>:cry:<code>:cry:</code></td>
-<td>:sob:<code>:sob:</code></td>
-<td>:joy:<code>:joy:</code></td>
-<td>:astonished:<code>:astonished:</code></td>
-</tr>
-<tr>
-<td>:scream:<code>:scream:</code></td>
-<td>:tired_face:<code>:tired_face:</code></td>
-<td>:angry:<code>:angry:</code></td>
-<td>:rage:<code>:rage:</code></td>
-</tr>
-<tr>
-<td>:triumph:<code>:triumph:</code></td>
-<td>:sleepy:<code>:sleepy:</code></td>
-<td>:yum:<code>:yum:</code></td>
-<td>:mask:<code>:mask:</code></td>
-</tr>
-<tr>
-<td>:sunglasses:<code>:sunglasses:</code></td>
-<td>:dizzy_face:<code>:dizzy_face:</code></td>
-<td>:imp:<code>:imp:</code></td>
-<td>:smiling_imp:<code>:smiling_imp:</code>​</td>
-</tr>
-<tr>
-<td>:neutral_face:<code>:neutral_face:</code></td>
-<td>:no_mouth:<code>:no_mouth:</code></td>
-<td>:innocent:<code>:innocent:</code></td>
-<td>:alien:<code>:alien:</code></td>
-</tr>
-<tr>
-<td>:yellow_heart:<code>:yellow_heart:</code></td>
-<td>:blue_heart:<code>:blue_heart:</code></td>
-<td>:purple_heart:<code>:purple_heart:</code></td>
-<td>:heart:<code>:heart:</code></td>
-</tr>
-<tr>
-<td>:green_heart:<code>:green_heart:</code></td>
-<td>:broken_heart:<code>:broken_heart:</code></td>
-<td>:heartbeat:<code>:heartbeat:</code></td>
-<td>:heartpulse:<code>:heartpulse:</code></td>
-</tr>
-<tr>
-<td>:two_hearts:<code>:two_hearts:</code></td>
-<td>:revolving_hearts:<code>:revolving_hearts:</code></td>
-<td>:cupid:<code>:cupid:</code></td>
-<td>:sparkling_heart:<code>:sparkling_heart:</code></td>
-</tr>
-<tr>
-<td>:sparkles:<code>:sparkles:</code></td>
-<td>:star:<code>:star:</code></td>
-<td>:star2:<code>:star2:</code></td>
-<td>:dizzy:<code>:dizzy:</code></td>
-</tr>
-<tr>
-<td>:boom:<code>:boom:</code></td>
-<td>:collision:<code>:collision:</code></td>
-<td>:anger:<code>:anger:</code></td>
-<td>:exclamation:<code>:exclamation:</code></td>
-</tr>
-<tr>
-<td>:question:<code>:question:</code></td>
-<td>:grey_exclamation:<code>:grey_exclamation:</code></td>
-<td>:grey_question:<code>:grey_question:</code></td>
-<td>:zzz:<code>:zzz:</code></td>
-</tr>
-<tr>
-<td>:dash:<code>:dash:</code></td>
-<td>:sweat_drops:<code>:sweat_drops:</code></td>
-<td>:notes:<code>:notes:</code></td>
-<td>:musical_note:<code>:musical_note:</code></td>
-</tr>
-<tr>
-<td>:fire:<code>:fire:</code></td>
-<td>:hankey:<code>:hankey:</code></td>
-<td>:poop:<code>:poop:</code></td>
-<td>:shit:<code>:shit:</code></td>
-</tr>
-<tr>
-<td>:+1:<code>:+1:</code></td>
-<td>:thumbsup:<code>:thumbsup:</code></td>
-<td>:-1:<code>:-1:</code></td>
-<td>:thumbsdown:<code>:thumbsdown:</code></td>
-</tr>
-<tr>
-<td>:ok_hand:<code>:ok_hand:</code></td>
-<td>:punch:<code>:punch:</code></td>
-<td>:facepunch:<code>:facepunch:</code></td>
-<td>:fist:<code>:fist:</code></td>
-</tr>
-<tr>
-<td>:v:<code>:v:</code></td>
-<td>:wave:<code>:wave:</code></td>
-<td>:hand:<code>:hand:</code></td>
-<td>:raised_hand:<code>:raised_hand:</code></td>
-</tr>
-<tr>
-<td>:open_hands:<code>:open_hands:</code></td>
-<td>:point_up:<code>:point_up:</code></td>
-<td>:point_down:<code>:point_down:</code></td>
-<td>:point_left:<code>:point_left:</code></td>
-</tr>
-<tr>
-<td>:point_right:<code>:point_right:</code></td>
-<td>:raised_hands:<code>:raised_hands:</code></td>
-<td>:pray:<code>:pray:</code></td>
-<td>:point_up_2:<code>:point_up_2:</code></td>
-</tr>
-<tr>
-<td>:clap:<code>:clap:</code></td>
-<td>:muscle:<code>:muscle:</code></td>
-<td>:metal:<code>:metal:</code></td>
-<td>:fu:<code>:fu:</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>未完待续…</strong></p>
+    <title>hexo-renderer-markdown-it里的插件使用</title>
+    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>markdown-it-abbr：缩写插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-footnote：脚注插件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-ins：插入插件（下划线插件）</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sub：下标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-sup：上标插件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>记录</category>
-        <category>问题</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>emoji</tag>
+        <tag>markdown</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -904,75 +939,152 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/post/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>NexT添加新的页面</title>
-    <url>/post/NexT%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2/</url>
-    <content><![CDATA[<p>给博客添加一个新的页面(page)，基本步骤与Next主题文档中添加tag或categories页面的步骤基本一致，但是由于Next主题菜单项中没有自带留言项，所以需要做一些小调整，下面用新建相册页面来介绍一下详细步骤。<br><a id="more"></a></p>
-<h3 id="1-在菜单中添加photo"><a href="#1-在菜单中添加photo" class="headerlink" title="1.在菜单中添加photo"></a>1.在菜单中添加photo</h3><h4 id="1-1-修改主题配置文件"><a href="#1-1-修改主题配置文件" class="headerlink" title="1.1.修改主题配置文件"></a>1.1.修改主题配置文件</h4><p>打开Next主题目录下的<code>_config.yml</code>（注意不是Hexo目录下的_config.yml,是 <strong><span class="label danger">Next主题目录</span></strong> 下的_config.yml，路径为blog/themes/next/_config.yml），在<code>menu</code>项下添加<code>photo</code>字段，如下：</p>
-<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">/photo/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-camera-retro</span></span><br></pre></td></tr></table></figure>
-<h4 id="1-2-添加对应的译文"><a href="#1-2-添加对应的译文" class="headerlink" title="1.2.添加对应的译文"></a>1.2.添加对应的译文</h4><p>在<code>~/themes/next/languages/zh-CN.yml</code>文件中的<code>menu</code>下添加<code>photo</code>字段，如下：</p>
-<figure class="highlight yml"><figcaption><span>zh-CN.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line">  <span class="attr">photo:</span> <span class="string">相册</span></span><br><span class="line">  <span class="string">...</span></span><br></pre></td></tr></table></figure>
-<h3 id="2-创建photo页面"><a href="#2-创建photo页面" class="headerlink" title="2.创建photo页面"></a>2.创建photo页面</h3><p>终端下进入Hexo根目录，运行以下命令创建<code>photo</code>页面：</p>
-<figure class="highlight plain"><figcaption><span>hexo根目录</span></figcaption><table><tr><td class="code"><pre><span class="line">hexo new page photo</span><br></pre></td></tr></table></figure>
-<p>此时在Hexo根目录下的source文件夹中应该就能看到<code>photo</code>文件夹了，进入<code>photo</code>文件夹打开<code>index.md</code>文件，再自行修改其中内容即可。<br>最后再输入<code>hexo clean &amp;&amp; hexo s</code>就可以查看效果了。</p>
+    <title>标签插件(Tag Plugins)</title>
+    <url>/post/note-tag/</url>
+    <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>标签插件是使Hexo支持特殊类型内容的一种方法。例如，我们不能在标准MarkDown中显示自定义大小的图片。Hexo和Next主题都提供了各自的标签插件。下面先介绍Hexo提供的。</p>
+<h1 id="Hexo提供的标签插件"><a href="#Hexo提供的标签插件" class="headerlink" title="Hexo提供的标签插件"></a>Hexo提供的标签插件</h1><h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。<br><strong>引用：</strong>quote<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p><strong>没有提供参数，则只输出普通的blockquote</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote></p>
+<p><strong>引用书上的例子</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><br><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote></p>
+<p><strong>引用Twitter</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote @DevDocs https:&#x2F;&#x2F;twitter.com&#x2F;devdocs&#x2F;status&#x2F;356095192085962752 %&#125;</span><br><span class="line">NEW: DevDocs now comes with syntax highlighting. http:&#x2F;&#x2F;devdocs.io</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="noopener">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+<p><strong>引用网络上的文章</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote Seth Godin http:&#x2F;&#x2F;sethgodin.typepad.com&#x2F;seths_blog&#x2F;2009&#x2F;07&#x2F;welcome-to-island-marketing.html Welcome to Island Marketing %&#125;</span><br><span class="line">Every interaction is both precious and an opportunity to delight.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>在文章中插入代码<br><strong>别名：</strong>code<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] [additional options] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br>Specify additional options in<code>option:value</code>format, e.g<code>line_number:false first_line:5</code></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Extra Options</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>line_number</code></td>
+<td>Show line number</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>highlight</code></td>
+<td>Enable code highlighting</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>first_line</code></td>
+<td>Specify the first line number</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>mark</code></td>
+<td>Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br/>Example: <code>mark:1,4-7,10</code> will mark line 1, 4 to 7 and 10.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>wrap</code></td>
+<td>Wrap the code block in <code>&lt;table&gt;</code></td>
+<td><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h3><p><strong>普通的代码块</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock %&#125;</span><br><span class="line">alert(&#39;Hello World!&#39;);</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br></pre></td></tr></table></figure></p>
+<p><strong>指定语言</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:objc %&#125;</span><br><span class="line">[rectangle setX: 10 y: 10 width: 20 height: 20];</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight objc"><table><tr><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure></p>
+<p><strong>附加说明</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock Array.map %&#125;</span><br><span class="line">array.map(callback[, thisArg])</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure></p>
+<p><strong>附加说明和网址</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock _.compact http:&#x2F;&#x2F;underscorejs.org&#x2F;#compact Underscore.js %&#125;</span><br><span class="line">_.compact([0, 1, false, 2, &#39;&#39;, 3]);</span><br><span class="line">&#x3D;&gt; [1, 2, 3]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="noopener">Underscore.js</a></figcaption><table><tr><td class="code"><pre><span class="line">_.compact([0, 1, false, 2, &#39;&#39;, 3]);</span><br><span class="line">&#x3D;&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure></p>
+<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>另一种形式的代码块，不同的是它使用三个反引号来包裹。<br>``` [language] [title] [url] [link text] code snippet ```</p>
+<h2 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h2><p>在文章中插入Pull quote。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% pullquote [class] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><p>在文章中嵌入jsFiddle。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>在文章中嵌入Gist。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% gist gist_id [filename] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>在文章中插入iframe。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>在文章中插入指定大小的图片。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] &#96;&quot;title text&quot; &quot;alt text&quot;&#39; %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p>在文章中插入链接，并自动给外部链接添加<code>target=&quot;_blank&quot;</code>属性。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Include-Code"><a href="#Include-Code" class="headerlink" title="Include Code"></a>Include Code</h2><p>插入<code>source/downloads/code</code>文件夹内的代码文件。<code>source/downloads/code</code>不是固定的，取决于你在配置文件中<code>code_dir</code>的配置。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code [title] [lang:language] [from:line] [to:line] path&#x2F;to&#x2F;file %&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h3><p><strong>嵌入test.js文件全文</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript test.js %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>只嵌入第3行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:3 to:3 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>嵌入第5行至第8行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 to:8 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>嵌入第5行至文件结束</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>嵌入第1行至第8行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript to:8 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Youtube"><a href="#Youtube" class="headerlink" title="Youtube"></a>Youtube</h2><p>在文章中插入YOUtube视频。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video_id %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>在文章中插入Vimeo视频。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% vimeo video_id %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>引用其他文章的链接。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_path filename %&#125;</span><br><span class="line">&#123;% post_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure><br>在使用此标签时可以忽略文章所在的路径或者文章的永久链接信息、如语言、日期。<br>例如，在文章中使用<code></code>时，只需要一个名为<code>how-to-bake-a-cake.md</code>的文章文件即可。即使这个文件位于站点文件夹的<code>source/posts/2015-02-my-family-holiday</code>目录下、或者文章的永久链接是<code>2018/en/how-to-bake-a-cake</code>，都没有影响。<br>默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用Markdown语法<code>[]()</code>。<br>默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用<code>escape</code>选项，禁止对特殊字符进行转义。<br><strong>链接使用文章的标题</strong><br><code></code><br>  </p>
+<p><strong>链接使用自定义文字</strong><br><code></code><br></p>
+<p><strong>对标题的特殊字符进行转义</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo-4-released &#39;How to use &lt;b&gt; tag in title&#39; %&#125;</span><br></pre></td></tr></table></figure><br></p>
+<p><strong>禁止对标题的特殊字符进行转义</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo-4-released &#39;&lt;b&gt;bold&lt;&#x2F;b&gt; custom title&#39; false %&#125;</span><br></pre></td></tr></table></figure><br></p>
+<h2 id="引用资源"><a href="#引用资源" class="headerlink" title="引用资源"></a>引用资源</h2><p>引用文章的资源。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_path filename %&#125;</span><br><span class="line">&#123;% asset_img filename [title] %&#125;</span><br><span class="line">&#123;% asset_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果您想在文章中插入Swig标签，可以尝试使用Raw标签，以免发生解析异常。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h2><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure><br>首页中将只会出现<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br></pre></td></tr></table></figure><br>正文中则会出现<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure><br>注意，摘要可能会被Front Matter中的<code>excerpt</code>覆盖。</p>
+<hr>
+<h1 id="NexT主题提供的标签插件"><a href="#NexT主题提供的标签插件" class="headerlink" title="NexT主题提供的标签插件"></a>NexT主题提供的标签插件</h1><h2 id="居中引用-Centered-Quote"><a href="#居中引用-Centered-Quote" class="headerlink" title="居中引用(Centered Quote)"></a>居中引用(Centered Quote)</h2><p>这个标记将在它之前和之后的两行中创建一个引用，引用的文本将居中。当使用居中引用时，如果我们有多行文本，而且每行有不同的长度，引用就不是对称的，所以建议在只有单行文本时使用。例如文章前都要做文章后的总结。</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>center-quote.js<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;Something&#123;% endcenterquote %&#125;</span><br><span class="line">&lt;!-- Tag Alias --&gt;</span><br><span class="line">&#123;% cq %&#125;Something&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="样例-3"><a href="#样例-3" class="headerlink" title="样例"></a>样例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;Elegant in code, simple in core&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>Elegant in code, simple in core</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+<h2 id="注释-Note"><a href="#注释-Note" class="headerlink" title="注释(Note)"></a>注释(Note)</h2><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bs-callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bs-callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><p>note.js<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">[class]   : default | primary | success | info | warning | danger.</span><br><span class="line">[no-icon] : Disable icon in note.</span><br><span class="line"></span><br><span class="line">All parameters are optional.</span><br></pre></td></tr></table></figure></p>
+<div class="note danger">
+            <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>如果你不想看到出bug就不要把这个标签写成一行。<br>例如，下面是用错误的语法写出来的内容：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;note text, note text, note text&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>或者像这样的：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;note text</span><br><span class="line">note text</span><br><span class="line">note text</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>需要把内容写到新的一行，像这样：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line">note text, note text, note text</span><br><span class="line">note text, note text, note text</span><br><span class="line">note text, note text, note text</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+          </div>
+<h3 id="样例-4"><a href="#样例-4" class="headerlink" title="样例"></a>样例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note ">
+            <h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>(without define class style)</p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Default Header</span><br><span class="line">Welcome to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note default">
+            <h4 id="Default-Header"><a href="#Default-Header" class="headerlink" title="Default Header"></a>Default Header</h4><p>Welcome to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note primary %&#125;</span><br><span class="line">#### Primary Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note primary">
+            <h4 id="Primary-Header"><a href="#Primary-Header" class="headerlink" title="Primary Header"></a>Primary Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125;</span><br><span class="line">#### Info Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info">
+            <h4 id="Info-Header"><a href="#Info-Header" class="headerlink" title="Info Header"></a>Info Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line">#### Success Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success">
+            <h4 id="Success-Header"><a href="#Success-Header" class="headerlink" title="Success Header"></a>Success Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning">
+            <h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line">#### Danger Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note danger">
+            <h4 id="Danger-Header"><a href="#Danger-Header" class="headerlink" title="Danger Header"></a>Danger Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line">#### No icon note</span><br><span class="line">Note **without** icon: &#96;note info no-icon&#96;</span><br><span class="line"></span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon">
+            <h4 id="No-icon-note"><a href="#No-icon-note" class="headerlink" title="No icon note"></a>No icon note</h4><p>Note <strong>without</strong> icon: <code>note info no-icon</code></p><p>note info, note info, note info<br>note info, note info, note info<br>note info, note info, note info</p>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line">#### Codeblock in note</span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note success">
+            <h4 id="Codeblock-in-note"><a href="#Codeblock-in-note" class="headerlink" title="Codeblock in note"></a>Codeblock in note</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br></pre></td></tr></table></figure>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Lists in note</span><br><span class="line">* ul</span><br><span class="line">* ul</span><br><span class="line">  * ul</span><br><span class="line">  * ul</span><br><span class="line">* ul</span><br><span class="line"></span><br><span class="line">1. ol</span><br><span class="line">2. ol</span><br><span class="line">  1. ol</span><br><span class="line">  2. ol</span><br><span class="line">3. ol</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note default">
+            <h4 id="Lists-in-note"><a href="#Lists-in-note" class="headerlink" title="Lists in note"></a>Lists in note</h4><ul><li>ul</li><li>ul<ul><li>ul</li><li>ul</li></ul></li><li>ul</li></ul><ol><li>ol</li><li>ol<ol><li>ol</li><li>ol</li></ol></li><li>ol</li></ol>
+          </div>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Table in Note</span><br><span class="line">| 1 | 2 |</span><br><span class="line">| - | - |</span><br><span class="line">| 3 | 4 |</span><br><span class="line">| 5 | 6 |</span><br><span class="line">| 7 | 8 |</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note default">
+            <h4 id="Table-in-Note"><a href="#Table-in-Note" class="headerlink" title="Table in Note"></a>Table in Note</h4><div class="table-container"><table><thead><tr><th>1</th><th>2</th></tr></thead><tbody><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td></tr></tbody></table></div>
+          </div>
 ]]></content>
       <categories>
-        <category>记录</category>
+        <category>笔记</category>
       </categories>
       <tags>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-renderer-markdown-it里的插件使用</title>
-    <url>/post/hexo-renderer-markdown-it%E9%87%8C%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p><code>hexo-renderer-markdown-it</code> 默认集成5个 <code>markdown-it</code> 插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line">markdown:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<ul>
-<li>markdown-it-abbr：缩写插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*[HTML]: Hyper Text Markup Language</span><br><span class="line">*[W3C]:  World Wide Web Consortium</span><br><span class="line"></span><br><span class="line">The HTML specification</span><br><span class="line">is maintained by the W3C.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-footnote：脚注插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">basic footnote[^1]</span><br><span class="line">and another one[^3]</span><br><span class="line">and another one[^4]</span><br><span class="line"></span><br><span class="line">[^1]: basic footnote content</span><br><span class="line">[^3]: paragraph</span><br><span class="line">[^4]: footnote content with some [markdown](https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Markdown)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-ins：插入插件（下划线插件）</li>
-</ul>
-<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">++inserted++ =&gt; <span class="xml"><span class="tag">&lt;<span class="name">ins</span>&gt;</span>inserted<span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sub：下标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">H~2~0 =&gt; H<span class="tag">&lt;<span class="name">sub</span>&gt;</span>2<span class="tag">&lt;/<span class="name">sub</span>&gt;</span>O</span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-sup：上标插件</li>
-</ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">29^th^ =&gt; 29<span class="tag">&lt;<span class="name">sup</span>&gt;</span>th<span class="tag">&lt;/<span class="name">sup</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>markdown-it-mark：高亮插件（需要自己下载）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x3D;&#x3D;marked&#x3D;&#x3D;&#96; &#x3D;&gt; &#96;inserted</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>插件</tag>
+        <tag>tag</tag>
+        <tag>plugins</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,6 +1354,31 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
+    <title>使用LeanCloud无法显示数量</title>
+    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
+    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
+            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
+          </div></p>
+<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
+<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
+<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
+</ul>
+</li>
+<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
+</ul>
+<div class="note danger no-icon">
+            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
+          </div>]]></content>
+      <categories>
+        <category>记录</category>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>leancloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个快速生成音乐外链的方法</title>
     <url>/post/%E4%B8%80%E4%B8%AA%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%A4%96%E9%93%BE%E7%9A%84%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<p>像图片可以用SM.MS或腾讯云搞到图片外链一样，音乐其实也可以通过网易云音乐网页版快速的搞到外链的 。</p>
@@ -1263,152 +1400,109 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>标签插件(Tag Plugins)</title>
-    <url>/post/note-tag/</url>
-    <content><![CDATA[<h1 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h1><p>标签插件是使Hexo支持特殊类型内容的一种方法。例如，我们不能在标准MarkDown中显示自定义大小的图片。Hexo和Next主题都提供了各自的标签插件。下面先介绍Hexo提供的。</p>
-<h1 id="Hexo提供的标签插件"><a href="#Hexo提供的标签插件" class="headerlink" title="Hexo提供的标签插件"></a>Hexo提供的标签插件</h1><h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><p>在文章中插入引言，可包含作者、来源和标题。<br><strong>引用：</strong>quote<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><p><strong>没有提供参数，则只输出普通的blockquote</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><br><blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
-</blockquote></p>
-<p><strong>引用书上的例子</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure><br><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote></p>
-<p><strong>引用Twitter</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote @DevDocs https:&#x2F;&#x2F;twitter.com&#x2F;devdocs&#x2F;status&#x2F;356095192085962752 %&#125;</span><br><span class="line">NEW: DevDocs now comes with syntax highlighting. http:&#x2F;&#x2F;devdocs.io</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="noopener">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="noopener">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
-<p><strong>引用网络上的文章</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote Seth Godin http:&#x2F;&#x2F;sethgodin.typepad.com&#x2F;seths_blog&#x2F;2009&#x2F;07&#x2F;welcome-to-island-marketing.html Welcome to Island Marketing %&#125;</span><br><span class="line">Every interaction is both precious and an opportunity to delight.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="noopener">Welcome to Island Marketing</a></cite></footer></blockquote>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>在文章中插入代码<br><strong>别名：</strong>code<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] [additional options] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br>Specify additional options in<code>option:value</code>format, e.g<code>line_number:false first_line:5</code></p>
+    <title>关于markdown的一些操作</title>
+    <url>/post/%E5%85%B3%E4%BA%8Emarkdown%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="web开发：设置复选框的只读效果"><a href="#web开发：设置复选框的只读效果" class="headerlink" title="web开发：设置复选框的只读效果"></a>web开发：设置复选框的只读效果</h1><p>在Web开发中，有时候需要显示一些复选框（checkbox），表明这个地方是可以进行勾选操作的，但是有时候是只想告知用户”这个地方是可以进行勾选操作的”而不想让用户在此处勾选（比如在信息展示页面），这时候就需要将复选框设置成只读的效果。</p>
+<a id="more"></a>
+<p>提到只读，很容易想到使用<code>readonly</code>属性，但是对于复选框来说，这个属性和期望得到的效果是有差别的。原因在于 <strong><code>readonly</code>属性关联的是页面元素的value属性（例如<code>textbox</code>，设置了<code>readonly</code>就不能修改输入框的文本内容），而复选框的勾选/取消并不改变其value属性，改变的只是一个<code>checked</code>状态</strong>。所以对于<code>checkbox</code>来说，设置了<code>readonly</code>，仍然是可以勾选/取消的。效果如下：</p>
 <div class="table-container">
 <table>
 <thead>
 <tr>
-<th>Extra Options</th>
-<th>Description</th>
-<th>Default</th>
+<th><code>&lt;input type=&quot;text&quot; name=&quot;realname&quot; value=&quot;只读的文本内容&quot; readonly=&quot;readonly&quot; /&gt;</code></th>
+<th><input type="text" name="realname" value="只读的文本内容" readonly="readonly" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>line_number</code></td>
-<td>Show line number</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>highlight</code></td>
-<td>Enable code highlighting</td>
-<td><code>true</code></td>
-</tr>
-<tr>
-<td><code>first_line</code></td>
-<td>Specify the first line number</td>
-<td><code>1</code></td>
-</tr>
-<tr>
-<td><code>mark</code></td>
-<td>Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br/>Example: <code>mark:1,4-7,10</code> will mark line 1, 4 to 7 and 10.</td>
-<td></td>
-</tr>
-<tr>
-<td><code>wrap</code></td>
-<td>Wrap the code block in <code>&lt;table&gt;</code></td>
-<td><code>true</code></td>
+<td><code>&lt;input type=&quot;checkbox&quot; name=&quot;optiona&quot; readonly=&quot;readonly&quot; /&gt;option a</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionb&quot; readonly=&quot;readonly&quot; /&gt;option b</code><br/><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionc&quot; readonly=&quot;readonly&quot; /&gt;option c</code></td>
+<td><input type="checkbox" name="optiona" readonly="readonly" />option a<br/><input type="checkbox" name="optionb" readonly="readonly" />option b<br/><input type="checkbox" name="optionc" readonly="readonly" />option c</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h3><p><strong>普通的代码块</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock %&#125;</span><br><span class="line">alert(&#39;Hello World!&#39;);</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">alert(&#39;Hello World!&#39;);</span><br></pre></td></tr></table></figure></p>
-<p><strong>指定语言</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:objc %&#125;</span><br><span class="line">[rectangle setX: 10 y: 10 width: 20 height: 20];</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight objc"><table><tr><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure></p>
-<p><strong>附加说明</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock Array.map %&#125;</span><br><span class="line">array.map(callback[, thisArg])</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure></p>
-<p><strong>附加说明和网址</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock _.compact http:&#x2F;&#x2F;underscorejs.org&#x2F;#compact Underscore.js %&#125;</span><br><span class="line">_.compact([0, 1, false, 2, &#39;&#39;, 3]);</span><br><span class="line">&#x3D;&gt; [1, 2, 3]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="noopener">Underscore.js</a></figcaption><table><tr><td class="code"><pre><span class="line">_.compact([0, 1, false, 2, &#39;&#39;, 3]);</span><br><span class="line">&#x3D;&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure></p>
-<h2 id="反引号代码块"><a href="#反引号代码块" class="headerlink" title="反引号代码块"></a>反引号代码块</h2><p>另一种形式的代码块，不同的是它使用三个反引号来包裹。<br>``` [language] [title] [url] [link text] code snippet ```</p>
-<h2 id="Pull-Quote"><a href="#Pull-Quote" class="headerlink" title="Pull Quote"></a>Pull Quote</h2><p>在文章中插入Pull quote。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% pullquote [class] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h2><p>在文章中嵌入jsFiddle。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h2><p>在文章中嵌入Gist。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% gist gist_id [filename] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>在文章中插入iframe。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><p>在文章中插入指定大小的图片。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% img [class names] &#x2F;path&#x2F;to&#x2F;image [width] [height] &#96;&quot;title text&quot; &quot;alt text&quot;&#39; %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p>在文章中插入链接，并自动给外部链接添加<code>target=&quot;_blank&quot;</code>属性。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Include-Code"><a href="#Include-Code" class="headerlink" title="Include Code"></a>Include Code</h2><p>插入<code>source/downloads/code</code>文件夹内的代码文件。<code>source/downloads/code</code>不是固定的，取决于你在配置文件中<code>code_dir</code>的配置。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code [title] [lang:language] [from:line] [to:line] path&#x2F;to&#x2F;file %&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="样例-2"><a href="#样例-2" class="headerlink" title="样例"></a>样例</h3><p><strong>嵌入test.js文件全文</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript test.js %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>只嵌入第3行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:3 to:3 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>嵌入第5行至第8行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 to:8 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>嵌入第5行至文件结束</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript from:5 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>嵌入第1行至第8行</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include_code lang:javascript to:8 test.js %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Youtube"><a href="#Youtube" class="headerlink" title="Youtube"></a>Youtube</h2><p>在文章中插入YOUtube视频。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube video_id %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Vimeo"><a href="#Vimeo" class="headerlink" title="Vimeo"></a>Vimeo</h2><p>在文章中插入Vimeo视频。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% vimeo video_id %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="引用文章"><a href="#引用文章" class="headerlink" title="引用文章"></a>引用文章</h2><p>引用其他文章的链接。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_path filename %&#125;</span><br><span class="line">&#123;% post_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure><br>在使用此标签时可以忽略文章所在的路径或者文章的永久链接信息、如语言、日期。<br>例如，在文章中使用<code></code>时，只需要一个名为<code>how-to-bake-a-cake.md</code>的文章文件即可。即使这个文件位于站点文件夹的<code>source/posts/2015-02-my-family-holiday</code>目录下、或者文章的永久链接是<code>2018/en/how-to-bake-a-cake</code>，都没有影响。<br>默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用Markdown语法<code>[]()</code>。<br>默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用<code>escape</code>选项，禁止对特殊字符进行转义。<br><strong>链接使用文章的标题</strong><br><code></code><br>  </p>
-<p><strong>链接使用自定义文字</strong><br><code></code><br></p>
-<p><strong>对标题的特殊字符进行转义</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo-4-released &#39;How to use &lt;b&gt; tag in title&#39; %&#125;</span><br></pre></td></tr></table></figure><br></p>
-<p><strong>禁止对标题的特殊字符进行转义</strong><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% post_link hexo-4-released &#39;&lt;b&gt;bold&lt;&#x2F;b&gt; custom title&#39; false %&#125;</span><br></pre></td></tr></table></figure><br></p>
-<h2 id="引用资源"><a href="#引用资源" class="headerlink" title="引用资源"></a>引用资源</h2><p>引用文章的资源。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_path filename %&#125;</span><br><span class="line">&#123;% asset_img filename [title] %&#125;</span><br><span class="line">&#123;% asset_link filename [title] [escape] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="Raw"><a href="#Raw" class="headerlink" title="Raw"></a>Raw</h2><p>如果您想在文章中插入Swig标签，可以尝试使用Raw标签，以免发生解析异常。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="文章摘要和截断"><a href="#文章摘要和截断" class="headerlink" title="文章摘要和截断"></a>文章摘要和截断</h2><p>在文章中使用 <code>&lt;!-- more --&gt;</code>，那么 <code>&lt;!-- more --&gt;</code> 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。<br>例如：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure><br>首页中将只会出现<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br></pre></td></tr></table></figure><br>正文中则会出现<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure><br>注意，摘要可能会被Front Matter中的<code>excerpt</code>覆盖。</p>
+<p>和readonly类似的，还有一个disabled属性，这个属性的作用是设置页面元素为不可用，即不可进行任何交互操作（包括不可修改value属性、不可修改checked状态等）。效果如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><code>&lt;input type=&quot;text&quot; name=&quot;realname&quot; value=&quot;输入的文本内容&quot; disabled=&quot;disabled&quot; /&gt;</code></th>
+<th><input type="text" name="realname" value="输入的文本内容" disabled="disabled" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;input type=&quot;checkbox&quot; name=&quot;optiona&quot; disabled=&quot;disabled&quot; /&gt;option a</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionb&quot; disabled=&quot;disabled&quot; /&gt;option b</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionc&quot; disabled=&quot;disabled&quot; /&gt;option c</code></td>
+<td><input type="checkbox" name="optiona" disabled="disabled" />option a<br/><input type="checkbox" name="optionb" disabled="disabled" />option b<br/><input type="checkbox" name="optionc" disabled="disabled" />option c</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>从上面我们可以看到，无论是readonly还是disabled，都没有实现我们期望的效果。既然直接实现不了，那么我们可以变通一下，模拟实现。代码如下：</p>
+<p> <code>&lt;input type=&quot;checkbox&quot; name=&quot;chkAllowed&quot; onclick=&quot;return false;&quot; checked=&quot;checked&quot; /&gt;</code> —-&gt; <input type="checkbox" name="chkAllowed" onclick="return false;" checked="checked" /> </p>
+<p>转自： <a href="https://www.cnblogs.com/josephchan/archive/2012/10/15/webui_checkbox_readonly.html" target="_blank" rel="noopener">Web开发：设置复选框的只读效果</a></p>
 <hr>
-<h1 id="NexT主题提供的标签插件"><a href="#NexT主题提供的标签插件" class="headerlink" title="NexT主题提供的标签插件"></a>NexT主题提供的标签插件</h1><h2 id="居中引用-Centered-Quote"><a href="#居中引用-Centered-Quote" class="headerlink" title="居中引用(Centered Quote)"></a>居中引用(Centered Quote)</h2><p>这个标记将在它之前和之后的两行中创建一个引用，引用的文本将居中。当使用居中引用时，如果我们有多行文本，而且每行有不同的长度，引用就不是对称的，所以建议在只有单行文本时使用。例如文章前都要做文章后的总结。</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>center-quote.js<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;Something&#123;% endcenterquote %&#125;</span><br><span class="line">&lt;!-- Tag Alias --&gt;</span><br><span class="line">&#123;% cq %&#125;Something&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="样例-3"><a href="#样例-3" class="headerlink" title="样例"></a>样例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;Elegant in code, simple in core&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>Elegant in code, simple in core</p>
+<h1 id="实现“内容折叠”的功能"><a href="#实现“内容折叠”的功能" class="headerlink" title="实现“内容折叠”的功能"></a>实现“内容折叠”的功能</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">mark</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">darkred</span>&gt;</span>点击查看详细内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<details>
+<summary><mark><font color=darkred>点击查看详细内容</font></mark></summary>
+<code></code>
+</details>
 
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
-<h2 id="注释-Note"><a href="#注释-Note" class="headerlink" title="注释(Note)"></a>注释(Note)</h2><h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bs-callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bs-callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><p>note.js<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">[class]   : default | primary | success | info | warning | danger.</span><br><span class="line">[no-icon] : Disable icon in note.</span><br><span class="line"></span><br><span class="line">All parameters are optional.</span><br></pre></td></tr></table></figure></p>
-<div class="note danger">
-            <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>如果你不想看到出bug就不要把这个标签写成一行。<br>例如，下面是用错误的语法写出来的内容：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;note text, note text, note text&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>或者像这样的：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;note text</span><br><span class="line">note text</span><br><span class="line">note text</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>需要把内容写到新的一行，像这样：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line">note text, note text, note text</span><br><span class="line">note text, note text, note text</span><br><span class="line">note text, note text, note text</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-          </div>
-<h3 id="样例-4"><a href="#样例-4" class="headerlink" title="样例"></a>样例</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line">#### Header</span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note ">
-            <h4 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h4><p>(without define class style)</p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Default Header</span><br><span class="line">Welcome to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note default">
-            <h4 id="Default-Header"><a href="#Default-Header" class="headerlink" title="Default Header"></a>Default Header</h4><p>Welcome to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note primary %&#125;</span><br><span class="line">#### Primary Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note primary">
-            <h4 id="Primary-Header"><a href="#Primary-Header" class="headerlink" title="Primary Header"></a>Primary Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info %&#125;</span><br><span class="line">#### Info Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info">
-            <h4 id="Info-Header"><a href="#Info-Header" class="headerlink" title="Info Header"></a>Info Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line">#### Success Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note success">
-            <h4 id="Success-Header"><a href="#Success-Header" class="headerlink" title="Success Header"></a>Success Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note warning %&#125;</span><br><span class="line">#### Warning Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note warning">
-            <h4 id="Warning-Header"><a href="#Warning-Header" class="headerlink" title="Warning Header"></a>Warning Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note danger %&#125;</span><br><span class="line">#### Danger Header</span><br><span class="line">**Welcome** to [Hexo!](https:&#x2F;&#x2F;hexo.io)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note danger">
-            <h4 id="Danger-Header"><a href="#Danger-Header" class="headerlink" title="Danger Header"></a>Danger Header</h4><p><strong>Welcome</strong> to <a href="https://hexo.io" target="_blank" rel="noopener">Hexo!</a></p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line">#### No icon note</span><br><span class="line">Note **without** icon: &#96;note info no-icon&#96;</span><br><span class="line"></span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note info no-icon">
-            <h4 id="No-icon-note"><a href="#No-icon-note" class="headerlink" title="No icon note"></a>No icon note</h4><p>Note <strong>without</strong> icon: <code>note info no-icon</code></p><p>note info, note info, note info<br>note info, note info, note info<br>note info, note info, note info</p>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note success %&#125;</span><br><span class="line">#### Codeblock in note</span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note success">
-            <h4 id="Codeblock-in-note"><a href="#Codeblock-in-note" class="headerlink" title="Codeblock in note"></a>Codeblock in note</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br></pre></td></tr></table></figure>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Lists in note</span><br><span class="line">* ul</span><br><span class="line">* ul</span><br><span class="line">  * ul</span><br><span class="line">  * ul</span><br><span class="line">* ul</span><br><span class="line"></span><br><span class="line">1. ol</span><br><span class="line">2. ol</span><br><span class="line">  1. ol</span><br><span class="line">  2. ol</span><br><span class="line">3. ol</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note default">
-            <h4 id="Lists-in-note"><a href="#Lists-in-note" class="headerlink" title="Lists in note"></a>Lists in note</h4><ul><li>ul</li><li>ul<ul><li>ul</li><li>ul</li></ul></li><li>ul</li></ul><ol><li>ol</li><li>ol<ol><li>ol</li><li>ol</li></ol></li><li>ol</li></ol>
-          </div>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">#### Table in Note</span><br><span class="line">| 1 | 2 |</span><br><span class="line">| - | - |</span><br><span class="line">| 3 | 4 |</span><br><span class="line">| 5 | 6 |</span><br><span class="line">| 7 | 8 |</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-<div class="note default">
-            <h4 id="Table-in-Note"><a href="#Table-in-Note" class="headerlink" title="Table in Note"></a>Table in Note</h4><div class="table-container"><table><thead><tr><th>1</th><th>2</th></tr></thead><tbody><tr><td>3</td><td>4</td></tr><tr><td>5</td><td>6</td></tr><tr><td>7</td><td>8</td></tr></tbody></table></div>
-          </div>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span>点击查看详细内容<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">code</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">	<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<details>
+    <summary>点击查看详细内容</summary>
+    <code>
+    </code>
+</details>
+
 ]]></content>
       <categories>
-        <category>笔记</category>
+        <category>记录</category>
       </categories>
       <tags>
+        <tag>html</tag>
+        <tag>markdown</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>捣鼓主题样式的方法</title>
+    <url>/post/%E6%8D%A3%E9%BC%93%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
+<li>火狐浏览器（我用的是开发者版本）</li>
+<li>VSCode</li>
+</ul>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><a id="more"></a>
+<ol>
+<li>在浏览器中打开网页<ul>
+<li>F12打开开发者工具<br><img src="https://i.loli.net/2020/01/23/9dSBCq5jv4NOEzW.png" alt=""></li>
+<li>用新窗口左上角的元素选择器在左边的页面选择需要修改的元素</li>
+</ul>
+</li>
+<li>复制选择器的名字<ul>
+<li>css选择器<br><img src="https://i.loli.net/2020/01/23/K9TQ2uhwdJ7ICsU.png" alt=""></li>
+</ul>
+</li>
+<li>在<code>~theme/next/source/css</code>里用VSCode打开<ul>
+<li>点击搜索，复制之前复制的css选择器<br><img src="https://i.loli.net/2020/01/23/vBnOTy13HEVLfSq.png" alt=""></li>
+<li>因为有很多文件里都存在同名的css选择器，所以要仔细一一比对找到对应的位置</li>
+</ul>
+</li>
+<li>修改样式再保存即可</li>
+</ol>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>用浏览器里的F12打开开发者工具，用元素选择器选择要修改的元素，复制css选择器名</li>
+<li>在vscode里搜索css选择器名，找到对应的位置修改保存</li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>捣鼓</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
         <tag>next</tag>
-        <tag>tag</tag>
-        <tag>plugins</tag>
+        <tag>自定义</tag>
       </tags>
   </entry>
   <entry>
@@ -1489,171 +1583,57 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>使用Googoleapis字体库报错</title>
-    <url>/post/%E4%BD%BF%E7%94%A8Googoleapis%E5%AD%97%E4%BD%93%E5%BA%93%E6%8A%A5%E9%94%99/</url>
-    <content><![CDATA[<p>在next主题配置文件里开启fonts设置自定义字体，使用默认host(googleapis.com)，开始还可以正常显示字体，一段时间后，重新生成部署网站后，字体恢复默认，不显示自定义字体，打开F12发现报错。</p>
-<p>(../images/报错1.png)</p>
-<p>(../images/报错2.png)<a id="more"></a></p>
-<p>这个问题原因还不明白，但是找到了解决方法。</p>
-<p>按F12进入控制台，找到申请字体的资源</p>
-<p>(../images/image-20200724213119642.png)</p>
-<p>全部复制下来，在博客目录里面找个位置保存，然后在<code>~\source\_data\head.swig</code>添加：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fonts --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/fonts/css/original_fonts.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>(../images/image-20200724213241666.png)</p>
-<p>问题就解决了。</p>
+    <title>给文章添加置顶</title>
+    <url>/post/%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6/</url>
+    <content><![CDATA[<p>本文是给next主题下文章添加置顶功能的教程。<br><a id="more"></a></p>
+<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<h1 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h1><p>打开<code>~/scaffolds/post.md</code>，在<code>Front-matter</code>里最底下添加<code>top: false</code>，这样每次生成的post文件都自带由<code>top:</code>这个参数项了，需要置顶的时候就把<code>false</code>改为<code>true</code>就行了。</p>
+<h1 id="设置置顶的样式"><a href="#设置置顶的样式" class="headerlink" title="设置置顶的样式"></a>设置置顶的样式</h1><p>打开<code>~/themes/next/layout/_macro/</code>里的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>在下面插入代码：<br><figure class="highlight plain"><figcaption><span>post.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>其中<code>color</code>是调整文字颜色的属性，可以自行修改想要的颜色。</p>
 ]]></content>
       <categories>
-        <category>记录</category>
-        <category>问题</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>使用LeanCloud无法显示数量</title>
-    <url>/post/%E4%BD%BF%E7%94%A8LeanCloud%E7%BB%9F%E8%AE%A1%E4%B8%8D%E6%98%BE%E7%A4%BA%E6%95%B0%E5%AD%97(%E5%B7%B2%E8%A7%A3%E5%86%B3)/</url>
-    <content><![CDATA[<h2 id="具体问题"><a href="#具体问题" class="headerlink" title="具体问题"></a>具体问题</h2><p>在根据文档配置好LeanCloud并完成部署之后，刷新博客网页，在主页看到每篇文章的阅读次数要么显示为0，要么就没有数字只有一个眼睛图标，而打开每篇文章的相应页面更是发现错误信息：<code>Counter not initialized! More info at console err msg.</code>。<a id="more"></a><br><div class="note default no-icon">
-            <p><del>目前这个问题貌似无解，网上找到的所有方法都试了还是没有解决</del><br>一定要把Web安全域名填正确，填完保存之后可能需要等待几分钟到十几分钟之后才会开始显示</p>
-          </div></p>
-<h2 id="下面列出一些在网上找的解决方案"><a href="#下面列出一些在网上找的解决方案" class="headerlink" title="下面列出一些在网上找的解决方案"></a>下面列出一些在网上找的解决方案</h2><ul>
-<li>安装插件<code>hexo-leancloud-counter-security</code><ul>
-<li>执行命令<code>npm install hexo-leancloud-counter-security</code></li>
-</ul>
-</li>
-<li>将主题配置文件<code>_config.yml</code>中的<code>leancloud_visitors.security</code>设置成<code>false</code></li>
-</ul>
-<div class="note danger no-icon">
-            <p><strong>注：</strong> 原文档中建议的是两种方法：1) 使用<code>hexo-leancloud-counter-security</code>插件；2) 设置<code>leancloud_visitors.security = false</code>均可。<br>但考虑到主题配置文件中关于安全性的提醒，我是按步骤分别完成了这两步。并且只安装<code>hexo-leancloud-counter-security</code>插件依然不能解决报错问题，可能真正生效的是“将<code>security</code>置为<code>false</code>这一步。<br>但出于安全考虑，建议大家也同时安装<code>hexo-leancloud-counter-security</code>插件。</p>
-          </div>]]></content>
-      <categories>
-        <category>记录</category>
-        <category>问题</category>
+        <category>美化</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>leancloud</tag>
+        <tag>next</tag>
+        <tag>美化</tag>
+        <tag>置顶</tag>
       </tags>
   </entry>
   <entry>
-    <title>关于markdown的一些操作</title>
-    <url>/post/%E5%85%B3%E4%BA%8Emarkdown%E7%9A%84%E4%B8%80%E4%BA%9B%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="web开发：设置复选框的只读效果"><a href="#web开发：设置复选框的只读效果" class="headerlink" title="web开发：设置复选框的只读效果"></a>web开发：设置复选框的只读效果</h1><p>在Web开发中，有时候需要显示一些复选框（checkbox），表明这个地方是可以进行勾选操作的，但是有时候是只想告知用户”这个地方是可以进行勾选操作的”而不想让用户在此处勾选（比如在信息展示页面），这时候就需要将复选框设置成只读的效果。</p>
+    <title>Hexo Next主题中添加aplayer播放器</title>
+    <url>/post/Hexo-Next%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0aplayer%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<p>本篇主要解决以下两个问题：</p>
+<p><input type="checkbox" checked="checked" onclick="return false;"/>在博客中添加aplayer</p>
+<p><input type="checkbox" checked="checked" onclick="return false;"/>解决切换页面时不打断播放</p>
 <a id="more"></a>
-<p>提到只读，很容易想到使用<code>readonly</code>属性，但是对于复选框来说，这个属性和期望得到的效果是有差别的。原因在于 <strong><code>readonly</code>属性关联的是页面元素的value属性（例如<code>textbox</code>，设置了<code>readonly</code>就不能修改输入框的文本内容），而复选框的勾选/取消并不改变其value属性，改变的只是一个<code>checked</code>状态</strong>。所以对于<code>checkbox</code>来说，设置了<code>readonly</code>，仍然是可以勾选/取消的。效果如下：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><code>&lt;input type=&quot;text&quot; name=&quot;realname&quot; value=&quot;只读的文本内容&quot; readonly=&quot;readonly&quot; /&gt;</code></th>
-<th><input type="text" name="realname" value="只读的文本内容" readonly="readonly" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;input type=&quot;checkbox&quot; name=&quot;optiona&quot; readonly=&quot;readonly&quot; /&gt;option a</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionb&quot; readonly=&quot;readonly&quot; /&gt;option b</code><br/><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionc&quot; readonly=&quot;readonly&quot; /&gt;option c</code></td>
-<td><input type="checkbox" name="optiona" readonly="readonly" />option a<br/><input type="checkbox" name="optionb" readonly="readonly" />option b<br/><input type="checkbox" name="optionc" readonly="readonly" />option c</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>和readonly类似的，还有一个disabled属性，这个属性的作用是设置页面元素为不可用，即不可进行任何交互操作（包括不可修改value属性、不可修改checked状态等）。效果如下：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><code>&lt;input type=&quot;text&quot; name=&quot;realname&quot; value=&quot;输入的文本内容&quot; disabled=&quot;disabled&quot; /&gt;</code></th>
-<th><input type="text" name="realname" value="输入的文本内容" disabled="disabled" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;input type=&quot;checkbox&quot; name=&quot;optiona&quot; disabled=&quot;disabled&quot; /&gt;option a</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionb&quot; disabled=&quot;disabled&quot; /&gt;option b</code><br /><code>&lt;input type=&quot;checkbox&quot; name=&quot;optionc&quot; disabled=&quot;disabled&quot; /&gt;option c</code></td>
-<td><input type="checkbox" name="optiona" disabled="disabled" />option a<br/><input type="checkbox" name="optionb" disabled="disabled" />option b<br/><input type="checkbox" name="optionc" disabled="disabled" />option c</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>从上面我们可以看到，无论是readonly还是disabled，都没有实现我们期望的效果。既然直接实现不了，那么我们可以变通一下，模拟实现。代码如下：</p>
-<p> <code>&lt;input type=&quot;checkbox&quot; name=&quot;chkAllowed&quot; onclick=&quot;return false;&quot; checked=&quot;checked&quot; /&gt;</code> —-&gt; <input type="checkbox" name="chkAllowed" onclick="return false;" checked="checked" /> </p>
-<p>转自： <a href="https://www.cnblogs.com/josephchan/archive/2012/10/15/webui_checkbox_readonly.html" target="_blank" rel="noopener">Web开发：设置复选框的只读效果</a></p>
+<h2 id="添加Aplayer播放器"><a href="#添加Aplayer播放器" class="headerlink" title="添加Aplayer播放器"></a>添加Aplayer播放器</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>在Github上下载<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">Aplayer</a> 。解压后将<code>dist</code>文件复制到<code>~\themes\next\source</code>文件夹下。</p>
+<h3 id="新建music-js"><a href="#新建music-js" class="headerlink" title="新建music.js"></a>新建music.js</h3><p>在<code>~\themes\next\source\dist\</code>目录下新建一个<code>music.js</code>文件，添加下面的内容：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"PDD洪荒之力"</span>,</span><br><span class="line">        artist: <span class="string">'徐梦圆'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/39868.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/84.jpg'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">'9420'</span>,</span><br><span class="line">        artist: <span class="string">'麦小兜'</span>,</span><br><span class="line">        url: <span class="string">'http://up.mcyt.net/?down/45967.mp3'</span>,</span><br><span class="line">        cover: <span class="string">'http://oeff2vktt.bkt.clouddn.com/image/8.jpg'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>代码中对应参数的解释，请查看：<a href="https://aplayer.js.org/#/zh-Hans/?id=参数" target="_blank" rel="noopener">Aplayer中文文档</a></p>
+<p><code>audio</code>对应的是音频文件的信息参数，需要自己配置相关的信息（如歌名，歌手，音频链接，封面等）的配置。</p>
+<div class="note info no-icon">
+            <p><code>url</code>和<code>cover</code>两个参数也可以是本地文件的相对地址，如：<code>url: &#39;/dist/assets/song1.mp3&#39;</code><br>快速生成音乐外链的方法可以参考我的<a href="https://hxwguang.github.io/2020/01/26/一个快速生成音乐外链的方法/">另一篇文章</a>。</p><p>另外：由于我没有配置歌词的信息，所以播放器在播放音乐的时候点击歌词是没有显示的</p>
+          </div>
+<h3 id="添加脚本信息"><a href="#添加脚本信息" class="headerlink" title="添加脚本信息"></a>添加脚本信息</h3><h4 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h4><p>在<code>站点根目录/source/_data</code>里新建文件<code>head.swig</code></p>
+<p>在里面添加</p>
+<figure class="highlight js"><figcaption><span>head.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">+  <span class="xml"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">+  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/music.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>保存</p>
+<h4 id="去掉注释"><a href="#去掉注释" class="headerlink" title="去掉注释"></a>去掉注释</h4><p>打开<code>~/theme/next/_config.yml</code></p>
+<p>定位到<code>custom_file_path</code>然后把<code>#header: source/_data/header.swig</code>前面的<code>#</code>号去掉，保存</p>
+<p>完成。</p>
 <hr>
-<h1 id="实现“内容折叠”的功能"><a href="#实现“内容折叠”的功能" class="headerlink" title="实现“内容折叠”的功能"></a>实现“内容折叠”的功能</h1><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">mark</span>&gt;</span><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">darkred</span>&gt;</span>点击查看详细内容<span class="tag">&lt;/<span class="name">font</span>&gt;</span><span class="tag">&lt;/<span class="name">mark</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">code</span>&gt;</span><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<details>
-<summary><mark><font color=darkred>点击查看详细内容</font></mark></summary>
-<code></code>
-</details>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span>点击查看详细内容<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">code</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">	<span class="tag">&lt;/<span class="name">code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<details>
-    <summary>点击查看详细内容</summary>
-    <code>
-    </code>
-</details>
-
+<h2 id="解决切换页面播放中断问题"><a href="#解决切换页面播放中断问题" class="headerlink" title="解决切换页面播放中断问题"></a>解决切换页面播放中断问题</h2><p>这个问题也困扰了我很久，但其实很容易解决。现在的Next主题里已经集成了pjax插件，利用它就可以解决问题，这个插件主要功能是加速页面的切换速度，建议启用！</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在<code>~/themes/next/</code>目录下右键<code>git bash here</code>，输入命令：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;theme-next-pjax source&#x2F;lib&#x2F;pjax</span><br></pre></td></tr></table></figure><br>下载完成后打开主题目录下的<code>_config.yml</code>文件，定位到<code>pjax</code>处，启用就可以了：<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">pjax:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>记录</category>
-      </categories>
-      <tags>
-        <tag>html</tag>
-        <tag>markdown</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端笔记</title>
-    <url>/post/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>记录前端的细碎小知识。</p>
-<a id="more"></a>
-<h3 id="aria-属性"><a href="#aria-属性" class="headerlink" title="[aria-*]属性"></a>[aria-*]属性</h3><p>ARIA是W3C的一个规范。其全称是’Accessible Rich Internet Applications’，是WAI-ARIA的一部分（它是W3C的Web无障碍推进组织(Web Accessibility Initiative / WAI)在2014年3月20日发布的可访问富互联网应用实现指南）。</p>
-<p>WAI-ARIA是一个为残疾人士等提供无障碍访问动态、可交互Web内容的技术规范。主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。尤其像盲人，眼睛看不到，其浏览网页则需要借助辅助设备，如屏幕阅读器，屏幕阅读机可以大声朗读或者输出盲文。</p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在标签内使用<code>aria-*</code>属性，它描述了元素的属性和状态。</p>
-<p>通常与<code>role</code>属性配合使用，它的值表示一个元素的实际意义和作用。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>捣鼓主题样式的方法</title>
-    <url>/post/%E6%8D%A3%E9%BC%93%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
-<li>火狐浏览器（我用的是开发者版本）</li>
-<li>VSCode</li>
-</ul>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><a id="more"></a>
-<ol>
-<li>在浏览器中打开网页<ul>
-<li>F12打开开发者工具<br><img src="https://i.loli.net/2020/01/23/9dSBCq5jv4NOEzW.png" alt=""></li>
-<li>用新窗口左上角的元素选择器在左边的页面选择需要修改的元素</li>
-</ul>
-</li>
-<li>复制选择器的名字<ul>
-<li>css选择器<br><img src="https://i.loli.net/2020/01/23/K9TQ2uhwdJ7ICsU.png" alt=""></li>
-</ul>
-</li>
-<li>在<code>~theme/next/source/css</code>里用VSCode打开<ul>
-<li>点击搜索，复制之前复制的css选择器<br><img src="https://i.loli.net/2020/01/23/vBnOTy13HEVLfSq.png" alt=""></li>
-<li>因为有很多文件里都存在同名的css选择器，所以要仔细一一比对找到对应的位置</li>
-</ul>
-</li>
-<li>修改样式再保存即可</li>
-</ol>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
-<li>用浏览器里的F12打开开发者工具，用元素选择器选择要修改的元素，复制css选择器名</li>
-<li>在vscode里搜索css选择器名，找到对应的位置修改保存</li>
-</ul>
-]]></content>
-      <categories>
-        <category>记录</category>
+        <category>美化</category>
         <category>捣鼓</category>
       </categories>
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-        <tag>自定义</tag>
+        <tag>美化</tag>
+        <tag>aplayer</tag>
       </tags>
   </entry>
   <entry>
@@ -1716,21 +1696,41 @@ a_3x+b_3y+c_3z=d_3\\
       </tags>
   </entry>
   <entry>
-    <title>给文章添加置顶</title>
-    <url>/post/%E7%BB%99%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6/</url>
-    <content><![CDATA[<p>本文是给next主题下文章添加置顶功能的教程。<br><a id="more"></a></p>
-<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-<h1 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h1><p>打开<code>~/scaffolds/post.md</code>，在<code>Front-matter</code>里最底下添加<code>top: false</code>，这样每次生成的post文件都自带由<code>top:</code>这个参数项了，需要置顶的时候就把<code>false</code>改为<code>true</code>就行了。</p>
-<h1 id="设置置顶的样式"><a href="#设置置顶的样式" class="headerlink" title="设置置顶的样式"></a>设置置顶的样式</h1><p>打开<code>~/themes/next/layout/_macro/</code>里的<code>post.swig</code>文件，定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code>在下面插入代码：<br><figure class="highlight plain"><figcaption><span>post.swig</span></figcaption><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><br>其中<code>color</code>是调整文字颜色的属性，可以自行修改想要的颜色。</p>
+    <title>前端笔记</title>
+    <url>/post/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>记录前端的细碎小知识。</p>
+<a id="more"></a>
+<h3 id="aria-属性"><a href="#aria-属性" class="headerlink" title="[aria-*]属性"></a>[aria-*]属性</h3><p>ARIA是W3C的一个规范。其全称是’Accessible Rich Internet Applications’，是WAI-ARIA的一部分（它是W3C的Web无障碍推进组织(Web Accessibility Initiative / WAI)在2014年3月20日发布的可访问富互联网应用实现指南）。</p>
+<p>WAI-ARIA是一个为残疾人士等提供无障碍访问动态、可交互Web内容的技术规范。主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。尤其像盲人，眼睛看不到，其浏览网页则需要借助辅助设备，如屏幕阅读器，屏幕阅读机可以大声朗读或者输出盲文。</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在标签内使用<code>aria-*</code>属性，它描述了元素的属性和状态。</p>
+<p>通常与<code>role</code>属性配合使用，它的值表示一个元素的实际意义和作用。</p>
 ]]></content>
       <categories>
-        <category>美化</category>
+        <category>笔记</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>next</tag>
-        <tag>美化</tag>
-        <tag>置顶</tag>
+        <tag>笔记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>使用Googoleapis字体库报错</title>
+    <url>/post/%E4%BD%BF%E7%94%A8Googoleapis%E5%AD%97%E4%BD%93%E5%BA%93%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<p>在next主题配置文件里开启fonts设置自定义字体，使用默认host(googleapis.com)，开始还可以正常显示字体，一段时间后，重新生成部署网站后，字体恢复默认，不显示自定义字体，打开F12发现报错。</p>
+<p>(../images/报错1.png)</p>
+<p>(../images/报错2.png)<a id="more"></a></p>
+<p>这个问题原因还不明白，但是找到了解决方法。</p>
+<p>按F12进入控制台，找到申请字体的资源</p>
+<p>(../images/image-20200724213119642.png)</p>
+<p>全部复制下来，在博客目录里面找个位置保存，然后在<code>~\source\_data\head.swig</code>添加：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- fonts --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/fonts/css/original_fonts.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>(../images/image-20200724213241666.png)</p>
+<p>问题就解决了。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>问题</category>
+      </categories>
   </entry>
   <entry>
     <title>《TCP-IP网络编程》学习笔记</title>
